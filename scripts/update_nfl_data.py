@@ -20,13 +20,11 @@ OUTPUT_DIR = Path("data")
 PLAYER_OUTPUT = OUTPUT_DIR / "players.json"
 STATUS_OUTPUT = OUTPUT_DIR / "data-status.json"
 
-# Official nflverse Player Summary Stats release.
 PLAYER_STATS_URL = (
     "https://github.com/nflverse/nflverse-data/releases/download/"
     f"stats_player/stats_player_week_{SEASON}.csv"
 )
 
-# For the first test we only need the four primary fantasy positions.
 ALLOWED_POSITIONS = {"QB", "RB", "WR", "TE"}
 
 REQUEST_TIMEOUT = 60
@@ -41,13 +39,10 @@ HEADERS = {
 # ============================================================
 
 def fail(message: str) -> None:
-    """Stop the workflow if validation fails."""
-
     print()
     print("=" * 60, file=sys.stderr)
     print(f"VALIDATION FAILED: {message}", file=sys.stderr)
     print("=" * 60, file=sys.stderr)
-
     sys.exit(1)
 
 
@@ -56,7 +51,6 @@ def fail(message: str) -> None:
 # ============================================================
 
 def download_csv(url: str) -> pd.DataFrame:
-    """Download and parse an nflverse CSV."""
 
     print()
     print("Downloading nflverse data:")
@@ -73,7 +67,9 @@ def download_csv(url: str) -> pd.DataFrame:
         response.raise_for_status()
 
     except requests.RequestException as exc:
-        fail(f"Unable to download nflverse data: {exc}")
+        fail(
+            f"Unable to download nflverse data: {exc}"
+        )
 
     content_type = (
         response.headers
@@ -85,12 +81,13 @@ def download_csv(url: str) -> pd.DataFrame:
 
     print()
     print(f"HTTP status: {response.status_code}")
-    print(f"Content type: {content_type or 'unknown'}")
+    print(
+        f"Content type: "
+        f"{content_type or 'unknown'}"
+    )
     print(f"Downloaded bytes: {size:,}")
     print(f"Final URL: {response.url}")
 
-    # Prevent GitHub/Cloudflare/etc. HTML error pages from
-    # accidentally being treated as NFL data.
     beginning = response.content[:500].lower()
 
     if (
@@ -98,14 +95,14 @@ def download_csv(url: str) -> pd.DataFrame:
         or b"<!doctype html" in beginning
     ):
         fail(
-            "The nflverse URL returned an HTML page "
+            "The nflverse URL returned HTML "
             "instead of CSV data."
         )
 
     if size < 1000:
         fail(
-            f"The downloaded dataset is unexpectedly small "
-            f"({size:,} bytes)."
+            f"The downloaded dataset is "
+            f"unexpectedly small ({size:,} bytes)."
         )
 
     try:
@@ -115,8 +112,7 @@ def download_csv(url: str) -> pd.DataFrame:
 
     except Exception as exc:
         fail(
-            f"The downloaded file could not be parsed "
-            f"as CSV: {exc}"
+            f"Unable to parse downloaded CSV: {exc}"
         )
 
     print()
@@ -130,14 +126,133 @@ def download_csv(url: str) -> pd.DataFrame:
 
 
 # ============================================================
+# NORMALIZE SOURCE SCHEMA
+# ============================================================
+
+def normalize_schema(
+    df: pd.DataFrame,
+) -> pd.DataFrame:
+
+    """
+    nflverse occasionally changes field naming.
+
+    The dashboard will always use 'recent_team'
+    internally regardless of the source field name.
+    """
+
+    df = df.copy()
+
+    print()
+    print("Checking nflverse schema...")
+
+    # --------------------------------------------------------
+    # TEAM
+    # --------------------------------------------------------
+
+    team_candidates = [
+        "recent_team",
+        "team",
+        "posteam",
+    ]
+
+    team_column = None
+
+    for candidate in team_candidates:
+
+        if candidate in df.columns:
+
+            team_column = candidate
+            break
+
+    if team_column is None:
+
+        print()
+        print(
+            "Available columns:"
+        )
+
+        print(
+            ", ".join(
+                sorted(df.columns)
+            )
+        )
+
+        fail(
+            "No recognized team column found. "
+            "Expected one of: "
+            "recent_team, team, posteam"
+        )
+
+    print(
+        f"Team column detected: {team_column}"
+    )
+
+    if team_column != "recent_team":
+
+        df["recent_team"] = (
+            df[team_column]
+        )
+
+        print(
+            f"Normalized '{team_column}' "
+            "to 'recent_team'."
+        )
+
+    # --------------------------------------------------------
+    # PLAYER NAME
+    # --------------------------------------------------------
+
+    if "player_display_name" not in df.columns:
+
+        player_name_candidates = [
+            "player_name",
+            "name",
+        ]
+
+        player_name_column = None
+
+        for candidate in player_name_candidates:
+
+            if candidate in df.columns:
+
+                player_name_column = candidate
+                break
+
+        if player_name_column is None:
+
+            fail(
+                "No recognized player-name "
+                "column found."
+            )
+
+        df["player_display_name"] = (
+            df[player_name_column]
+        )
+
+        print(
+            f"Normalized '{player_name_column}' "
+            "to 'player_display_name'."
+        )
+
+    print(
+        "Schema normalization complete."
+    )
+
+    return df
+
+
+# ============================================================
 # VALIDATION
 # ============================================================
 
-def validate_player_data(df: pd.DataFrame) -> None:
-    """Validate the nflverse dataset before publishing it."""
+def validate_player_data(
+    df: pd.DataFrame,
+) -> None:
 
     print()
-    print("Validating nflverse player data...")
+    print(
+        "Validating nflverse player data..."
+    )
 
     required_columns = {
         "player_id",
@@ -148,16 +263,25 @@ def validate_player_data(df: pd.DataFrame) -> None:
         "week",
     }
 
-    missing = required_columns - set(df.columns)
+    missing = (
+        required_columns
+        - set(df.columns)
+    )
 
     if missing:
+
         fail(
             "Dataset is missing required columns: "
-            + ", ".join(sorted(missing))
+            + ", ".join(
+                sorted(missing)
+            )
         )
 
     if df.empty:
-        fail("Player dataset contains zero rows.")
+
+        fail(
+            "Player dataset contains zero rows."
+        )
 
     numeric_season = pd.to_numeric(
         df["season"],
@@ -169,15 +293,18 @@ def validate_player_data(df: pd.DataFrame) -> None:
     ].copy()
 
     if season_df.empty:
+
         fail(
-            f"No {SEASON} player statistics were found."
+            f"No {SEASON} player statistics "
+            "were found."
         )
 
-    # Sanity check. This deliberately uses a conservative threshold.
     if len(season_df) < 100:
+
         fail(
-            f"Only {len(season_df):,} {SEASON} "
-            "player-week records were found."
+            f"Only {len(season_df):,} "
+            f"{SEASON} player-week records "
+            "were found."
         )
 
     positions = set(
@@ -189,12 +316,15 @@ def validate_player_data(df: pd.DataFrame) -> None:
     )
 
     missing_positions = (
-        ALLOWED_POSITIONS - positions
+        ALLOWED_POSITIONS
+        - positions
     )
 
     if missing_positions:
+
         fail(
-            "Expected fantasy positions are missing: "
+            "Expected fantasy positions "
+            "are missing: "
             + ", ".join(
                 sorted(missing_positions)
             )
@@ -206,41 +336,68 @@ def validate_player_data(df: pd.DataFrame) -> None:
     ).dropna()
 
     if weeks.empty:
+
         fail(
-            "No valid NFL week numbers were found."
+            "No valid NFL week numbers "
+            "were found."
         )
 
-    latest_week = int(weeks.max())
+    latest_week = int(
+        weeks.max()
+    )
 
     if not 1 <= latest_week <= 22:
+
         fail(
             f"Unexpected latest NFL week: "
             f"{latest_week}"
         )
 
+    teams = (
+        season_df["recent_team"]
+        .dropna()
+        .astype(str)
+        .unique()
+    )
+
+    if len(teams) < 20:
+
+        fail(
+            f"Only {len(teams)} teams "
+            "were detected."
+        )
+
+    print()
     print("Validation PASSED")
+
     print(
-        f"2026 player-week rows: "
+        f"{SEASON} player-week rows: "
         f"{len(season_df):,}"
     )
+
     print(
-        f"Latest week found: {latest_week}"
+        f"Latest week found: "
+        f"{latest_week}"
     )
+
     print(
-        "Positions found: "
-        + ", ".join(sorted(positions))
+        f"Teams found: "
+        f"{len(teams)}"
+    )
+
+    print(
+        "Fantasy positions confirmed: "
+        + ", ".join(
+            sorted(ALLOWED_POSITIONS)
+        )
     )
 
 
 # ============================================================
-# NORMALIZATION
+# JSON CLEANING
 # ============================================================
 
 def clean_value(value):
-    """
-    Convert pandas/numpy values into JSON-safe
-    native Python values.
-    """
 
     if pd.isna(value):
         return None
@@ -251,16 +408,18 @@ def clean_value(value):
     return value
 
 
+# ============================================================
+# BUILD PLAYER DATASET
+# ============================================================
+
 def build_player_dataset(
     df: pd.DataFrame,
 ):
-    """
-    Keep 2026 QB/RB/WR/TE player-week records.
 
-    For now we deliberately retain all available nflverse
-    columns so we can inspect the full dataset before deciding
-    which fields belong in each dashboard view.
-    """
+    print()
+    print(
+        "Building QB/RB/WR/TE player dataset..."
+    )
 
     df = df.copy()
 
@@ -278,7 +437,8 @@ def build_player_dataset(
 
     df = df[
         (numeric_season == SEASON)
-        & (
+        &
+        (
             df["position"]
             .isin(ALLOWED_POSITIONS)
         )
@@ -317,11 +477,16 @@ def build_player_dataset(
 
         records.append(record)
 
+    print(
+        f"Normalized records: "
+        f"{len(records):,}"
+    )
+
     return records
 
 
 # ============================================================
-# STATUS / VERIFICATION DATA
+# BUILD STATUS FILE
 # ============================================================
 
 def build_status(
@@ -345,7 +510,8 @@ def build_status(
 
     fantasy_df = fantasy_df[
         (numeric_season == SEASON)
-        & (
+        &
+        (
             fantasy_df["position"]
             .isin(ALLOWED_POSITIONS)
         )
@@ -386,62 +552,76 @@ def build_status(
     )
 
     return {
+
         "status": "validated",
+
         "source": "nflverse",
-        "source_dataset": (
-            "Player Summary Stats"
-        ),
+
+        "source_dataset":
+            "Player Summary Stats",
+
         "season": SEASON,
-        "latest_week": latest_week,
-        "generated_at_utc": (
+
+        "latest_week":
+            latest_week,
+
+        "generated_at_utc":
             datetime.now(
                 timezone.utc
-            ).isoformat()
-        ),
-        "player_week_records": (
-            len(records)
-        ),
-        "unique_players": int(
-            len(players)
-        ),
-        "teams_found": len(teams),
-        "teams": teams,
+            ).isoformat(),
+
+        "player_week_records":
+            len(records),
+
+        "unique_players":
+            int(len(players)),
+
+        "teams_found":
+            len(teams),
+
+        "teams":
+            teams,
+
         "position_counts": {
             str(key): int(value)
             for key, value
             in position_counts.items()
         },
-        "license": "CC BY 4.0",
+
+        "license":
+            "CC BY 4.0",
+
         "attribution": (
-            "Player statistics provided by nflverse. "
-            "Source: nflverse-data Player Summary Stats."
+            "Player statistics provided "
+            "by nflverse. "
+            "Source: nflverse-data "
+            "Player Summary Stats."
         ),
     }
 
 
 # ============================================================
-# OUTPUT
+# WRITE JSON SAFELY
 # ============================================================
 
 def write_json(
     path: Path,
     data,
 ) -> None:
-    """
-    Write to a temporary file first, then replace the
-    production file only after serialization succeeds.
-    """
 
     path.parent.mkdir(
         parents=True,
         exist_ok=True,
     )
 
-    temporary = path.with_suffix(
-        path.suffix + ".tmp"
+    temporary = (
+        path.with_suffix(
+            path.suffix + ".tmp"
+        )
     )
 
     try:
+
         with temporary.open(
             "w",
             encoding="utf-8",
@@ -463,7 +643,8 @@ def write_json(
             temporary.unlink()
 
         fail(
-            f"Unable to write {path}: {exc}"
+            f"Unable to write "
+            f"{path}: {exc}"
         )
 
 
@@ -474,26 +655,50 @@ def write_json(
 def main() -> None:
 
     print("=" * 60)
+
     print(
         f"NFL PLAYER DASHBOARD — "
         f"{SEASON} DATA UPDATE"
     )
+
     print("=" * 60)
+
+    # --------------------------------------------------------
+    # DOWNLOAD
+    # --------------------------------------------------------
 
     df = download_csv(
         PLAYER_STATS_URL
     )
 
-    validate_player_data(df)
+    # --------------------------------------------------------
+    # NORMALIZE
+    # --------------------------------------------------------
 
-    print()
-    print(
-        "Building normalized player dataset..."
+    df = normalize_schema(
+        df
     )
 
-    records = build_player_dataset(df)
+    # --------------------------------------------------------
+    # VALIDATE
+    # --------------------------------------------------------
+
+    validate_player_data(
+        df
+    )
+
+    # --------------------------------------------------------
+    # BUILD
+    # --------------------------------------------------------
+
+    records = (
+        build_player_dataset(
+            df
+        )
+    )
 
     if not records:
+
         fail(
             "Normalized player dataset "
             "contains zero records."
@@ -503,6 +708,10 @@ def main() -> None:
         df,
         records,
     )
+
+    # --------------------------------------------------------
+    # WRITE
+    # --------------------------------------------------------
 
     print()
     print(
@@ -519,6 +728,10 @@ def main() -> None:
         status,
     )
 
+    # --------------------------------------------------------
+    # FINAL VERIFICATION REPORT
+    # --------------------------------------------------------
+
     print()
     print("=" * 60)
     print("SUCCESS")
@@ -530,7 +743,7 @@ def main() -> None:
     )
 
     print(
-        f"Unique players: "
+        f"Unique fantasy players: "
         f"{status['unique_players']:,}"
     )
 
@@ -544,32 +757,47 @@ def main() -> None:
         f"{status['latest_week']}"
     )
 
-    print(
-        "Position counts:"
-    )
+    print()
+    print("Players by position:")
 
-    for position in sorted(
-        status["position_counts"]
-    ):
+    for position in [
+        "QB",
+        "RB",
+        "WR",
+        "TE",
+    ]:
+
+        count = (
+            status[
+                "position_counts"
+            ].get(
+                position,
+                0,
+            )
+        )
+
         print(
-            f"  {position}: "
-            f"{status['position_counts'][position]}"
+            f"  {position}: {count:,}"
         )
 
     print()
     print(
-        f"Player data written to: "
+        f"Player data: "
         f"{PLAYER_OUTPUT}"
     )
 
     print(
-        f"Validation status written to: "
+        f"Validation status: "
         f"{STATUS_OUTPUT}"
     )
 
     print()
     print(
-        "nflverse attribution: CC BY 4.0"
+        "Source: nflverse"
+    )
+
+    print(
+        "License: CC BY 4.0"
     )
 
 
