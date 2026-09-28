@@ -22,37 +22,46 @@ OUTPUT_DIR = Path("data")
 PLAYER_OUTPUT = OUTPUT_DIR / "players.json"
 STATUS_OUTPUT = OUTPUT_DIR / "data-status.json"
 
+BASE_RELEASE_URL = (
+    "https://github.com/nflverse/nflverse-data/releases/download"
+)
+
 PLAYER_STATS_URL = (
-    "https://github.com/nflverse/nflverse-data/releases/download/"
-    f"stats_player/stats_player_week_{SEASON}.csv"
+    f"{BASE_RELEASE_URL}/stats_player/"
+    f"stats_player_week_{SEASON}.csv"
 )
 
 SNAP_COUNTS_URL = (
-    "https://github.com/nflverse/nflverse-data/releases/download/"
-    f"snap_counts/snap_counts_{SEASON}.csv"
+    f"{BASE_RELEASE_URL}/snap_counts/"
+    f"snap_counts_{SEASON}.csv"
 )
 
-ADVANCED_SOURCES = {
-    "PASS": (
-        "https://github.com/nflverse/nflverse-data/releases/download/"
-        f"pfr_advstats/advstats_week_pass_{SEASON}.csv"
-    ),
-    "RUSH": (
-        "https://github.com/nflverse/nflverse-data/releases/download/"
-        f"pfr_advstats/advstats_week_rush_{SEASON}.csv"
-    ),
-    "REC": (
-        "https://github.com/nflverse/nflverse-data/releases/download/"
-        f"pfr_advstats/advstats_week_rec_{SEASON}.csv"
-    ),
-}
+ADV_PASS_URL = (
+    f"{BASE_RELEASE_URL}/pfr_advstats/"
+    f"advstats_week_pass_{SEASON}.csv"
+)
 
-ALLOWED_POSITIONS = {"QB", "RB", "WR", "TE"}
+ADV_RUSH_URL = (
+    f"{BASE_RELEASE_URL}/pfr_advstats/"
+    f"advstats_week_rush_{SEASON}.csv"
+)
+
+ADV_REC_URL = (
+    f"{BASE_RELEASE_URL}/pfr_advstats/"
+    f"advstats_week_rec_{SEASON}.csv"
+)
+
+ALLOWED_POSITIONS = {
+    "QB",
+    "RB",
+    "WR",
+    "TE",
+}
 
 REQUEST_TIMEOUT = 90
 
 HEADERS = {
-    "User-Agent": "nfl-player-dashboard/1.2"
+    "User-Agent": "nfl-player-dashboard/2.0"
 }
 
 MIN_SNAP_MATCH_RATE = 0.70
@@ -63,10 +72,15 @@ MIN_SNAP_MATCH_RATE = 0.70
 # ============================================================
 
 def fail(message: str) -> None:
+
     print()
-    print("=" * 70, file=sys.stderr)
-    print(f"VALIDATION FAILED: {message}", file=sys.stderr)
-    print("=" * 70, file=sys.stderr)
+    print("=" * 72, file=sys.stderr)
+    print(
+        f"VALIDATION FAILED: {message}",
+        file=sys.stderr,
+    )
+    print("=" * 72, file=sys.stderr)
+
     sys.exit(1)
 
 
@@ -74,15 +88,19 @@ def fail(message: str) -> None:
 # DOWNLOAD
 # ============================================================
 
-def download_csv(url: str, label: str) -> pd.DataFrame:
+def download_csv(
+    url: str,
+    label: str,
+) -> pd.DataFrame:
 
     print()
-    print("=" * 70)
+    print("=" * 72)
     print(f"DOWNLOADING: {label}")
-    print("=" * 70)
+    print("=" * 72)
     print(url)
 
     try:
+
         response = requests.get(
             url,
             headers=HEADERS,
@@ -93,41 +111,64 @@ def download_csv(url: str, label: str) -> pd.DataFrame:
         response.raise_for_status()
 
     except requests.RequestException as exc:
-        fail(f"Unable to download {label}: {exc}")
+
+        fail(
+            f"Unable to download {label}: {exc}"
+        )
 
     size = len(response.content)
 
-    print(f"HTTP status: {response.status_code}")
-    print(f"Downloaded bytes: {size:,}")
     print(
-        "Content type:",
-        response.headers.get("content-type", "unknown"),
+        f"HTTP status: {response.status_code}"
     )
 
-    beginning = response.content[:500].lower()
+    print(
+        f"Downloaded bytes: {size:,}"
+    )
+
+    print(
+        "Content type:",
+        response.headers.get(
+            "content-type",
+            "unknown",
+        ),
+    )
+
+    beginning = (
+        response.content[:500].lower()
+    )
 
     if (
         b"<html" in beginning
         or b"<!doctype html" in beginning
     ):
+
         fail(
-            f"{label} returned HTML instead of CSV."
+            f"{label} returned HTML "
+            "instead of CSV."
         )
 
-    if size < 1000:
+    if size < 500:
+
         fail(
-            f"{label} download is unexpectedly small "
+            f"{label} download is "
+            f"unexpectedly small "
             f"({size:,} bytes)."
         )
 
     try:
+
         df = pd.read_csv(
-            io.BytesIO(response.content)
+            io.BytesIO(
+                response.content
+            )
         )
 
     except Exception as exc:
+
         fail(
-            f"Unable to parse {label} CSV: {exc}"
+            f"Unable to parse "
+            f"{label}: {exc}"
         )
 
     print(
@@ -140,7 +181,7 @@ def download_csv(url: str, label: str) -> pd.DataFrame:
 
 
 # ============================================================
-# NORMALIZATION HELPERS
+# NORMALIZATION
 # ============================================================
 
 def normalize_name(value) -> str:
@@ -156,13 +197,23 @@ def normalize_name(value) -> str:
     )
 
     value = "".join(
-        c for c in value
-        if not unicodedata.combining(c)
+        character
+        for character in value
+        if not unicodedata.combining(
+            character
+        )
     )
 
-    value = value.lower().strip()
+    value = (
+        value
+        .lower()
+        .strip()
+    )
 
-    value = value.replace("’", "'")
+    value = value.replace(
+        "’",
+        "'",
+    )
 
     value = re.sub(
         r"[.'`-]",
@@ -190,7 +241,11 @@ def normalize_team(value) -> str:
     if pd.isna(value):
         return ""
 
-    team = str(value).upper().strip()
+    team = (
+        str(value)
+        .upper()
+        .strip()
+    )
 
     aliases = {
         "JAX": "JAC",
@@ -219,19 +274,14 @@ def clean_value(value):
 
 
 # ============================================================
-# PLAYER STATS SCHEMA
+# PLAYER DATA
 # ============================================================
 
-def normalize_player_schema(
+def normalize_player_data(
     df: pd.DataFrame,
 ) -> pd.DataFrame:
 
     df = df.copy()
-
-    print()
-    print(
-        "Normalizing player-stat schema..."
-    )
 
     team_candidates = [
         "recent_team",
@@ -249,12 +299,17 @@ def normalize_player_schema(
     )
 
     if team_column is None:
+
         fail(
             "No recognized team column "
             "in player stats."
         )
 
-    if team_column != "recent_team":
+    if (
+        team_column
+        != "recent_team"
+    ):
+
         df["recent_team"] = (
             df[team_column]
         )
@@ -264,28 +319,52 @@ def normalize_player_schema(
         not in df.columns
     ):
 
-        name_candidates = [
+        candidates = [
             "player_name",
             "name",
         ]
 
-        name_column = next(
+        player_column = next(
             (
                 column
-                for column in name_candidates
+                for column in candidates
                 if column in df.columns
             ),
             None,
         )
 
-        if name_column is None:
+        if player_column is None:
+
             fail(
                 "No recognized player-name "
-                "column in player stats."
+                "column."
             )
 
         df["player_display_name"] = (
-            df[name_column]
+            df[player_column]
+        )
+
+    required = {
+        "player_id",
+        "player_display_name",
+        "position",
+        "recent_team",
+        "season",
+        "week",
+    }
+
+    missing = (
+        required
+        - set(df.columns)
+    )
+
+    if missing:
+
+        fail(
+            "Player stats missing: "
+            + ", ".join(
+                sorted(missing)
+            )
         )
 
     df["recent_team"] = (
@@ -306,56 +385,66 @@ def normalize_player_schema(
         .apply(normalize_name)
     )
 
+    df["season"] = pd.to_numeric(
+        df["season"],
+        errors="coerce",
+    )
+
+    df["week"] = pd.to_numeric(
+        df["week"],
+        errors="coerce",
+    )
+
+    df = df[
+        (df["season"] == SEASON)
+        &
+        (
+            df["position"]
+            .isin(
+                ALLOWED_POSITIONS
+            )
+        )
+        &
+        (
+            df["week"]
+            .notna()
+        )
+    ].copy()
+
+    df["week"] = (
+        df["week"]
+        .astype(int)
+    )
+
     return df
 
-
-# ============================================================
-# PLAYER VALIDATION
-# ============================================================
 
 def validate_player_data(
     df: pd.DataFrame,
 ) -> None:
 
-    required = {
-        "player_id",
-        "player_display_name",
-        "position",
-        "recent_team",
-        "season",
-        "week",
-    }
+    if len(df) < 500:
 
-    missing = (
-        required
-        - set(df.columns)
-    )
-
-    if missing:
         fail(
-            "Player dataset is missing: "
-            + ", ".join(
-                sorted(missing)
-            )
+            "Player dataset contains "
+            "too few records."
         )
 
-    numeric_season = pd.to_numeric(
-        df["season"],
-        errors="coerce",
+    teams = set(
+        df["recent_team"]
+        .dropna()
+        .unique()
     )
 
-    season_df = df[
-        numeric_season == SEASON
-    ].copy()
+    if len(teams) != 32:
 
-    if len(season_df) < 100:
         fail(
-            f"Only {len(season_df):,} "
-            f"{SEASON} player-stat rows found."
+            f"Expected 32 teams; "
+            f"found {len(teams)}."
         )
 
     positions = set(
-        season_df["position"]
+        df["position"]
         .dropna()
         .unique()
     )
@@ -366,44 +455,24 @@ def validate_player_data(
     )
 
     if missing_positions:
+
         fail(
             "Missing fantasy positions: "
             + ", ".join(
-                sorted(missing_positions)
+                sorted(
+                    missing_positions
+                )
             )
         )
 
-    teams = set(
-        season_df["recent_team"]
-        .dropna()
-        .astype(str)
-        .unique()
-    )
-
-    if len(teams) != 32:
-        fail(
-            f"Expected 32 teams but found "
-            f"{len(teams)}."
-        )
-
-    weeks = pd.to_numeric(
-        season_df["week"],
-        errors="coerce",
-    ).dropna()
-
-    if weeks.empty:
-        fail(
-            "Player data contains "
-            "no valid weeks."
-        )
-
     latest_week = int(
-        weeks.max()
+        df["week"].max()
     )
 
     if not 1 <= latest_week <= 22:
+
         fail(
-            f"Unexpected player-stat week: "
+            f"Unexpected latest week: "
             f"{latest_week}"
         )
 
@@ -411,28 +480,31 @@ def validate_player_data(
     print(
         "PLAYER DATA VALIDATION PASSED"
     )
+
+    print(
+        f"Player-week records: "
+        f"{len(df):,}"
+    )
+
     print(
         f"Teams: {len(teams)}/32"
     )
+
     print(
-        f"Latest week: {latest_week}"
+        f"Latest week: "
+        f"{latest_week}"
     )
 
 
 # ============================================================
-# SNAP SCHEMA
+# SNAP DATA
 # ============================================================
 
-def normalize_snap_schema(
+def normalize_snap_data(
     df: pd.DataFrame,
 ) -> pd.DataFrame:
 
     df = df.copy()
-
-    print()
-    print(
-        "Normalizing snap-count schema..."
-    )
 
     required = {
         "season",
@@ -451,12 +523,37 @@ def normalize_snap_schema(
     )
 
     if missing:
+
         fail(
-            "Snap-count dataset is missing: "
+            "Snap data missing: "
             + ", ".join(
                 sorted(missing)
             )
         )
+
+    df["season"] = pd.to_numeric(
+        df["season"],
+        errors="coerce",
+    )
+
+    df["week"] = pd.to_numeric(
+        df["week"],
+        errors="coerce",
+    )
+
+    df = df[
+        (df["season"] == SEASON)
+        &
+        (
+            df["week"]
+            .notna()
+        )
+    ].copy()
+
+    df["week"] = (
+        df["week"]
+        .astype(int)
+    )
 
     df["team"] = (
         df["team"]
@@ -468,176 +565,37 @@ def normalize_snap_schema(
         .apply(normalize_team)
     )
 
-    df["position"] = (
-        df["position"]
-        .fillna("")
-        .astype(str)
-        .str.upper()
-        .str.strip()
-    )
-
     df["_join_name"] = (
         df["player"]
         .apply(normalize_name)
     )
 
-    df["week"] = pd.to_numeric(
-        df["week"],
-        errors="coerce",
+    df["offense_snaps"] = (
+        pd.to_numeric(
+            df["offense_snaps"],
+            errors="coerce",
+        )
     )
 
-    df["season"] = pd.to_numeric(
-        df["season"],
-        errors="coerce",
-    )
-
-    df["offense_snaps"] = pd.to_numeric(
-        df["offense_snaps"],
-        errors="coerce",
-    )
-
-    df["offense_pct"] = pd.to_numeric(
-        df["offense_pct"],
-        errors="coerce",
+    df["offense_pct"] = (
+        pd.to_numeric(
+            df["offense_pct"],
+            errors="coerce",
+        )
     )
 
     return df
 
 
-# ============================================================
-# SNAP VALIDATION
-# ============================================================
-
-def validate_snap_data(
-    df: pd.DataFrame,
-) -> None:
-
-    season_df = df[
-        df["season"] == SEASON
-    ].copy()
-
-    if len(season_df) < 500:
-        fail(
-            f"Only {len(season_df):,} "
-            f"{SEASON} snap records found."
-        )
-
-    weeks = (
-        season_df["week"]
-        .dropna()
-    )
-
-    if weeks.empty:
-        fail(
-            "Snap data contains "
-            "no valid weeks."
-        )
-
-    latest_week = int(
-        weeks.max()
-    )
-
-    teams = set(
-        season_df["team"]
-        .dropna()
-        .astype(str)
-        .unique()
-    )
-
-    if len(teams) < 30:
-        fail(
-            f"Only {len(teams)} teams "
-            "found in snap-count data."
-        )
-
-    print()
-    print(
-        "SNAP DATA VALIDATION PASSED"
-    )
-    print(
-        f"Snap records: "
-        f"{len(season_df):,}"
-    )
-    print(
-        f"Snap teams: "
-        f"{len(teams)}"
-    )
-    print(
-        f"Latest snap week: "
-        f"{latest_week}"
-    )
-
-
-# ============================================================
-# BUILD PLAYER DATA
-# ============================================================
-
-def build_player_dataset(
-    df: pd.DataFrame,
-) -> pd.DataFrame:
-
-    numeric_season = pd.to_numeric(
-        df["season"],
-        errors="coerce",
-    )
-
-    df = df[
-        (numeric_season == SEASON)
-        &
-        (
-            df["position"]
-            .isin(ALLOWED_POSITIONS)
-        )
-    ].copy()
-
-    df["week"] = pd.to_numeric(
-        df["week"],
-        errors="coerce",
-    )
-
-    df = df[
-        df["week"].notna()
-    ].copy()
-
-    df["week"] = (
-        df["week"]
-        .astype(int)
-    )
-
-    return df
-
-
-# ============================================================
-# JOIN SNAP COUNTS
-# ============================================================
-
-def join_snap_counts(
+def join_snap_data(
     players: pd.DataFrame,
     snaps: pd.DataFrame,
 ):
 
     print()
-    print("=" * 70)
+    print("=" * 72)
     print("JOINING SNAP COUNTS")
-    print("=" * 70)
-
-    snap_df = snaps[
-        (snaps["season"] == SEASON)
-        &
-        (
-            snaps["position"]
-            .isin(ALLOWED_POSITIONS)
-        )
-    ].copy()
-
-    snap_df = snap_df[
-        snap_df["week"].notna()
-    ].copy()
-
-    snap_df["week"] = (
-        snap_df["week"]
-        .astype(int)
-    )
+    print("=" * 72)
 
     snap_keep = [
         "_join_name",
@@ -648,8 +606,8 @@ def join_snap_counts(
         "offense_pct",
     ]
 
-    snap_df = (
-        snap_df[snap_keep]
+    snap_join = (
+        snaps[snap_keep]
         .sort_values(
             [
                 "_join_name",
@@ -675,7 +633,7 @@ def join_snap_counts(
     )
 
     joined = players.merge(
-        snap_df,
+        snap_join,
         how="left",
         left_on=[
             "_join_name",
@@ -696,13 +654,15 @@ def join_snap_counts(
         errors="ignore",
     )
 
-    total = len(joined)
-
     matched = int(
-        joined["offense_snaps"]
+        joined[
+            "offense_snaps"
+        ]
         .notna()
         .sum()
     )
+
+    total = len(joined)
 
     match_rate = (
         matched / total
@@ -711,13 +671,8 @@ def join_snap_counts(
     )
 
     print(
-        f"Player-week records: "
-        f"{total:,}"
-    )
-
-    print(
-        f"Snap matches: "
-        f"{matched:,}"
+        f"Matched: "
+        f"{matched:,}/{total:,}"
     )
 
     print(
@@ -729,10 +684,10 @@ def join_snap_counts(
         match_rate
         < MIN_SNAP_MATCH_RATE
     ):
+
         fail(
-            "Snap-count join coverage "
-            "is too low: "
-            f"{match_rate:.1%}"
+            "Snap match rate below "
+            f"{MIN_SNAP_MATCH_RATE:.0%}."
         )
 
     return (
@@ -743,13 +698,285 @@ def join_snap_counts(
 
 
 # ============================================================
+# ADVANCED DATA
+# ============================================================
+
+def normalize_advanced_data(
+    df: pd.DataFrame,
+    prefix: str,
+) -> pd.DataFrame:
+
+    df = df.copy()
+
+    required = {
+        "season",
+        "week",
+        "team",
+        "opponent",
+        "pfr_player_name",
+        "pfr_player_id",
+    }
+
+    missing = (
+        required
+        - set(df.columns)
+    )
+
+    if missing:
+
+        fail(
+            f"{prefix} advanced data missing: "
+            + ", ".join(
+                sorted(missing)
+            )
+        )
+
+    df["season"] = pd.to_numeric(
+        df["season"],
+        errors="coerce",
+    )
+
+    df["week"] = pd.to_numeric(
+        df["week"],
+        errors="coerce",
+    )
+
+    df = df[
+        (df["season"] == SEASON)
+        &
+        (
+            df["week"]
+            .notna()
+        )
+    ].copy()
+
+    df["week"] = (
+        df["week"]
+        .astype(int)
+    )
+
+    df["team"] = (
+        df["team"]
+        .apply(normalize_team)
+    )
+
+    df["opponent"] = (
+        df["opponent"]
+        .apply(normalize_team)
+    )
+
+    df["_join_name"] = (
+        df["pfr_player_name"]
+        .apply(normalize_name)
+    )
+
+    protected = {
+        "_join_name",
+        "season",
+        "week",
+        "team",
+        "opponent",
+        "pfr_player_name",
+        "pfr_player_id",
+        "game_id",
+        "pfr_game_id",
+        "game_type",
+    }
+
+    rename_map = {}
+
+    for column in df.columns:
+
+        if column not in protected:
+
+            rename_map[column] = (
+                f"adv_{prefix}_{column}"
+            )
+
+    df = df.rename(
+        columns=rename_map
+    )
+
+    df = df.rename(
+        columns={
+            "pfr_player_id":
+                f"adv_{prefix}_pfr_player_id",
+            "pfr_player_name":
+                f"adv_{prefix}_pfr_player_name",
+        }
+    )
+
+    return df
+
+
+def join_advanced_data(
+    players: pd.DataFrame,
+    advanced: pd.DataFrame,
+    prefix: str,
+    eligibility_column: str | None,
+):
+
+    print()
+    print("=" * 72)
+    print(
+        f"JOINING ADVANCED "
+        f"{prefix.upper()}"
+    )
+    print("=" * 72)
+
+    exclude = {
+        "season",
+        "opponent",
+        "game_id",
+        "pfr_game_id",
+        "game_type",
+    }
+
+    keep_columns = [
+        column
+        for column
+        in advanced.columns
+        if column not in exclude
+    ]
+
+    advanced_join = (
+        advanced[
+            keep_columns
+        ]
+        .drop_duplicates(
+            subset=[
+                "_join_name",
+                "team",
+                "week",
+            ],
+            keep="first",
+        )
+    )
+
+    joined = players.merge(
+        advanced_join,
+        how="left",
+        left_on=[
+            "_join_name",
+            "recent_team",
+            "week",
+        ],
+        right_on=[
+            "_join_name",
+            "team",
+            "week",
+        ],
+        validate="many_to_one",
+        suffixes=(
+            "",
+            f"_{prefix}",
+        ),
+    )
+
+    joined.drop(
+        columns=["team"],
+        inplace=True,
+        errors="ignore",
+    )
+
+    id_column = (
+        f"adv_{prefix}_pfr_player_id"
+    )
+
+    matched_mask = (
+        joined[id_column]
+        .notna()
+    )
+
+    total_matches = int(
+        matched_mask.sum()
+    )
+
+    if (
+        eligibility_column
+        and
+        eligibility_column
+        in joined.columns
+    ):
+
+        eligible_values = (
+            pd.to_numeric(
+                joined[
+                    eligibility_column
+                ],
+                errors="coerce",
+            )
+            .fillna(0)
+        )
+
+        eligible_mask = (
+            eligible_values > 0
+        )
+
+    else:
+
+        eligible_mask = (
+            joined["position"]
+            .notna()
+        )
+
+    eligible_count = int(
+        eligible_mask.sum()
+    )
+
+    eligible_matches = int(
+        (
+            eligible_mask
+            &
+            matched_mask
+        ).sum()
+    )
+
+    coverage = (
+        eligible_matches
+        / eligible_count
+        if eligible_count
+        else 0
+    )
+
+    print(
+        f"Eligible player-weeks: "
+        f"{eligible_count:,}"
+    )
+
+    print(
+        f"Eligible matches: "
+        f"{eligible_matches:,}"
+    )
+
+    print(
+        f"Coverage: "
+        f"{coverage:.1%}"
+    )
+
+    return (
+        joined,
+        {
+            "eligible_records":
+                eligible_count,
+            "matched_records":
+                eligible_matches,
+            "coverage":
+                coverage,
+            "total_matches":
+                total_matches,
+        },
+    )
+
+
+# ============================================================
 # DERIVED METRICS
 # ============================================================
 
 def safe_divide(
-    numerator: pd.Series,
-    denominator: pd.Series,
-) -> pd.Series:
+    numerator,
+    denominator,
+):
 
     numerator = pd.to_numeric(
         numerator,
@@ -761,13 +988,17 @@ def safe_divide(
         errors="coerce",
     )
 
+    denominator = (
+        denominator
+        .replace(
+            0,
+            float("nan"),
+        )
+    )
+
     return (
         numerator
-        /
-        denominator.replace(
-            0,
-            pd.NA,
-        )
+        / denominator
     )
 
 
@@ -782,6 +1013,7 @@ def add_derived_metrics(
         and
         "receptions" in df.columns
     ):
+
         df["touches"] = (
             pd.to_numeric(
                 df["carries"],
@@ -799,6 +1031,7 @@ def add_derived_metrics(
         and
         "targets" in df.columns
     ):
+
         df["opportunities"] = (
             pd.to_numeric(
                 df["carries"],
@@ -811,7 +1044,12 @@ def add_derived_metrics(
             ).fillna(0)
         )
 
-    if "targets" in df.columns:
+    if (
+        "targets" in df.columns
+        and
+        "offense_snaps" in df.columns
+    ):
+
         df["targets_per_snap"] = (
             safe_divide(
                 df["targets"],
@@ -819,7 +1057,12 @@ def add_derived_metrics(
             )
         )
 
-    if "carries" in df.columns:
+    if (
+        "carries" in df.columns
+        and
+        "offense_snaps" in df.columns
+    ):
+
         df["carries_per_snap"] = (
             safe_divide(
                 df["carries"],
@@ -827,13 +1070,16 @@ def add_derived_metrics(
             )
         )
 
-    if "fantasy_points" in df.columns:
+    if (
+        "fantasy_points"
+        in df.columns
+    ):
 
-        df["fantasy_points_per_snap"] = (
-            safe_divide(
-                df["fantasy_points"],
-                df["offense_snaps"],
-            )
+        df[
+            "fantasy_points_per_snap"
+        ] = safe_divide(
+            df["fantasy_points"],
+            df["offense_snaps"],
         )
 
         df[
@@ -850,11 +1096,11 @@ def add_derived_metrics(
         in df.columns
     ):
 
-        df["ppr_points_per_snap"] = (
-            safe_divide(
-                df["fantasy_points_ppr"],
-                df["offense_snaps"],
-            )
+        df[
+            "ppr_points_per_snap"
+        ] = safe_divide(
+            df["fantasy_points_ppr"],
+            df["offense_snaps"],
         )
 
         df[
@@ -873,13 +1119,12 @@ def add_derived_metrics(
         "targets"
         in df.columns
     ):
+
         df[
             "receiving_yards_per_target"
-        ] = (
-            safe_divide(
-                df["receiving_yards"],
-                df["targets"],
-            )
+        ] = safe_divide(
+            df["receiving_yards"],
+            df["targets"],
         )
 
     if (
@@ -887,6 +1132,7 @@ def add_derived_metrics(
         and
         "targets" in df.columns
     ):
+
         df["catch_rate"] = (
             safe_divide(
                 df["receptions"],
@@ -894,11 +1140,60 @@ def add_derived_metrics(
             )
         )
 
+    if (
+        "rushing_yards"
+        in df.columns
+        and
+        "carries"
+        in df.columns
+    ):
+
+        df[
+            "rushing_yards_per_carry_calc"
+        ] = safe_divide(
+            df["rushing_yards"],
+            df["carries"],
+        )
+
+    if (
+        "adv_rush_rushing_yards_after_contact"
+        in df.columns
+        and
+        "carries"
+        in df.columns
+    ):
+
+        df[
+            "yards_after_contact_per_carry"
+        ] = safe_divide(
+            df[
+                "adv_rush_rushing_yards_after_contact"
+            ],
+            df["carries"],
+        )
+
+    if (
+        "adv_rush_rushing_yards_before_contact"
+        in df.columns
+        and
+        "carries"
+        in df.columns
+    ):
+
+        df[
+            "yards_before_contact_per_carry"
+        ] = safe_divide(
+            df[
+                "adv_rush_rushing_yards_before_contact"
+            ],
+            df["carries"],
+        )
+
     return df
 
 
 # ============================================================
-# OUTPUT HELPERS
+# OUTPUT
 # ============================================================
 
 def dataframe_records(
@@ -906,7 +1201,9 @@ def dataframe_records(
 ):
 
     df = df.drop(
-        columns=["_join_name"],
+        columns=[
+            "_join_name",
+        ],
         errors="ignore",
     )
 
@@ -927,7 +1224,9 @@ def dataframe_records(
             in row.items()
         }
 
-        records.append(record)
+        records.append(
+            record
+        )
 
     return records
 
@@ -963,7 +1262,9 @@ def write_json(
                 allow_nan=False,
             )
 
-        temporary.replace(path)
+        temporary.replace(
+            path
+        )
 
     except Exception as exc:
 
@@ -977,31 +1278,16 @@ def write_json(
 
 
 # ============================================================
-# STATUS FILE
+# STATUS
 # ============================================================
 
 def build_status(
-    df: pd.DataFrame,
-    snap_records: int,
-    snap_match_rate: float,
+    df,
+    snap_stats,
+    pass_stats,
+    rush_stats,
+    rec_stats,
 ):
-
-    weeks = pd.to_numeric(
-        df["week"],
-        errors="coerce",
-    ).dropna()
-
-    latest_week = int(
-        weeks.max()
-    )
-
-    teams = sorted(
-        df["recent_team"]
-        .dropna()
-        .astype(str)
-        .unique()
-        .tolist()
-    )
 
     players = (
         df[
@@ -1014,6 +1300,13 @@ def build_status(
         .drop_duplicates()
     )
 
+    teams = sorted(
+        df["recent_team"]
+        .dropna()
+        .unique()
+        .tolist()
+    )
+
     position_counts = (
         players["position"]
         .value_counts()
@@ -1021,51 +1314,85 @@ def build_status(
     )
 
     return {
-        "status": "validated",
-        "season": SEASON,
-        "latest_week": latest_week,
-        "generated_at_utc": (
+
+        "status":
+            "validated",
+
+        "season":
+            SEASON,
+
+        "latest_week":
+            int(
+                df["week"].max()
+            ),
+
+        "generated_at_utc":
             datetime.now(
                 timezone.utc
-            ).isoformat()
-        ),
+            ).isoformat(),
+
         "player_week_records":
             int(len(df)),
+
         "unique_players":
             int(len(players)),
+
         "teams_found":
             int(len(teams)),
+
         "teams":
             teams,
+
         "position_counts": {
-            str(k): int(v)
-            for k, v
+            str(key): int(value)
+            for key, value
             in position_counts.items()
         },
+
         "sources": {
+
             "player_stats": {
-                "status": "loaded",
-                "provider": "nflverse",
+                "status":
+                    "loaded",
+                "provider":
+                    "nflverse",
             },
+
             "snap_counts": {
-                "status": "loaded",
-                "provider": "nflverse",
-                "matched_player_week_records":
-                    int(snap_records),
-                "match_rate":
-                    round(
-                        float(
-                            snap_match_rate
-                        ),
-                        4,
-                    ),
+                "status":
+                    "loaded",
+                **snap_stats,
+            },
+
+            "advanced_passing": {
+                "status":
+                    "loaded",
+                **pass_stats,
+            },
+
+            "advanced_rushing": {
+                "status":
+                    "loaded",
+                **rush_stats,
+            },
+
+            "advanced_receiving": {
+                "status":
+                    "loaded",
+                **rec_stats,
             },
         },
+
         "license":
             "CC BY 4.0",
+
         "attribution": (
-            "NFL data provided "
-            "through nflverse."
+            "NFL statistics provided "
+            "through nflverse. "
+            "See nflverse-data and "
+            "applicable dataset "
+            "documentation for source "
+            "and attribution details."
         ),
     }
 
@@ -1076,115 +1403,147 @@ def build_status(
 
 def main() -> None:
 
-    print("=" * 70)
+    print("=" * 72)
+
     print(
         f"NFL PLAYER DASHBOARD — "
-        f"{SEASON} DATA UPDATE"
+        f"{SEASON} CONSOLIDATED UPDATE"
     )
-    print("=" * 70)
 
-    # ========================================================
-    # TEMPORARY ADVANCED DATA SCHEMA TEST
-    # ========================================================
+    print("=" * 72)
 
-    print()
-    print("=" * 70)
-    print("ADVANCED DATA SCHEMA TEST")
-    print("=" * 70)
-
-    for label, url in (
-        ADVANCED_SOURCES.items()
-    ):
-
-        advanced_df = download_csv(
-            url,
-            f"PFR Advanced {label}",
-        )
-
-        print()
-        print(
-            f"{label} ROWS: "
-            f"{len(advanced_df):,}"
-        )
-
-        print(
-            f"{label} COLUMNS: "
-            f"{len(advanced_df.columns):,}"
-        )
-
-        print(
-            f"{label} COLUMN NAMES:"
-        )
-
-        for column in (
-            advanced_df.columns
-        ):
-            print(
-                f"  {column}"
-            )
-
-        print()
-
-    # ========================================================
+    # --------------------------------------------------------
     # PLAYER STATS
-    # ========================================================
+    # --------------------------------------------------------
 
     player_raw = download_csv(
         PLAYER_STATS_URL,
-        "nflverse Player Summary Stats",
+        "Player Summary Stats",
     )
 
-    player_raw = (
-        normalize_player_schema(
+    players = (
+        normalize_player_data(
             player_raw
         )
     )
 
     validate_player_data(
-        player_raw
+        players
     )
 
-    players = (
-        build_player_dataset(
-            player_raw
-        )
-    )
-
-    # ========================================================
+    # --------------------------------------------------------
     # SNAP COUNTS
-    # ========================================================
+    # --------------------------------------------------------
 
     snap_raw = download_csv(
         SNAP_COUNTS_URL,
-        "nflverse Snap Counts",
+        "Snap Counts",
     )
 
-    snap_raw = (
-        normalize_snap_schema(
-            snap_raw
-        )
-    )
-
-    validate_snap_data(
+    snaps = normalize_snap_data(
         snap_raw
     )
-
-    # ========================================================
-    # JOIN SNAP COUNTS
-    # ========================================================
 
     (
         joined,
         snap_matches,
-        snap_match_rate,
-    ) = join_snap_counts(
+        snap_rate,
+    ) = join_snap_data(
         players,
-        snap_raw,
+        snaps,
     )
 
-    # ========================================================
+    snap_stats = {
+        "matched_records":
+            snap_matches,
+        "coverage":
+            round(
+                snap_rate,
+                4,
+            ),
+    }
+
+    # --------------------------------------------------------
+    # ADVANCED PASSING
+    # --------------------------------------------------------
+
+    pass_raw = download_csv(
+        ADV_PASS_URL,
+        "Advanced Passing",
+    )
+
+    pass_data = (
+        normalize_advanced_data(
+            pass_raw,
+            "pass",
+        )
+    )
+
+    (
+        joined,
+        pass_stats,
+    ) = join_advanced_data(
+        joined,
+        pass_data,
+        "pass",
+        "attempts",
+    )
+
+    # --------------------------------------------------------
+    # ADVANCED RUSHING
+    # --------------------------------------------------------
+
+    rush_raw = download_csv(
+        ADV_RUSH_URL,
+        "Advanced Rushing",
+    )
+
+    rush_data = (
+        normalize_advanced_data(
+            rush_raw,
+            "rush",
+        )
+    )
+
+    (
+        joined,
+        rush_stats,
+    ) = join_advanced_data(
+        joined,
+        rush_data,
+        "rush",
+        "carries",
+    )
+
+    # --------------------------------------------------------
+    # ADVANCED RECEIVING
+    # --------------------------------------------------------
+
+    rec_raw = download_csv(
+        ADV_REC_URL,
+        "Advanced Receiving",
+    )
+
+    rec_data = (
+        normalize_advanced_data(
+            rec_raw,
+            "rec",
+        )
+    )
+
+    (
+        joined,
+        rec_stats,
+    ) = join_advanced_data(
+        joined,
+        rec_data,
+        "rec",
+        "targets",
+    )
+
+    # --------------------------------------------------------
     # DERIVED METRICS
-    # ========================================================
+    # --------------------------------------------------------
 
     joined = (
         add_derived_metrics(
@@ -1192,23 +1551,34 @@ def main() -> None:
         )
     )
 
-    # ========================================================
+    # --------------------------------------------------------
     # FINAL VALIDATION
-    # ========================================================
+    # --------------------------------------------------------
+
+    if len(joined) != len(players):
+
+        fail(
+            "Advanced joins changed "
+            "the number of player-week "
+            "records."
+        )
 
     teams = set(
         joined["recent_team"]
         .dropna()
-        .astype(str)
         .unique()
     )
 
     if len(teams) != 32:
+
         fail(
-            f"Final dataset has "
-            f"{len(teams)} teams "
-            "instead of 32."
+            "Final dataset does not "
+            "contain all 32 teams."
         )
+
+    # --------------------------------------------------------
+    # OUTPUT
+    # --------------------------------------------------------
 
     records = (
         dataframe_records(
@@ -1216,25 +1586,12 @@ def main() -> None:
         )
     )
 
-    if not records:
-        fail(
-            "Final player dataset "
-            "contains zero records."
-        )
-
     status = build_status(
         joined,
-        snap_matches,
-        snap_match_rate,
-    )
-
-    # ========================================================
-    # WRITE OUTPUT
-    # ========================================================
-
-    print()
-    print(
-        "Writing validated output..."
+        snap_stats,
+        pass_stats,
+        rush_stats,
+        rec_stats,
     )
 
     write_json(
@@ -1247,21 +1604,21 @@ def main() -> None:
         status,
     )
 
-    # ========================================================
+    # --------------------------------------------------------
     # REPORT
-    # ========================================================
+    # --------------------------------------------------------
 
     print()
-    print("=" * 70)
+    print("=" * 72)
     print("SUCCESS")
-    print("=" * 70)
+    print("=" * 72)
 
     print()
     print("PLAYER DATA")
 
     print(
         f"Player-week records: "
-        f"{status['player_week_records']:,}"
+        f"{len(joined):,}"
     )
 
     print(
@@ -1280,34 +1637,70 @@ def main() -> None:
     )
 
     print()
-    print(
-        "PLAYERS BY POSITION"
-    )
-
-    for position in [
-        "QB",
-        "RB",
-        "WR",
-        "TE",
-    ]:
-
-        print(
-            f"{position}: "
-            f"{status['position_counts'].get(position, 0):,}"
-        )
-
-    print()
-    print("SNAP DATA")
-    print("Downloaded: YES")
+    print("SNAP COUNTS")
 
     print(
-        f"Matched player-week records: "
+        f"Matched: "
         f"{snap_matches:,}"
     )
 
     print(
-        f"Snap match rate: "
-        f"{snap_match_rate:.1%}"
+        f"Coverage: "
+        f"{snap_rate:.1%}"
+    )
+
+    print()
+    print("ADVANCED PASSING")
+
+    print(
+        f"Eligible: "
+        f"{pass_stats['eligible_records']:,}"
+    )
+
+    print(
+        f"Matched: "
+        f"{pass_stats['matched_records']:,}"
+    )
+
+    print(
+        f"Coverage: "
+        f"{pass_stats['coverage']:.1%}"
+    )
+
+    print()
+    print("ADVANCED RUSHING")
+
+    print(
+        f"Eligible: "
+        f"{rush_stats['eligible_records']:,}"
+    )
+
+    print(
+        f"Matched: "
+        f"{rush_stats['matched_records']:,}"
+    )
+
+    print(
+        f"Coverage: "
+        f"{rush_stats['coverage']:.1%}"
+    )
+
+    print()
+    print("ADVANCED RECEIVING")
+
+    print(
+        f"Eligible: "
+        f"{rec_stats['eligible_records']:,}"
+    )
+
+    print(
+        f"Matched: "
+        f"{rec_stats['matched_records']:,}"
+    )
+
+    print(
+        f"Coverage: "
+        f"{rec_stats['coverage']:.1%}"
     )
 
     print()
@@ -1325,7 +1718,7 @@ def main() -> None:
 
     print()
     print(
-        "VALIDATION: PASSED"
+        "FINAL VALIDATION: PASSED"
     )
 
 
