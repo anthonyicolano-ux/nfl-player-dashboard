@@ -32,16 +32,29 @@ SNAP_COUNTS_URL = (
     f"snap_counts/snap_counts_{SEASON}.csv"
 )
 
+ADVANCED_SOURCES = {
+    "PASS": (
+        "https://github.com/nflverse/nflverse-data/releases/download/"
+        f"pfr_advstats/advstats_week_pass_{SEASON}.csv"
+    ),
+    "RUSH": (
+        "https://github.com/nflverse/nflverse-data/releases/download/"
+        f"pfr_advstats/advstats_week_rush_{SEASON}.csv"
+    ),
+    "REC": (
+        "https://github.com/nflverse/nflverse-data/releases/download/"
+        f"pfr_advstats/advstats_week_rec_{SEASON}.csv"
+    ),
+}
+
 ALLOWED_POSITIONS = {"QB", "RB", "WR", "TE"}
 
 REQUEST_TIMEOUT = 90
 
 HEADERS = {
-    "User-Agent": "nfl-player-dashboard/1.1"
+    "User-Agent": "nfl-player-dashboard/1.2"
 }
 
-# We deliberately use a conservative threshold.
-# Some fantasy players may legitimately have no offensive snaps.
 MIN_SNAP_MATCH_RATE = 0.70
 
 
@@ -62,6 +75,7 @@ def fail(message: str) -> None:
 # ============================================================
 
 def download_csv(url: str, label: str) -> pd.DataFrame:
+
     print()
     print("=" * 70)
     print(f"DOWNLOADING: {label}")
@@ -75,6 +89,7 @@ def download_csv(url: str, label: str) -> pd.DataFrame:
             timeout=REQUEST_TIMEOUT,
             allow_redirects=True,
         )
+
         response.raise_for_status()
 
     except requests.RequestException as exc:
@@ -95,7 +110,9 @@ def download_csv(url: str, label: str) -> pd.DataFrame:
         b"<html" in beginning
         or b"<!doctype html" in beginning
     ):
-        fail(f"{label} returned HTML instead of CSV.")
+        fail(
+            f"{label} returned HTML instead of CSV."
+        )
 
     if size < 1000:
         fail(
@@ -104,13 +121,19 @@ def download_csv(url: str, label: str) -> pd.DataFrame:
         )
 
     try:
-        df = pd.read_csv(io.BytesIO(response.content))
+        df = pd.read_csv(
+            io.BytesIO(response.content)
+        )
+
     except Exception as exc:
-        fail(f"Unable to parse {label} CSV: {exc}")
+        fail(
+            f"Unable to parse {label} CSV: {exc}"
+        )
 
     print(
         f"Parsed successfully: "
-        f"{len(df):,} rows x {len(df.columns):,} columns"
+        f"{len(df):,} rows x "
+        f"{len(df.columns):,} columns"
     )
 
     return df
@@ -121,17 +144,17 @@ def download_csv(url: str, label: str) -> pd.DataFrame:
 # ============================================================
 
 def normalize_name(value) -> str:
-    """
-    Conservative name normalization for joining nflverse
-    player stats to PFR snap-count records.
-    """
 
     if pd.isna(value):
         return ""
 
     value = str(value)
 
-    value = unicodedata.normalize("NFKD", value)
+    value = unicodedata.normalize(
+        "NFKD",
+        value,
+    )
+
     value = "".join(
         c for c in value
         if not unicodedata.combining(c)
@@ -139,24 +162,31 @@ def normalize_name(value) -> str:
 
     value = value.lower().strip()
 
-    # Remove common punctuation.
     value = value.replace("’", "'")
-    value = re.sub(r"[.'`-]", "", value)
 
-    # Remove common suffixes.
+    value = re.sub(
+        r"[.'`-]",
+        "",
+        value,
+    )
+
     value = re.sub(
         r"\b(jr|sr|ii|iii|iv|v)\b",
         "",
         value,
     )
 
-    # Keep letters/numbers only.
-    value = re.sub(r"[^a-z0-9]", "", value)
+    value = re.sub(
+        r"[^a-z0-9]",
+        "",
+        value,
+    )
 
     return value
 
 
 def normalize_team(value) -> str:
+
     if pd.isna(value):
         return ""
 
@@ -171,10 +201,14 @@ def normalize_team(value) -> str:
         "LAR": "LA",
     }
 
-    return aliases.get(team, team)
+    return aliases.get(
+        team,
+        team,
+    )
 
 
 def clean_value(value):
+
     if pd.isna(value):
         return None
 
@@ -195,7 +229,9 @@ def normalize_player_schema(
     df = df.copy()
 
     print()
-    print("Normalizing player-stat schema...")
+    print(
+        "Normalizing player-stat schema..."
+    )
 
     team_candidates = [
         "recent_team",
@@ -214,14 +250,19 @@ def normalize_player_schema(
 
     if team_column is None:
         fail(
-            "No recognized team column in player stats. "
-            "Expected recent_team, team, or posteam."
+            "No recognized team column "
+            "in player stats."
         )
 
     if team_column != "recent_team":
-        df["recent_team"] = df[team_column]
+        df["recent_team"] = (
+            df[team_column]
+        )
 
-    if "player_display_name" not in df.columns:
+    if (
+        "player_display_name"
+        not in df.columns
+    ):
 
         name_candidates = [
             "player_name",
@@ -239,11 +280,13 @@ def normalize_player_schema(
 
         if name_column is None:
             fail(
-                "No recognized player-name column "
-                "in player stats."
+                "No recognized player-name "
+                "column in player stats."
             )
 
-        df["player_display_name"] = df[name_column]
+        df["player_display_name"] = (
+            df[name_column]
+        )
 
     df["recent_team"] = (
         df["recent_team"]
@@ -283,12 +326,17 @@ def validate_player_data(
         "week",
     }
 
-    missing = required - set(df.columns)
+    missing = (
+        required
+        - set(df.columns)
+    )
 
     if missing:
         fail(
             "Player dataset is missing: "
-            + ", ".join(sorted(missing))
+            + ", ".join(
+                sorted(missing)
+            )
         )
 
     numeric_season = pd.to_numeric(
@@ -313,7 +361,8 @@ def validate_player_data(
     )
 
     missing_positions = (
-        ALLOWED_POSITIONS - positions
+        ALLOWED_POSITIONS
+        - positions
     )
 
     if missing_positions:
@@ -343,9 +392,14 @@ def validate_player_data(
     ).dropna()
 
     if weeks.empty:
-        fail("Player data contains no valid weeks.")
+        fail(
+            "Player data contains "
+            "no valid weeks."
+        )
 
-    latest_week = int(weeks.max())
+    latest_week = int(
+        weeks.max()
+    )
 
     if not 1 <= latest_week <= 22:
         fail(
@@ -354,13 +408,19 @@ def validate_player_data(
         )
 
     print()
-    print("PLAYER DATA VALIDATION PASSED")
-    print(f"Teams: {len(teams)}/32")
-    print(f"Latest week: {latest_week}")
+    print(
+        "PLAYER DATA VALIDATION PASSED"
+    )
+    print(
+        f"Teams: {len(teams)}/32"
+    )
+    print(
+        f"Latest week: {latest_week}"
+    )
 
 
 # ============================================================
-# SNAP SCHEMA / VALIDATION
+# SNAP SCHEMA
 # ============================================================
 
 def normalize_snap_schema(
@@ -370,7 +430,9 @@ def normalize_snap_schema(
     df = df.copy()
 
     print()
-    print("Normalizing snap-count schema...")
+    print(
+        "Normalizing snap-count schema..."
+    )
 
     required = {
         "season",
@@ -383,12 +445,17 @@ def normalize_snap_schema(
         "offense_pct",
     }
 
-    missing = required - set(df.columns)
+    missing = (
+        required
+        - set(df.columns)
+    )
 
     if missing:
         fail(
             "Snap-count dataset is missing: "
-            + ", ".join(sorted(missing))
+            + ", ".join(
+                sorted(missing)
+            )
         )
 
     df["team"] = (
@@ -437,6 +504,10 @@ def normalize_snap_schema(
     return df
 
 
+# ============================================================
+# SNAP VALIDATION
+# ============================================================
+
 def validate_snap_data(
     df: pd.DataFrame,
 ) -> None:
@@ -457,9 +528,14 @@ def validate_snap_data(
     )
 
     if weeks.empty:
-        fail("Snap data contains no valid weeks.")
+        fail(
+            "Snap data contains "
+            "no valid weeks."
+        )
 
-    latest_week = int(weeks.max())
+    latest_week = int(
+        weeks.max()
+    )
 
     teams = set(
         season_df["team"]
@@ -470,12 +546,14 @@ def validate_snap_data(
 
     if len(teams) < 30:
         fail(
-            f"Only {len(teams)} teams found "
-            "in snap-count data."
+            f"Only {len(teams)} teams "
+            "found in snap-count data."
         )
 
     print()
-    print("SNAP DATA VALIDATION PASSED")
+    print(
+        "SNAP DATA VALIDATION PASSED"
+    )
     print(
         f"Snap records: "
         f"{len(season_df):,}"
@@ -491,7 +569,7 @@ def validate_snap_data(
 
 
 # ============================================================
-# BUILD FANTASY PLAYER DATA
+# BUILD PLAYER DATA
 # ============================================================
 
 def build_player_dataset(
@@ -521,7 +599,10 @@ def build_player_dataset(
         df["week"].notna()
     ].copy()
 
-    df["week"] = df["week"].astype(int)
+    df["week"] = (
+        df["week"]
+        .astype(int)
+    )
 
     return df
 
@@ -558,7 +639,6 @@ def join_snap_counts(
         .astype(int)
     )
 
-    # Keep the fields we currently need.
     snap_keep = [
         "_join_name",
         "team",
@@ -568,7 +648,6 @@ def join_snap_counts(
         "offense_pct",
     ]
 
-    # Defensive duplicate handling.
     snap_df = (
         snap_df[snap_keep]
         .sort_values(
@@ -632,55 +711,35 @@ def join_snap_counts(
     )
 
     print(
-        f"Player-week records: {total:,}"
+        f"Player-week records: "
+        f"{total:,}"
     )
+
     print(
-        f"Snap matches: {matched:,}"
+        f"Snap matches: "
+        f"{matched:,}"
     )
+
     print(
         f"Snap match rate: "
         f"{match_rate:.1%}"
     )
 
-    # Print unmatched examples for debugging,
-    # but do not expose any credentials or secrets.
-    unmatched = (
-        joined[
-            joined["offense_snaps"].isna()
-        ][
-            [
-                "player_display_name",
-                "position",
-                "recent_team",
-                "week",
-            ]
-        ]
-        .head(20)
-    )
-
-    if not unmatched.empty:
-
-        print()
-        print(
-            "Sample records without snap match:"
-        )
-
-        for _, row in unmatched.iterrows():
-            print(
-                f"  {row['player_display_name']} | "
-                f"{row['position']} | "
-                f"{row['recent_team']} | "
-                f"Week {row['week']}"
-            )
-
-    if match_rate < MIN_SNAP_MATCH_RATE:
+    if (
+        match_rate
+        < MIN_SNAP_MATCH_RATE
+    ):
         fail(
-            "Snap-count join coverage is too low: "
-            f"{match_rate:.1%}. "
-            "No output will be published."
+            "Snap-count join coverage "
+            "is too low: "
+            f"{match_rate:.1%}"
         )
 
-    return joined, matched, match_rate
+    return (
+        joined,
+        matched,
+        match_rate,
+    )
 
 
 # ============================================================
@@ -702,12 +761,14 @@ def safe_divide(
         errors="coerce",
     )
 
-    result = (
+    return (
         numerator
-        / denominator.replace(0, pd.NA)
+        /
+        denominator.replace(
+            0,
+            pd.NA,
+        )
     )
-
-    return result
 
 
 def add_derived_metrics(
@@ -716,10 +777,10 @@ def add_derived_metrics(
 
     df = df.copy()
 
-    # Touches
     if (
         "carries" in df.columns
-        and "receptions" in df.columns
+        and
+        "receptions" in df.columns
     ):
         df["touches"] = (
             pd.to_numeric(
@@ -733,10 +794,10 @@ def add_derived_metrics(
             ).fillna(0)
         )
 
-    # Opportunities
     if (
         "carries" in df.columns
-        and "targets" in df.columns
+        and
+        "targets" in df.columns
     ):
         df["opportunities"] = (
             pd.to_numeric(
@@ -751,15 +812,19 @@ def add_derived_metrics(
         )
 
     if "targets" in df.columns:
-        df["targets_per_snap"] = safe_divide(
-            df["targets"],
-            df["offense_snaps"],
+        df["targets_per_snap"] = (
+            safe_divide(
+                df["targets"],
+                df["offense_snaps"],
+            )
         )
 
     if "carries" in df.columns:
-        df["carries_per_snap"] = safe_divide(
-            df["carries"],
-            df["offense_snaps"],
+        df["carries_per_snap"] = (
+            safe_divide(
+                df["carries"],
+                df["offense_snaps"],
+            )
         )
 
     if "fantasy_points" in df.columns:
@@ -771,12 +836,19 @@ def add_derived_metrics(
             )
         )
 
-        df["fantasy_points_per_100_snaps"] = (
-            df["fantasy_points_per_snap"]
+        df[
+            "fantasy_points_per_100_snaps"
+        ] = (
+            df[
+                "fantasy_points_per_snap"
+            ]
             * 100
         )
 
-    if "fantasy_points_ppr" in df.columns:
+    if (
+        "fantasy_points_ppr"
+        in df.columns
+    ):
 
         df["ppr_points_per_snap"] = (
             safe_divide(
@@ -785,16 +857,25 @@ def add_derived_metrics(
             )
         )
 
-        df["ppr_points_per_100_snaps"] = (
-            df["ppr_points_per_snap"]
+        df[
+            "ppr_points_per_100_snaps"
+        ] = (
+            df[
+                "ppr_points_per_snap"
+            ]
             * 100
         )
 
     if (
-        "receiving_yards" in df.columns
-        and "targets" in df.columns
+        "receiving_yards"
+        in df.columns
+        and
+        "targets"
+        in df.columns
     ):
-        df["receiving_yards_per_target"] = (
+        df[
+            "receiving_yards_per_target"
+        ] = (
             safe_divide(
                 df["receiving_yards"],
                 df["targets"],
@@ -803,7 +884,8 @@ def add_derived_metrics(
 
     if (
         "receptions" in df.columns
-        and "targets" in df.columns
+        and
+        "targets" in df.columns
     ):
         df["catch_rate"] = (
             safe_divide(
@@ -812,30 +894,17 @@ def add_derived_metrics(
             )
         )
 
-    if (
-        "rushing_yards" in df.columns
-        and "carries" in df.columns
-    ):
-        df["rushing_yards_per_carry_calc"] = (
-            safe_divide(
-                df["rushing_yards"],
-                df["carries"],
-            )
-        )
-
     return df
 
 
 # ============================================================
-# JSON OUTPUT
+# OUTPUT HELPERS
 # ============================================================
 
 def dataframe_records(
     df: pd.DataFrame,
 ):
 
-    # Internal join helper should never appear
-    # in the dashboard.
     df = df.drop(
         columns=["_join_name"],
         errors="ignore",
@@ -873,8 +942,10 @@ def write_json(
         exist_ok=True,
     )
 
-    temporary = path.with_suffix(
-        path.suffix + ".tmp"
+    temporary = (
+        path.with_suffix(
+            path.suffix + ".tmp"
+        )
     )
 
     try:
@@ -900,7 +971,8 @@ def write_json(
             temporary.unlink()
 
         fail(
-            f"Unable to write {path}: {exc}"
+            f"Unable to write "
+            f"{path}: {exc}"
         )
 
 
@@ -957,10 +1029,14 @@ def build_status(
                 timezone.utc
             ).isoformat()
         ),
-        "player_week_records": int(len(df)),
-        "unique_players": int(len(players)),
-        "teams_found": int(len(teams)),
-        "teams": teams,
+        "player_week_records":
+            int(len(df)),
+        "unique_players":
+            int(len(players)),
+        "teams_found":
+            int(len(teams)),
+        "teams":
+            teams,
         "position_counts": {
             str(k): int(v)
             for k, v
@@ -970,27 +1046,26 @@ def build_status(
             "player_stats": {
                 "status": "loaded",
                 "provider": "nflverse",
-                "dataset": "Player Summary Stats",
             },
             "snap_counts": {
                 "status": "loaded",
                 "provider": "nflverse",
-                "dataset": "PFR Snap Counts",
                 "matched_player_week_records":
                     int(snap_records),
                 "match_rate":
                     round(
-                        float(snap_match_rate),
+                        float(
+                            snap_match_rate
+                        ),
                         4,
                     ),
             },
         },
-        "license": "CC BY 4.0",
+        "license":
+            "CC BY 4.0",
         "attribution": (
-            "NFL data provided through nflverse. "
-            "See nflverse-data and the applicable "
-            "dataset documentation for attribution "
-            "and licensing information."
+            "NFL data provided "
+            "through nflverse."
         ),
     }
 
@@ -1004,70 +1079,122 @@ def main() -> None:
     print("=" * 70)
     print(
         f"NFL PLAYER DASHBOARD — "
-        f"{SEASON} PLAYER + SNAP UPDATE"
+        f"{SEASON} DATA UPDATE"
     )
     print("=" * 70)
 
-    # --------------------------------------------------------
+    # ========================================================
+    # TEMPORARY ADVANCED DATA SCHEMA TEST
+    # ========================================================
+
+    print()
+    print("=" * 70)
+    print("ADVANCED DATA SCHEMA TEST")
+    print("=" * 70)
+
+    for label, url in (
+        ADVANCED_SOURCES.items()
+    ):
+
+        advanced_df = download_csv(
+            url,
+            f"PFR Advanced {label}",
+        )
+
+        print()
+        print(
+            f"{label} ROWS: "
+            f"{len(advanced_df):,}"
+        )
+
+        print(
+            f"{label} COLUMNS: "
+            f"{len(advanced_df.columns):,}"
+        )
+
+        print(
+            f"{label} COLUMN NAMES:"
+        )
+
+        for column in (
+            advanced_df.columns
+        ):
+            print(
+                f"  {column}"
+            )
+
+        print()
+
+    # ========================================================
     # PLAYER STATS
-    # --------------------------------------------------------
+    # ========================================================
 
     player_raw = download_csv(
         PLAYER_STATS_URL,
         "nflverse Player Summary Stats",
     )
 
-    player_raw = normalize_player_schema(
-        player_raw
+    player_raw = (
+        normalize_player_schema(
+            player_raw
+        )
     )
 
     validate_player_data(
         player_raw
     )
 
-    players = build_player_dataset(
-        player_raw
+    players = (
+        build_player_dataset(
+            player_raw
+        )
     )
 
-    # --------------------------------------------------------
+    # ========================================================
     # SNAP COUNTS
-    # --------------------------------------------------------
+    # ========================================================
 
     snap_raw = download_csv(
         SNAP_COUNTS_URL,
         "nflverse Snap Counts",
     )
 
-    snap_raw = normalize_snap_schema(
-        snap_raw
+    snap_raw = (
+        normalize_snap_schema(
+            snap_raw
+        )
     )
 
     validate_snap_data(
         snap_raw
     )
 
-    # --------------------------------------------------------
-    # JOIN
-    # --------------------------------------------------------
+    # ========================================================
+    # JOIN SNAP COUNTS
+    # ========================================================
 
-    joined, snap_matches, snap_match_rate = (
-        join_snap_counts(
-            players,
-            snap_raw,
+    (
+        joined,
+        snap_matches,
+        snap_match_rate,
+    ) = join_snap_counts(
+        players,
+        snap_raw,
+    )
+
+    # ========================================================
+    # DERIVED METRICS
+    # ========================================================
+
+    joined = (
+        add_derived_metrics(
+            joined
         )
     )
 
-    # --------------------------------------------------------
-    # DERIVED METRICS
-    # --------------------------------------------------------
-
-    joined = add_derived_metrics(
-        joined
-    )
-
-    # --------------------------------------------------------
+    # ========================================================
     # FINAL VALIDATION
-    # --------------------------------------------------------
+    # ========================================================
 
     teams = set(
         joined["recent_team"]
@@ -1079,17 +1206,20 @@ def main() -> None:
     if len(teams) != 32:
         fail(
             f"Final dataset has "
-            f"{len(teams)} teams instead of 32."
+            f"{len(teams)} teams "
+            "instead of 32."
         )
 
-    records = dataframe_records(
-        joined
+    records = (
+        dataframe_records(
+            joined
+        )
     )
 
     if not records:
         fail(
-            "Final player dataset contains "
-            "zero records."
+            "Final player dataset "
+            "contains zero records."
         )
 
     status = build_status(
@@ -1098,12 +1228,14 @@ def main() -> None:
         snap_match_rate,
     )
 
-    # --------------------------------------------------------
-    # WRITE
-    # --------------------------------------------------------
+    # ========================================================
+    # WRITE OUTPUT
+    # ========================================================
 
     print()
-    print("Writing validated output...")
+    print(
+        "Writing validated output..."
+    )
 
     write_json(
         PLAYER_OUTPUT,
@@ -1115,9 +1247,9 @@ def main() -> None:
         status,
     )
 
-    # --------------------------------------------------------
+    # ========================================================
     # REPORT
-    # --------------------------------------------------------
+    # ========================================================
 
     print()
     print("=" * 70)
@@ -1126,25 +1258,31 @@ def main() -> None:
 
     print()
     print("PLAYER DATA")
+
     print(
         f"Player-week records: "
         f"{status['player_week_records']:,}"
     )
+
     print(
         f"Unique players: "
         f"{status['unique_players']:,}"
     )
+
     print(
         f"Teams: "
         f"{status['teams_found']}/32"
     )
+
     print(
         f"Latest week: "
         f"{status['latest_week']}"
     )
 
     print()
-    print("PLAYERS BY POSITION")
+    print(
+        "PLAYERS BY POSITION"
+    )
 
     for position in [
         "QB",
@@ -1161,10 +1299,12 @@ def main() -> None:
     print()
     print("SNAP DATA")
     print("Downloaded: YES")
+
     print(
         f"Matched player-week records: "
         f"{snap_matches:,}"
     )
+
     print(
         f"Snap match rate: "
         f"{snap_match_rate:.1%}"
@@ -1172,17 +1312,21 @@ def main() -> None:
 
     print()
     print("OUTPUT")
+
     print(
         f"Player data: "
         f"{PLAYER_OUTPUT}"
     )
+
     print(
         f"Status: "
         f"{STATUS_OUTPUT}"
     )
 
     print()
-    print("VALIDATION: PASSED")
+    print(
+        "VALIDATION: PASSED"
+    )
 
 
 if __name__ == "__main__":
