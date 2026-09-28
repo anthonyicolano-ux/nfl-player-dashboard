@@ -1,0 +1,1197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>NFL Player Data Dashboard</title>
+
+<style>
+:root {
+  --bg: #0b1020;
+  --panel: #121a2d;
+  --panel2: #182238;
+  --border: #26334e;
+  --text: #edf2f7;
+  --muted: #98a6bd;
+  --accent: #4ea1ff;
+  --good: #35c98b;
+  --warn: #f3b64c;
+  --bad: #ff6b6b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family:
+    Inter,
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+}
+
+header {
+  padding: 28px 32px 18px;
+  border-bottom: 1px solid var(--border);
+}
+
+h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+.subtitle {
+  color: var(--muted);
+  margin-top: 6px;
+}
+
+.container {
+  padding: 22px 32px 40px;
+}
+
+.status {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+}
+
+.badge {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  padding: 7px 11px;
+  border-radius: 8px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.badge.good {
+  color: var(--good);
+}
+
+.cards {
+  display: grid;
+  grid-template-columns:
+    repeat(auto-fit, minmax(160px, 1fr));
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 16px;
+}
+
+.card-label {
+  color: var(--muted);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+}
+
+.card-value {
+  font-size: 24px;
+  font-weight: 700;
+  margin-top: 6px;
+}
+
+.filters {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 14px;
+  display: grid;
+  grid-template-columns:
+    repeat(auto-fit, minmax(145px, 1fr));
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+select,
+input {
+  width: 100%;
+  background: var(--panel2);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  padding: 9px 10px;
+}
+
+.tabs {
+  display: flex;
+  gap: 6px;
+  overflow-x: auto;
+  margin-bottom: 12px;
+}
+
+.tab {
+  border: 1px solid var(--border);
+  background: var(--panel);
+  color: var(--muted);
+  border-radius: 7px;
+  padding: 8px 13px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.tab.active {
+  color: white;
+  border-color: var(--accent);
+  background: #17365f;
+}
+
+.table-wrap {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: auto;
+  max-height: 68vh;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 13px;
+}
+
+thead {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+th {
+  background: #162038;
+  color: #dbe6f5;
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+td {
+  padding: 9px 10px;
+  border-bottom: 1px solid #202c43;
+  white-space: nowrap;
+}
+
+tbody tr:hover {
+  background: #16223a;
+}
+
+.player {
+  font-weight: 600;
+}
+
+.pos {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.footer-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  color: var(--muted);
+  margin-top: 10px;
+  font-size: 13px;
+}
+
+.loading {
+  padding: 50px;
+  text-align: center;
+  color: var(--muted);
+}
+
+.error {
+  color: var(--bad);
+}
+
+@media(max-width:700px) {
+  header,
+  .container {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>NFL Player Data Dashboard</h1>
+  <div class="subtitle">
+    2026 player usage, advanced statistics and fantasy performance
+  </div>
+</header>
+
+<div class="container">
+
+<div id="status" class="status"></div>
+
+<div id="cards" class="cards"></div>
+
+<div class="filters">
+
+  <select id="mode">
+    <option value="weekly">Weekly Data</option>
+    <option value="season">Season Totals</option>
+  </select>
+
+  <select id="week">
+    <option value="">All Weeks</option>
+  </select>
+
+  <select id="position">
+    <option value="">All Positions</option>
+    <option>QB</option>
+    <option>RB</option>
+    <option>WR</option>
+    <option>TE</option>
+  </select>
+
+  <select id="team">
+    <option value="">All Teams</option>
+  </select>
+
+  <select id="opponent">
+    <option value="">All Opponents</option>
+  </select>
+
+  <input
+    id="search"
+    type="search"
+    placeholder="Search player..."
+  >
+
+</div>
+
+<div class="tabs" id="tabs"></div>
+
+<div class="table-wrap">
+
+  <div id="loading" class="loading">
+    Loading player data...
+  </div>
+
+  <table id="table" style="display:none">
+
+    <thead>
+      <tr id="thead"></tr>
+    </thead>
+
+    <tbody id="tbody"></tbody>
+
+  </table>
+
+</div>
+
+<div class="footer-row">
+
+  <div id="count"></div>
+
+  <div>
+    Data: nflverse • CC BY 4.0
+  </div>
+
+</div>
+
+</div>
+
+<script>
+
+const VIEWS = {
+
+  Overview: [
+    "player_display_name",
+    "position",
+    "recent_team",
+    "opponent",
+    "week",
+    "offense_snaps",
+    "offense_pct",
+    "carries",
+    "targets",
+    "receptions",
+    "touches",
+    "opportunities",
+    "fantasy_points",
+    "fantasy_points_ppr"
+  ],
+
+  "Playing Time": [
+    "player_display_name",
+    "position",
+    "recent_team",
+    "opponent",
+    "week",
+    "offense_snaps",
+    "offense_pct",
+    "targets",
+    "targets_per_snap",
+    "carries",
+    "carries_per_snap"
+  ],
+
+  Usage: [
+    "player_display_name",
+    "position",
+    "recent_team",
+    "week",
+    "carries",
+    "targets",
+    "receptions",
+    "touches",
+    "opportunities",
+    "target_share",
+    "air_yards_share",
+    "wopr"
+  ],
+
+  Passing: [
+    "player_display_name",
+    "recent_team",
+    "opponent",
+    "week",
+    "completions",
+    "attempts",
+    "passing_yards",
+    "passing_tds",
+    "interceptions",
+    "sacks",
+    "passing_epa",
+    "adv_pass_times_sacked",
+    "adv_pass_times_blitzed",
+    "adv_pass_times_hurried",
+    "adv_pass_times_hit",
+    "adv_pass_times_pressured",
+    "adv_pass_times_pressured_pct",
+    "adv_pass_passing_bad_throws",
+    "adv_pass_passing_bad_throw_pct"
+  ],
+
+  Rushing: [
+    "player_display_name",
+    "position",
+    "recent_team",
+    "opponent",
+    "week",
+    "carries",
+    "rushing_yards",
+    "rushing_tds",
+    "rushing_first_downs",
+    "rushing_epa",
+    "rushing_yards_per_carry_calc",
+    "adv_rush_rushing_yards_before_contact",
+    "adv_rush_rushing_yards_before_contact_avg",
+    "adv_rush_rushing_yards_after_contact",
+    "adv_rush_rushing_yards_after_contact_avg",
+    "adv_rush_rushing_broken_tackles"
+  ],
+
+  Receiving: [
+    "player_display_name",
+    "position",
+    "recent_team",
+    "opponent",
+    "week",
+    "targets",
+    "receptions",
+    "receiving_yards",
+    "receiving_tds",
+    "receiving_first_downs",
+    "receiving_epa",
+    "catch_rate",
+    "receiving_yards_per_target",
+    "adv_rec_receiving_broken_tackles",
+    "adv_rec_receiving_drop",
+    "adv_rec_receiving_drop_pct",
+    "adv_rec_receiving_int",
+    "adv_rec_receiving_rat"
+  ],
+
+  Fantasy: [
+    "player_display_name",
+    "position",
+    "recent_team",
+    "week",
+    "fantasy_points",
+    "fantasy_points_ppr",
+    "fantasy_points_per_snap",
+    "fantasy_points_per_100_snaps",
+    "ppr_points_per_snap",
+    "ppr_points_per_100_snaps",
+    "offense_snaps",
+    "touches",
+    "opportunities"
+  ],
+
+  Advanced: [
+    "player_display_name",
+    "position",
+    "recent_team",
+    "week",
+    "target_share",
+    "air_yards_share",
+    "wopr",
+    "racr",
+    "receiving_epa",
+    "rushing_epa",
+    "passing_epa",
+    "adv_pass_times_pressured_pct",
+    "adv_rush_rushing_yards_after_contact_avg",
+    "adv_rec_receiving_drop_pct"
+  ]
+
+};
+
+let RAW = [];
+let STATUS = {};
+let activeView = "Overview";
+let sortColumn = "fantasy_points_ppr";
+let sortDirection = -1;
+
+
+/* ----------------------------------------------------------
+   Formatting
+---------------------------------------------------------- */
+
+function label(key) {
+
+  const replacements = {
+    player_display_name: "Player",
+    recent_team: "Team",
+    offense_snaps: "Snaps",
+    offense_pct: "Snap %",
+    fantasy_points: "FP",
+    fantasy_points_ppr: "PPR",
+    target_share: "Target Share",
+    air_yards_share: "Air Yard Share",
+    wopr: "WOPR",
+    racr: "RACR",
+    touches: "Touches",
+    opportunities: "Opportunities"
+  };
+
+  if (replacements[key]) {
+    return replacements[key];
+  }
+
+  return key
+    .replace(/^adv_pass_/, "Pass ")
+    .replace(/^adv_rush_/, "Rush ")
+    .replace(/^adv_rec_/, "Rec ")
+    .replaceAll("_", " ")
+    .replace(/\b\w/g, c => c.toUpperCase());
+}
+
+
+function isPercentColumn(key) {
+
+  return (
+    key.endsWith("_pct") ||
+    key.includes("share") ||
+    key === "catch_rate" ||
+    key === "targets_per_snap" ||
+    key === "carries_per_snap"
+  );
+}
+
+
+function formatValue(key, value) {
+
+  if (
+    value === null ||
+    value === undefined ||
+    value === ""
+  ) {
+    return "—";
+  }
+
+  if (key === "player_display_name") {
+    return value;
+  }
+
+  if (isPercentColumn(key)) {
+
+    const n = Number(value);
+
+    if (Number.isNaN(n)) {
+      return value;
+    }
+
+    return (n * 100).toFixed(1) + "%";
+  }
+
+  if (
+    typeof value === "number"
+  ) {
+
+    if (Number.isInteger(value)) {
+      return value.toLocaleString();
+    }
+
+    return value.toFixed(2);
+  }
+
+  return value;
+}
+
+
+/* ----------------------------------------------------------
+   Filters
+---------------------------------------------------------- */
+
+function populateFilters() {
+
+  const teams = [
+    ...new Set(
+      RAW
+        .map(r => r.recent_team)
+        .filter(Boolean)
+    )
+  ].sort();
+
+  const opponents = [
+    ...new Set(
+      RAW
+        .map(r => r.opponent)
+        .filter(Boolean)
+    )
+  ].sort();
+
+  const weeks = [
+    ...new Set(
+      RAW
+        .map(r => r.week)
+        .filter(Boolean)
+    )
+  ].sort((a,b) => a-b);
+
+  for (const t of teams) {
+
+    team.insertAdjacentHTML(
+      "beforeend",
+      `<option>${t}</option>`
+    );
+  }
+
+  for (const o of opponents) {
+
+    opponent.insertAdjacentHTML(
+      "beforeend",
+      `<option>${o}</option>`
+    );
+  }
+
+  for (const w of weeks) {
+
+    week.insertAdjacentHTML(
+      "beforeend",
+      `<option value="${w}">
+        Week ${w}
+      </option>`
+    );
+  }
+}
+
+
+function filteredRows() {
+
+  const pos = position.value;
+  const tm = team.value;
+  const opp = opponent.value;
+  const wk = week.value;
+  const q = search.value
+    .trim()
+    .toLowerCase();
+
+  return RAW.filter(row => {
+
+    if (
+      pos &&
+      row.position !== pos
+    ) return false;
+
+    if (
+      tm &&
+      row.recent_team !== tm
+    ) return false;
+
+    if (
+      opp &&
+      row.opponent !== opp
+    ) return false;
+
+    if (
+      wk &&
+      String(row.week) !== wk
+    ) return false;
+
+    if (
+      q &&
+      !String(
+        row.player_display_name || ""
+      )
+      .toLowerCase()
+      .includes(q)
+    ) return false;
+
+    return true;
+  });
+}
+
+
+/* ----------------------------------------------------------
+   Season aggregation
+---------------------------------------------------------- */
+
+function seasonRows(rows) {
+
+  const grouped = new Map();
+
+  for (const row of rows) {
+
+    const key =
+      row.player_id ||
+      row.player_display_name;
+
+    if (!grouped.has(key)) {
+
+      grouped.set(
+        key,
+        {
+          ...row,
+          week: "Season"
+        }
+      );
+
+      continue;
+    }
+
+    const target = grouped.get(key);
+
+    for (
+      const [column, value]
+      of Object.entries(row)
+    ) {
+
+      if (
+        typeof value === "number"
+      ) {
+
+        if (
+          column === "season" ||
+          column === "week"
+        ) {
+          continue;
+        }
+
+        if (
+          column.endsWith("_pct") ||
+          column.includes("share") ||
+          column.includes("per_") ||
+          column === "wopr" ||
+          column === "racr"
+        ) {
+          continue;
+        }
+
+        target[column] =
+          Number(target[column] || 0)
+          + value;
+      }
+    }
+  }
+
+  const result = [
+    ...grouped.values()
+  ];
+
+  for (const row of result) {
+
+    if (
+      row.targets &&
+      row.receptions !== undefined
+    ) {
+      row.catch_rate =
+        row.receptions /
+        row.targets;
+    }
+
+    if (
+      row.targets &&
+      row.receiving_yards !== undefined
+    ) {
+      row.receiving_yards_per_target =
+        row.receiving_yards /
+        row.targets;
+    }
+
+    if (
+      row.carries &&
+      row.rushing_yards !== undefined
+    ) {
+      row.rushing_yards_per_carry_calc =
+        row.rushing_yards /
+        row.carries;
+    }
+
+    if (
+      row.offense_snaps &&
+      row.targets !== undefined
+    ) {
+      row.targets_per_snap =
+        row.targets /
+        row.offense_snaps;
+    }
+
+    if (
+      row.offense_snaps &&
+      row.carries !== undefined
+    ) {
+      row.carries_per_snap =
+        row.carries /
+        row.offense_snaps;
+    }
+
+    if (
+      row.offense_snaps &&
+      row.fantasy_points !== undefined
+    ) {
+
+      row.fantasy_points_per_snap =
+        row.fantasy_points /
+        row.offense_snaps;
+
+      row.fantasy_points_per_100_snaps =
+        row.fantasy_points_per_snap * 100;
+    }
+
+    if (
+      row.offense_snaps &&
+      row.fantasy_points_ppr !== undefined
+    ) {
+
+      row.ppr_points_per_snap =
+        row.fantasy_points_ppr /
+        row.offense_snaps;
+
+      row.ppr_points_per_100_snaps =
+        row.ppr_points_per_snap * 100;
+    }
+  }
+
+  return result;
+}
+
+
+/* ----------------------------------------------------------
+   Tabs
+---------------------------------------------------------- */
+
+function createTabs() {
+
+  const names = [
+    ...Object.keys(VIEWS),
+    "All Data"
+  ];
+
+  tabs.innerHTML = "";
+
+  for (const name of names) {
+
+    const button =
+      document.createElement("button");
+
+    button.className =
+      "tab" +
+      (
+        name === activeView
+        ? " active"
+        : ""
+      );
+
+    button.textContent = name;
+
+    button.onclick = () => {
+
+      activeView = name;
+
+      createTabs();
+      render();
+    };
+
+    tabs.appendChild(button);
+  }
+}
+
+
+/* ----------------------------------------------------------
+   Render
+---------------------------------------------------------- */
+
+function render() {
+
+  let rows = filteredRows();
+
+  if (
+    mode.value === "season"
+  ) {
+    rows = seasonRows(rows);
+  }
+
+  let columns;
+
+  if (
+    activeView === "All Data"
+  ) {
+
+    columns = [
+      ...new Set(
+        RAW.flatMap(
+          row => Object.keys(row)
+        )
+      )
+    ];
+
+  } else {
+
+    columns = VIEWS[
+      activeView
+    ].filter(
+      column =>
+        RAW.some(
+          row =>
+            column in row
+        )
+    );
+  }
+
+  if (
+    activeView === "Passing"
+  ) {
+    rows = rows.filter(
+      r => r.position === "QB"
+    );
+  }
+
+  if (
+    activeView === "Rushing"
+  ) {
+    rows = rows.filter(
+      r =>
+        Number(r.carries || 0) > 0
+    );
+  }
+
+  if (
+    activeView === "Receiving"
+  ) {
+    rows = rows.filter(
+      r =>
+        Number(r.targets || 0) > 0
+    );
+  }
+
+  rows.sort((a,b) => {
+
+    const av = a[sortColumn];
+    const bv = b[sortColumn];
+
+    if (
+      typeof av === "number" &&
+      typeof bv === "number"
+    ) {
+      return (
+        (av - bv)
+        * sortDirection
+      );
+    }
+
+    return (
+      String(av ?? "")
+      .localeCompare(
+        String(bv ?? "")
+      )
+      * sortDirection
+    );
+  });
+
+  thead.innerHTML = "";
+
+  for (const column of columns) {
+
+    const th =
+      document.createElement("th");
+
+    th.textContent =
+      label(column);
+
+    th.onclick = () => {
+
+      if (
+        sortColumn === column
+      ) {
+        sortDirection *= -1;
+      } else {
+        sortColumn = column;
+        sortDirection = -1;
+      }
+
+      render();
+    };
+
+    thead.appendChild(th);
+  }
+
+  tbody.innerHTML = "";
+
+  for (const row of rows) {
+
+    const tr =
+      document.createElement("tr");
+
+    for (const column of columns) {
+
+      const td =
+        document.createElement("td");
+
+      td.textContent =
+        formatValue(
+          column,
+          row[column]
+        );
+
+      if (
+        column ===
+        "player_display_name"
+      ) {
+        td.className = "player";
+      }
+
+      if (
+        column === "position"
+      ) {
+        td.className = "pos";
+      }
+
+      tr.appendChild(td);
+    }
+
+    tbody.appendChild(tr);
+  }
+
+  count.textContent =
+    `${rows.length.toLocaleString()} records`;
+
+  loading.style.display =
+    "none";
+
+  table.style.display =
+    "table";
+}
+
+
+/* ----------------------------------------------------------
+   Header/status
+---------------------------------------------------------- */
+
+function renderStatus() {
+
+  status.innerHTML = `
+    <span class="badge good">
+      ✓ ${STATUS.status || "Loaded"}
+    </span>
+
+    <span class="badge">
+      Season ${STATUS.season || 2026}
+    </span>
+
+    <span class="badge">
+      Through Week ${STATUS.latest_week ?? "—"}
+    </span>
+
+    <span class="badge">
+      nflverse
+    </span>
+  `;
+
+  cards.innerHTML = `
+
+    <div class="card">
+      <div class="card-label">
+        Players
+      </div>
+      <div class="card-value">
+        ${(
+          STATUS.unique_players || 0
+        ).toLocaleString()}
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-label">
+        Player-Weeks
+      </div>
+      <div class="card-value">
+        ${(
+          STATUS.player_week_records || 0
+        ).toLocaleString()}
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-label">
+        Teams
+      </div>
+      <div class="card-value">
+        ${STATUS.teams_found || 0}/32
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-label">
+        Snap Coverage
+      </div>
+      <div class="card-value">
+        ${(
+          (
+            STATUS.sources
+            ?.snap_counts
+            ?.coverage || 0
+          ) * 100
+        ).toFixed(1)}%
+      </div>
+    </div>
+
+  `;
+}
+
+
+/* ----------------------------------------------------------
+   Events
+---------------------------------------------------------- */
+
+[
+  mode,
+  week,
+  position,
+  team,
+  opponent
+].forEach(
+  element =>
+    element.addEventListener(
+      "change",
+      render
+    )
+);
+
+search.addEventListener(
+  "input",
+  render
+);
+
+
+/* ----------------------------------------------------------
+   Load
+---------------------------------------------------------- */
+
+async function start() {
+
+  try {
+
+    const [
+      playerResponse,
+      statusResponse
+    ] = await Promise.all([
+      fetch(
+        "data/players.json",
+        {
+          cache: "no-store"
+        }
+      ),
+      fetch(
+        "data/data-status.json",
+        {
+          cache: "no-store"
+        }
+      )
+    ]);
+
+    if (
+      !playerResponse.ok
+    ) {
+      throw new Error(
+        "players.json could not be loaded."
+      );
+    }
+
+    if (
+      !statusResponse.ok
+    ) {
+      throw new Error(
+        "data-status.json could not be loaded."
+      );
+    }
+
+    RAW =
+      await playerResponse.json();
+
+    STATUS =
+      await statusResponse.json();
+
+    if (
+      !Array.isArray(RAW) ||
+      RAW.length === 0
+    ) {
+      throw new Error(
+        "Player dataset is empty."
+      );
+    }
+
+    renderStatus();
+    populateFilters();
+    createTabs();
+    render();
+
+  } catch(error) {
+
+    loading.innerHTML = `
+      <div class="error">
+        <strong>
+          Dashboard data could not be loaded.
+        </strong>
+        <br><br>
+        ${error.message}
+        <br><br>
+        Confirm that
+        <code>data/players.json</code>
+        and
+        <code>data/data-status.json</code>
+        exist in the repository.
+      </div>
+    `;
+
+    console.error(error);
+  }
+}
+
+start();
+
+</script>
+
+</body>
+</html>
