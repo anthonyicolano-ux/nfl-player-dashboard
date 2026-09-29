@@ -1,0 +1,1171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>NFL Matchup Dashboard</title>
+
+<style>
+:root{
+  --bg:#09101e;
+  --panel:#111a2b;
+  --panel2:#172238;
+  --border:#283750;
+  --text:#edf3fb;
+  --muted:#94a3b8;
+  --accent:#4ea1ff;
+  --green:#3dd598;
+  --red:#ff7373;
+}
+
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+
+header{
+  padding:26px 30px 18px;
+  border-bottom:1px solid var(--border);
+}
+
+h1{
+  margin:0;
+  font-size:28px;
+}
+
+.subtitle{
+  color:var(--muted);
+  margin-top:5px;
+}
+
+main{
+  padding:20px 30px 40px;
+}
+
+.nav{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+  margin-bottom:16px;
+}
+
+.nav a{
+  text-decoration:none;
+  padding:8px 12px;
+  background:var(--panel);
+  border:1px solid var(--border);
+  border-radius:7px;
+  color:var(--muted);
+  font-size:13px;
+}
+
+.nav a.active{
+  background:#173b67;
+  border-color:var(--accent);
+  color:white;
+}
+
+.status{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+  margin-bottom:14px;
+}
+
+.badge{
+  padding:7px 11px;
+  background:var(--panel);
+  border:1px solid var(--border);
+  border-radius:7px;
+  color:var(--muted);
+  font-size:12px;
+}
+
+.good{
+  color:var(--green);
+}
+
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+  gap:10px;
+  margin-bottom:16px;
+}
+
+.card{
+  background:var(--panel);
+  border:1px solid var(--border);
+  border-radius:10px;
+  padding:14px;
+}
+
+.card-label{
+  color:var(--muted);
+  font-size:11px;
+  text-transform:uppercase;
+}
+
+.card-value{
+  font-size:22px;
+  font-weight:700;
+  margin-top:5px;
+}
+
+.filters{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+  gap:8px;
+
+  background:var(--panel);
+  border:1px solid var(--border);
+  border-radius:10px;
+
+  padding:14px;
+  margin-bottom:14px;
+}
+
+select,input{
+  width:100%;
+  background:var(--panel2);
+  color:var(--text);
+  border:1px solid var(--border);
+  border-radius:6px;
+  padding:9px;
+}
+
+.table-wrap{
+  border:1px solid var(--border);
+  border-radius:10px;
+  overflow:auto;
+  max-height:70vh;
+  background:var(--panel);
+}
+
+table{
+  border-collapse:collapse;
+  width:100%;
+  font-size:12.5px;
+}
+
+thead{
+  position:sticky;
+  top:0;
+  z-index:2;
+}
+
+th{
+  background:#162139;
+  padding:9px;
+  text-align:left;
+  border-bottom:1px solid var(--border);
+  cursor:pointer;
+  white-space:nowrap;
+}
+
+td{
+  padding:8px 9px;
+  border-bottom:1px solid #202c43;
+  white-space:nowrap;
+}
+
+tbody tr:hover{
+  background:#16233b;
+}
+
+.rank{
+  font-weight:700;
+}
+
+.pos{
+  color:var(--accent);
+  font-weight:700;
+}
+
+.easy{
+  color:var(--green);
+  font-weight:700;
+}
+
+.tough{
+  color:var(--red);
+  font-weight:700;
+}
+
+.middle{
+  color:var(--muted);
+}
+
+.loading{
+  text-align:center;
+  padding:50px;
+  color:var(--muted);
+}
+
+.error{
+  color:var(--red);
+}
+
+.footer{
+  display:flex;
+  justify-content:space-between;
+  gap:10px;
+  margin-top:9px;
+  color:var(--muted);
+  font-size:12px;
+}
+
+.legend{
+  margin-bottom:12px;
+  color:var(--muted);
+  font-size:12px;
+}
+
+@media(max-width:800px){
+
+  header,
+  main{
+    padding-left:12px;
+    padding-right:12px;
+  }
+
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+<h1>NFL Defense vs Position</h1>
+
+<div class="subtitle">
+2026 fantasy points allowed • QB • RB • WR • TE
+</div>
+
+</header>
+
+<main>
+
+<div class="nav">
+
+<a href="index.html">
+Player Dashboard
+</a>
+
+<a href="matchups.html" class="active">
+Matchups
+</a>
+
+</div>
+
+<div id="status" class="status"></div>
+
+<div id="cards" class="cards"></div>
+
+<div class="filters">
+
+<select id="position">
+
+<option value="QB">
+QB
+</option>
+
+<option value="RB">
+RB
+</option>
+
+<option value="WR">
+WR
+</option>
+
+<option value="TE">
+TE
+</option>
+
+<option value="">
+All Positions
+</option>
+
+</select>
+
+
+<select id="period">
+
+<option value="season">
+Season
+</option>
+
+<option value="last3">
+Last 3 Weeks
+</option>
+
+</select>
+
+
+<select id="defense">
+
+<option value="">
+All Defenses
+</option>
+
+</select>
+
+
+<input
+  id="search"
+  type="search"
+  placeholder="Search defense"
+>
+
+</div>
+
+<div class="legend">
+
+Rank 1 = most PPR fantasy points allowed per game to that position.
+Higher fantasy production allowed indicates a more favorable historical
+matchup for opposing fantasy players.
+
+</div>
+
+<div class="table-wrap">
+
+<div id="loading" class="loading">
+Loading matchup data...
+</div>
+
+<table
+  id="table"
+  style="display:none"
+>
+
+<thead>
+<tr id="thead"></tr>
+</thead>
+
+<tbody id="tbody"></tbody>
+
+</table>
+
+</div>
+
+<div class="footer">
+
+<div id="count"></div>
+
+<div>
+Source: nflverse • CC BY 4.0
+</div>
+
+</div>
+
+</main>
+
+<script>
+
+let RAW=[];
+
+let sortColumn=
+  "season_rank";
+
+let sortDirection=1;
+
+
+const COLUMNS={
+
+QB:[
+  "season_rank",
+  "defense",
+  "position",
+  "games",
+  "ppr_allowed_per_game",
+  "fantasy_points_ppr_allowed",
+  "passing_yards_allowed",
+  "passing_tds_allowed",
+  "interceptions",
+  "rushing_yards_allowed",
+  "rushing_tds_allowed"
+],
+
+RB:[
+  "season_rank",
+  "defense",
+  "position",
+  "games",
+  "ppr_allowed_per_game",
+  "fantasy_points_ppr_allowed",
+  "rushing_yards_allowed",
+  "rushing_tds_allowed",
+  "targets_allowed",
+  "receptions_allowed",
+  "receiving_yards_allowed",
+  "receiving_tds_allowed"
+],
+
+WR:[
+  "season_rank",
+  "defense",
+  "position",
+  "games",
+  "ppr_allowed_per_game",
+  "fantasy_points_ppr_allowed",
+  "targets_allowed",
+  "receptions_allowed",
+  "receiving_yards_allowed",
+  "receiving_tds_allowed",
+  "rushing_yards_allowed",
+  "rushing_tds_allowed"
+],
+
+TE:[
+  "season_rank",
+  "defense",
+  "position",
+  "games",
+  "ppr_allowed_per_game",
+  "fantasy_points_ppr_allowed",
+  "targets_allowed",
+  "receptions_allowed",
+  "receiving_yards_allowed",
+  "receiving_tds_allowed"
+]
+
+};
+
+
+const LABELS={
+
+season_rank:
+  "Rank",
+
+last3_rank:
+  "L3 Rank",
+
+defense:
+  "Defense",
+
+position:
+  "Pos",
+
+games:
+  "Games",
+
+last3_games:
+  "L3 Games",
+
+ppr_allowed_per_game:
+  "PPR/G",
+
+last3_ppr_allowed_per_game:
+  "L3 PPR/G",
+
+fantasy_points_ppr_allowed:
+  "PPR Allowed",
+
+last3_fantasy_points_ppr_allowed:
+  "L3 PPR Allowed",
+
+passing_yards_allowed:
+  "Pass Yds",
+
+passing_tds_allowed:
+  "Pass TD",
+
+interceptions:
+  "INT",
+
+rushing_yards_allowed:
+  "Rush Yds",
+
+rushing_tds_allowed:
+  "Rush TD",
+
+targets_allowed:
+  "Targets",
+
+receptions_allowed:
+  "Rec",
+
+receiving_yards_allowed:
+  "Rec Yds",
+
+receiving_tds_allowed:
+  "Rec TD"
+
+};
+
+
+function label(key){
+
+  return (
+    LABELS[key] ||
+    key
+      .replaceAll("_"," ")
+      .replace(
+        /\b\w/g,
+        c=>c.toUpperCase()
+      )
+  );
+
+}
+
+
+function formatValue(
+  key,
+  value
+){
+
+  if(
+    value===null ||
+    value===undefined ||
+    value===""
+  ){
+    return "—";
+  }
+
+  if(
+    typeof value==="number"
+  ){
+
+    if(
+      [
+        "ppr_allowed_per_game",
+        "last3_ppr_allowed_per_game"
+      ].includes(key)
+    ){
+
+      return value.toFixed(2);
+
+    }
+
+    if(
+      Number.isInteger(value)
+    ){
+
+      return value.toLocaleString();
+
+    }
+
+    return value.toFixed(1);
+
+  }
+
+  return value;
+
+}
+
+
+function rankClass(value){
+
+  const rank=
+    Number(value);
+
+  if(
+    !Number.isFinite(rank)
+  ){
+    return "";
+  }
+
+  if(rank<=10){
+    return "easy";
+  }
+
+  if(rank>=23){
+    return "tough";
+  }
+
+  return "middle";
+
+}
+
+
+function populateDefenseFilter(){
+
+  const defenses=[
+    ...new Set(
+      RAW
+        .map(
+          row=>row.defense
+        )
+        .filter(Boolean)
+    )
+  ].sort();
+
+  defenses.forEach(team=>{
+
+    const option=
+      document.createElement(
+        "option"
+      );
+
+    option.value=team;
+    option.textContent=team;
+
+    defense.appendChild(
+      option
+    );
+
+  });
+
+}
+
+
+function header(){
+
+  const latestWeek=
+    Math.max(
+      ...RAW.map(
+        row=>
+          Number(
+            row.through_week||0
+          )
+      )
+    );
+
+  const defenses=
+    new Set(
+      RAW.map(
+        row=>row.defense
+      )
+    ).size;
+
+  status.innerHTML=`
+
+    <span class="badge good">
+    ✓ Matchup data validated
+    </span>
+
+    <span class="badge">
+    2026
+    </span>
+
+    <span class="badge">
+    Through Week ${latestWeek}
+    </span>
+
+  `;
+
+
+  cards.innerHTML=`
+
+    <div class="card">
+
+      <div class="card-label">
+      Defenses
+      </div>
+
+      <div class="card-value">
+      ${defenses}
+      </div>
+
+    </div>
+
+
+    <div class="card">
+
+      <div class="card-label">
+      Positions
+      </div>
+
+      <div class="card-value">
+      4
+      </div>
+
+    </div>
+
+
+    <div class="card">
+
+      <div class="card-label">
+      Matchup Records
+      </div>
+
+      <div class="card-value">
+      ${RAW.length}
+      </div>
+
+    </div>
+
+
+    <div class="card">
+
+      <div class="card-label">
+      Latest Week
+      </div>
+
+      <div class="card-value">
+      ${latestWeek}
+      </div>
+
+    </div>
+
+  `;
+
+}
+
+
+function getColumns(){
+
+  const selectedPosition=
+    position.value;
+
+  let columns;
+
+  if(
+    selectedPosition &&
+    COLUMNS[selectedPosition]
+  ){
+
+    columns=[
+      ...COLUMNS[
+        selectedPosition
+      ]
+    ];
+
+  }else{
+
+    columns=[
+      "season_rank",
+      "defense",
+      "position",
+      "games",
+      "ppr_allowed_per_game",
+      "fantasy_points_ppr_allowed"
+    ];
+
+  }
+
+
+  if(
+    period.value==="last3"
+  ){
+
+    columns=
+      columns.map(column=>{
+
+        if(
+          column==="season_rank"
+        ){
+          return "last3_rank";
+        }
+
+        if(
+          column==="games"
+        ){
+          return "last3_games";
+        }
+
+        if(
+          column===
+          "ppr_allowed_per_game"
+        ){
+          return (
+            "last3_ppr_allowed_per_game"
+          );
+        }
+
+        if(
+          column===
+          "fantasy_points_ppr_allowed"
+        ){
+          return (
+            "last3_fantasy_points_ppr_allowed"
+          );
+        }
+
+        return column;
+
+      });
+
+  }
+
+  return columns;
+
+}
+
+
+function getRows(){
+
+  const selectedPosition=
+    position.value;
+
+  const selectedDefense=
+    defense.value;
+
+  const query=
+    search.value
+      .toUpperCase()
+      .trim();
+
+  return RAW.filter(row=>{
+
+    if(
+      selectedPosition &&
+      row.position!==
+      selectedPosition
+    ){
+      return false;
+    }
+
+    if(
+      selectedDefense &&
+      row.defense!==
+      selectedDefense
+    ){
+      return false;
+    }
+
+    if(
+      query &&
+      !String(
+        row.defense||""
+      )
+      .toUpperCase()
+      .includes(query)
+    ){
+      return false;
+    }
+
+    return true;
+
+  });
+
+}
+
+
+function render(){
+
+  const columns=
+    getColumns();
+
+  let rows=
+    getRows();
+
+
+  if(
+    period.value==="last3" &&
+    sortColumn==="season_rank"
+  ){
+
+    sortColumn=
+      "last3_rank";
+
+  }
+
+
+  if(
+    period.value==="season" &&
+    sortColumn==="last3_rank"
+  ){
+
+    sortColumn=
+      "season_rank";
+
+  }
+
+
+  rows.sort(
+    (a,b)=>{
+
+      const av=
+        a[sortColumn];
+
+      const bv=
+        b[sortColumn];
+
+
+      if(
+        typeof av==="number" &&
+        typeof bv==="number"
+      ){
+
+        return (
+          (av-bv) *
+          sortDirection
+        );
+
+      }
+
+
+      return (
+        String(av??"")
+          .localeCompare(
+            String(bv??"")
+          )
+        *
+        sortDirection
+      );
+
+    }
+  );
+
+
+  thead.innerHTML="";
+
+
+  columns.forEach(column=>{
+
+    const th=
+      document.createElement(
+        "th"
+      );
+
+    th.textContent=
+      label(column);
+
+
+    th.onclick=()=>{
+
+      if(
+        sortColumn===column
+      ){
+
+        sortDirection*=-1;
+
+      }else{
+
+        sortColumn=column;
+
+        if(
+          column.includes("rank")
+        ){
+
+          sortDirection=1;
+
+        }else{
+
+          sortDirection=-1;
+
+        }
+
+      }
+
+      render();
+
+    };
+
+
+    thead.appendChild(
+      th
+    );
+
+  });
+
+
+  tbody.innerHTML="";
+
+
+  rows.forEach(row=>{
+
+    const tr=
+      document.createElement(
+        "tr"
+      );
+
+
+    columns.forEach(column=>{
+
+      const td=
+        document.createElement(
+          "td"
+        );
+
+      td.textContent=
+        formatValue(
+          column,
+          row[column]
+        );
+
+
+      if(
+        column==="position"
+      ){
+
+        td.className="pos";
+
+      }
+
+
+      if(
+        column.includes("rank")
+      ){
+
+        td.className=
+          "rank " +
+          rankClass(
+            row[column]
+          );
+
+      }
+
+
+      tr.appendChild(
+        td
+      );
+
+    });
+
+
+    tbody.appendChild(
+      tr
+    );
+
+  });
+
+
+  count.textContent=
+    `${rows.length} matchup records shown`;
+
+
+  loading.style.display=
+    "none";
+
+  table.style.display=
+    "table";
+
+}
+
+
+async function start(){
+
+  try{
+
+    const response=
+      await fetch(
+        "data/matchups.json",
+        {
+          cache:"no-store"
+        }
+      );
+
+
+    if(
+      !response.ok
+    ){
+
+      throw new Error(
+        "matchups.json could not be loaded."
+      );
+
+    }
+
+
+    RAW=
+      await response.json();
+
+
+    if(
+      !Array.isArray(RAW) ||
+      RAW.length===0
+    ){
+
+      throw new Error(
+        "Matchup dataset is empty."
+      );
+
+    }
+
+
+    if(
+      RAW.length!==128
+    ){
+
+      console.warn(
+        "Expected 128 matchup records; " +
+        `received ${RAW.length}.`
+      );
+
+    }
+
+
+    populateDefenseFilter();
+
+    header();
+
+    render();
+
+
+  }catch(error){
+
+    loading.innerHTML=`
+
+      <div class="error">
+
+      <strong>
+      Matchup data could not be loaded.
+      </strong>
+
+      <br><br>
+
+      ${error.message}
+
+      </div>
+
+    `;
+
+
+    console.error(
+      error
+    );
+
+  }
+
+}
+
+
+position.addEventListener(
+  "change",
+  ()=>{
+
+    sortColumn=
+      period.value==="season"
+      ?"season_rank"
+      :"last3_rank";
+
+    sortDirection=1;
+
+    render();
+
+  }
+);
+
+
+period.addEventListener(
+  "change",
+  ()=>{
+
+    sortColumn=
+      period.value==="season"
+      ?"season_rank"
+      :"last3_rank";
+
+    sortDirection=1;
+
+    render();
+
+  }
+);
+
+
+defense.addEventListener(
+  "change",
+  render
+);
+
+
+search.addEventListener(
+  "input",
+  render
+);
+
+
+start();
+
+</script>
+
+</body>
+</html>
