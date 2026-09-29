@@ -682,6 +682,33 @@ function trendColumn(k){
   return k.endsWith("_trend");
 }
 
+/* ------------------------------
+   MATCHUP DIFFICULTY
+------------------------------ */
+
+function matchupClass(value){
+
+  const rank=
+    Number(value);
+
+  if(
+    !Number.isFinite(rank)
+  ){
+    return "";
+  }
+
+  if(rank<=10){
+    return "matchup-favorable";
+  }
+
+  if(rank>=23){
+    return "matchup-tough";
+  }
+
+  return "matchup-neutral";
+
+}
+  
 function rankColumn(k){
   return k.endsWith("_rank");
 }
@@ -2006,11 +2033,43 @@ function render(){
         td.className="pos";
       }
 
-      if(
-        rankColumn(c)
-      ){
-        td.className="rank";
-      }
+if(
+  rankColumn(c)
+){
+  td.className="rank";
+}
+
+
+/* ------------------------------
+   UPCOMING MATCHUP RANK COLORS
+------------------------------ */
+
+if(
+  c==="matchup_rank" ||
+  c==="matchup_last3_rank"
+){
+
+  td.className=
+    matchupClass(
+      r[c]
+    );
+
+}
+
+
+/* ------------------------------
+   BYE WEEK
+------------------------------ */
+
+if(
+  c==="upcoming_opponent" &&
+  r.upcoming_bye
+){
+
+  td.className=
+    "matchup-bye";
+
+}
 
       if(
         trendColumn(c)
