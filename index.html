@@ -1491,30 +1491,55 @@ const names=[
         :""
       );
 
-    b.textContent=name;
+b.onclick=()=>{
 
-    b.onclick=()=>{
+  activeView=name;
 
-      activeView=name;
 
-      if(
-        [
-          "QB",
-          "RB",
-          "WR",
-          "TE"
-        ]
-        .includes(name)
-      ){
-        position.value=name;
-      }
+  /*
+  --------------------------------
+  POSITION TABS
+  --------------------------------
+  */
 
-      createTabs();
-      render();
+  if(
+    [
+      "QB",
+      "RB",
+      "WR",
+      "TE"
+    ]
+    .includes(name)
+  ){
+    position.value=name;
+  }
 
-    };
 
-    tabs.appendChild(b);
+  /*
+  --------------------------------
+  UPCOMING MATCHUP DEFAULT SORT
+  --------------------------------
+  */
+
+  if(
+    name==="Upcoming Matchup"
+  ){
+
+    sortColumn=
+      "matchup_rank";
+
+    sortDirection=
+      1;
+
+  }
+
+
+  createTabs();
+  render();
+
+};
+
+tabs.appendChild(b);
 
   });
 
