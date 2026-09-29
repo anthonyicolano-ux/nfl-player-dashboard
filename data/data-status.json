@@ -1,0 +1,83 @@
+{
+  "status": "validated",
+  "season": 2026,
+  "latest_week": 3,
+  "generated_at_utc": "2026-09-29T15:14:42.720049+00:00",
+  "player_week_records": 1078,
+  "unique_players": 454,
+  "teams_found": 32,
+  "teams": [
+    "ARI",
+    "ATL",
+    "BAL",
+    "BUF",
+    "CAR",
+    "CHI",
+    "CIN",
+    "CLE",
+    "DAL",
+    "DEN",
+    "DET",
+    "GB",
+    "HOU",
+    "IND",
+    "JAC",
+    "KC",
+    "LA",
+    "LAC",
+    "LV",
+    "MIA",
+    "MIN",
+    "NE",
+    "NO",
+    "NYG",
+    "NYJ",
+    "PHI",
+    "PIT",
+    "SEA",
+    "SF",
+    "TB",
+    "TEN",
+    "WAS"
+  ],
+  "position_counts": {
+    "WR": 188,
+    "RB": 114,
+    "TE": 103,
+    "QB": 49
+  },
+  "sources": {
+    "player_stats": {
+      "status": "loaded",
+      "provider": "nflverse"
+    },
+    "snap_counts": {
+      "status": "loaded",
+      "matched_records": 1074,
+      "coverage": 0.9963
+    },
+    "advanced_passing": {
+      "status": "loaded",
+      "eligible_records": 113,
+      "matched_records": 77,
+      "coverage": 0.6814159292035398,
+      "total_matches": 77
+    },
+    "advanced_rushing": {
+      "status": "loaded",
+      "eligible_records": 374,
+      "matched_records": 260,
+      "coverage": 0.6951871657754011,
+      "total_matches": 260
+    },
+    "advanced_receiving": {
+      "status": "loaded",
+      "eligible_records": 766,
+      "matched_records": 519,
+      "coverage": 0.6775456919060052,
+      "total_matches": 519
+    }
+  },
+  "license": "CC BY 4.0",
+  "attribution": "NFL statistics provided through nflverse. See nflverse-data and applicable dataset documentation for source and attribution details."
+}
