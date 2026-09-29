@@ -327,6 +327,19 @@ const COMMON=[
 
 const VIEWS={
 
+"Upcoming Matchup":[
+  "player_display_name",
+  "position",
+  "recent_team",
+  "upcoming_opponent",
+  "upcoming_home_away",
+  "upcoming_game_date",
+  "matchup_ppr_allowed",
+  "matchup_rank",
+  "matchup_last3_ppr_allowed",
+  "matchup_last3_rank"
+],
+
 Rankings:[
   "ppr_rank",
   "player_display_name",
@@ -583,6 +596,16 @@ Fantasy:[
 const LABELS={
   player_display_name:"Player",
   recent_team:"Team",
+
+  upcoming_opponent:"Opp",
+  upcoming_home_away:"H/A",
+  upcoming_game_date:"Game Date",
+
+  matchup_ppr_allowed:"Opp PPR/G",
+  matchup_rank:"Matchup Rk",
+
+  matchup_last3_ppr_allowed:"L3 PPR/G",
+  matchup_last3_rank:"L3 Rk",
   offense_snaps:"Snaps",
   offense_pct:"Snap %",
   fantasy_points:"FP",
@@ -1303,9 +1326,10 @@ function getRows(){
 
 function createTabs(){
 
-  const names=[
+const names=[
 
     "Rankings",
+    "Upcoming Matchup",
     "Compare",
     "Overview",
     "QB",
@@ -2153,7 +2177,7 @@ async function start(){
 
   try{
 
-    const [p,s]=
+    const [p,s,m]=
       await Promise.all([
 
         fetch(
@@ -2164,9 +2188,15 @@ async function start(){
         fetch(
           "data/data-status.json",
           {cache:"no-store"}
+        ),
+
+        fetch(
+          "data/player-matchups.json",
+          {cache:"no-store"}
         )
 
       ]);
+
 
     if(!p.ok){
 
@@ -2176,6 +2206,7 @@ async function start(){
 
     }
 
+
     if(!s.ok){
 
       throw Error(
@@ -2184,11 +2215,25 @@ async function start(){
 
     }
 
+
+    if(!m.ok){
+
+      throw Error(
+        "player-matchups.json failed to load"
+      );
+
+    }
+
+
     RAW=
       await p.json();
 
     STATUS=
       await s.json();
+
+    const MATCHUPS=
+      await m.json();
+
 
     if(
       !Array.isArray(RAW) ||
@@ -2201,10 +2246,244 @@ async function start(){
 
     }
 
+
+    if(
+      !Array.isArray(MATCHUPS) ||
+      !MATCHUPS.length
+    ){
+
+      throw Error(
+        "Player matchup dataset is empty"
+      );
+
+    }
+
+
+    /*
+    ------------------------------------------
+    BUILD MATCHUP LOOKUP
+
+    player_id is preferred.
+
+    Player name + position is retained as a
+    fallback in case a source record is ever
+    missing player_id.
+    ------------------------------------------
+    */
+
+    const matchupById=
+      new Map();
+
+    const matchupByName=
+      new Map();
+
+
+    MATCHUPS.forEach(x=>{
+
+      if(x.player_id){
+
+        matchupById.set(
+          String(x.player_id),
+          x
+        );
+
+      }
+
+
+      if(
+        x.player_name &&
+        x.position
+      ){
+
+        matchupByName.set(
+
+          String(
+            x.player_name
+          )
+          .trim()
+          .toLowerCase()
+          +"|"+
+          String(
+            x.position
+          )
+          .trim()
+          .toUpperCase(),
+
+          x
+
+        );
+
+      }
+
+    });
+
+
+    /*
+    ------------------------------------------
+    JOIN UPCOMING MATCHUP DATA TO EVERY
+    PLAYER-WEEK RECORD
+
+    Historical opponent remains untouched.
+    ------------------------------------------
+    */
+
+    let matched=0;
+
+
+    RAW=
+      RAW.map(r=>{
+
+        let matchup=null;
+
+
+        if(r.player_id){
+
+          matchup=
+            matchupById.get(
+              String(
+                r.player_id
+              )
+            );
+
+        }
+
+
+        if(
+          !matchup &&
+          r.player_display_name &&
+          r.position
+        ){
+
+          const key=
+
+            String(
+              r.player_display_name
+            )
+            .trim()
+            .toLowerCase()
+
+            +"|"+
+
+            String(
+              r.position
+            )
+            .trim()
+            .toUpperCase();
+
+
+          matchup=
+            matchupByName.get(
+              key
+            );
+
+        }
+
+
+        if(!matchup){
+
+          return{
+            ...r,
+
+            upcoming_week:
+              Number(
+                STATUS.latest_week||0
+              )+1,
+
+            upcoming_opponent:
+              null,
+
+            upcoming_home_away:
+              null,
+
+            upcoming_game_date:
+              null,
+
+            upcoming_bye:
+              null,
+
+            matchup_available:
+              false,
+
+            matchup_ppr_allowed:
+              null,
+
+            matchup_rank:
+              null,
+
+            matchup_last3_ppr_allowed:
+              null,
+
+            matchup_last3_rank:
+              null
+
+          };
+
+        }
+
+
+        matched++;
+
+
+        return{
+          ...r,
+
+          upcoming_week:
+            matchup.upcoming_week,
+
+          upcoming_opponent:
+            matchup.bye
+            ?"BYE"
+            :matchup.opponent,
+
+          upcoming_home_away:
+            matchup.bye
+            ?"—"
+            :matchup.home_away,
+
+          upcoming_game_date:
+            matchup.game_date,
+
+          upcoming_bye:
+            Boolean(
+              matchup.bye
+            ),
+
+          matchup_available:
+            Boolean(
+              matchup.matchup_available
+            ),
+
+          matchup_ppr_allowed:
+            matchup.opponent_ppr_allowed_per_game,
+
+          matchup_rank:
+            matchup.opponent_matchup_rank,
+
+          matchup_last3_ppr_allowed:
+            matchup.opponent_last3_ppr_allowed_per_game,
+
+          matchup_last3_rank:
+            matchup.opponent_last3_matchup_rank
+
+        };
+
+      });
+
+
+    console.log(
+      "Upcoming matchup join:",
+      matched,
+      "of",
+      RAW.length,
+      "player-week records matched"
+    );
+
+
     header();
     populate();
     createTabs();
     render();
+
 
   }catch(e){
 
