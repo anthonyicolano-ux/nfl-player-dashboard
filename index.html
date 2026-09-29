@@ -1454,7 +1454,7 @@ function getRows(){
 
 function createTabs(){
 
-const names=[
+  const names=[
 
     "Rankings",
     "Upcoming Matchup",
@@ -1491,55 +1491,74 @@ const names=[
         :""
       );
 
-b.onclick=()=>{
 
-  activeView=name;
+    /*
+    --------------------------------
+    TAB NAME
+    --------------------------------
+    */
 
-
-  /*
-  --------------------------------
-  POSITION TABS
-  --------------------------------
-  */
-
-  if(
-    [
-      "QB",
-      "RB",
-      "WR",
-      "TE"
-    ]
-    .includes(name)
-  ){
-    position.value=name;
-  }
+    b.textContent=name;
 
 
-  /*
-  --------------------------------
-  UPCOMING MATCHUP DEFAULT SORT
-  --------------------------------
-  */
+    /*
+    --------------------------------
+    TAB CLICK
+    --------------------------------
+    */
 
-  if(
-    name==="Upcoming Matchup"
-  ){
+    b.onclick=()=>{
 
-    sortColumn=
-      "matchup_rank";
-
-    sortDirection=
-      1;
-
-  }
+      activeView=name;
 
 
-  createTabs();
-  render();
+      /*
+      --------------------------------
+      POSITION TABS
+      --------------------------------
+      */
 
-};
+      if(
+        [
+          "QB",
+          "RB",
+          "WR",
+          "TE"
+        ]
+        .includes(name)
+      ){
 
-tabs.appendChild(b);
+        position.value=name;
+
+      }
+
+
+      /*
+      --------------------------------
+      UPCOMING MATCHUP DEFAULT SORT
+      --------------------------------
+      */
+
+      if(
+        name==="Upcoming Matchup"
+      ){
+
+        sortColumn=
+          "matchup_rank";
+
+        sortDirection=
+          1;
+
+      }
+
+
+      createTabs();
+      render();
+
+    };
+
+
+    tabs.appendChild(b);
 
   });
 
