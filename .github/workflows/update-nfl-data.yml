@@ -52,12 +52,20 @@ jobs:
           pip install pandas requests
 
       # ------------------------------------------------------
-      # BUILD NFL DATA
+      # BUILD PLAYER DATA
       # ------------------------------------------------------
 
-      - name: Retrieve and validate NFL data
+      - name: Retrieve and validate NFL player data
         run: |
           python scripts/update_nfl_data.py
+
+      # ------------------------------------------------------
+      # BUILD MATCHUP DATA
+      # ------------------------------------------------------
+
+      - name: Build defense vs position matchup data
+        run: |
+          python scripts/update_matchup_data.py
 
       # ------------------------------------------------------
       # VERIFY OUTPUT FILES EXIST
@@ -77,6 +85,11 @@ jobs:
             exit 1
           fi
 
+          if [ ! -f "data/matchups.json" ]; then
+            echo "ERROR: data/matchups.json was not created."
+            exit 1
+          fi
+
           echo "Generated files found:"
           ls -lh data/
 
@@ -89,23 +102,20 @@ jobs:
           git config user.name "nfl-dashboard-bot"
           git config user.email "nfl-dashboard-bot@users.noreply.github.com"
 
-          # IMPORTANT:
-          # Stage the files BEFORE checking for changes.
-          # This allows Git to detect brand-new files as well
-          # as modifications to existing files.
+          # Stage all validated generated data.
           git add data/
 
           echo "Git status after staging:"
           git status --short
 
-          # Check staged changes.
+          # Stop successfully if nothing changed.
           if git diff --cached --quiet; then
             echo "No NFL data changes detected."
             exit 0
           fi
 
-          git commit -m "Update NFL player data"
+          git commit -m "Update NFL player and matchup data"
 
           git push
 
-          echo "NFL player data successfully committed and pushed."
+          echo "NFL player and matchup data successfully committed and pushed."
