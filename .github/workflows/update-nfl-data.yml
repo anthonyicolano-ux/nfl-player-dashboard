@@ -52,7 +52,7 @@ jobs:
           pip install pandas requests
 
       # ------------------------------------------------------
-      # BUILD PLAYER DATA
+      # PLAYER DATA
       # ------------------------------------------------------
 
       - name: Retrieve and validate NFL player data
@@ -60,7 +60,7 @@ jobs:
           python scripts/update_nfl_data.py
 
       # ------------------------------------------------------
-      # BUILD MATCHUP DATA
+      # DEFENSE VS POSITION MATCHUPS
       # ------------------------------------------------------
 
       - name: Build defense vs position matchup data
@@ -68,7 +68,15 @@ jobs:
           python scripts/update_matchup_data.py
 
       # ------------------------------------------------------
-      # VERIFY OUTPUT FILES EXIST
+      # NFL SCHEDULE
+      # ------------------------------------------------------
+
+      - name: Build NFL schedule data
+        run: |
+          python scripts/update_schedule_data.py
+
+      # ------------------------------------------------------
+      # VERIFY OUTPUT FILES
       # ------------------------------------------------------
 
       - name: Verify generated files
@@ -90,7 +98,13 @@ jobs:
             exit 1
           fi
 
-          echo "Generated files found:"
+          if [ ! -f "data/schedule.json" ]; then
+            echo "ERROR: data/schedule.json was not created."
+            exit 1
+          fi
+
+          echo ""
+          echo "All required data files exist:"
           ls -lh data/
 
       # ------------------------------------------------------
@@ -102,20 +116,18 @@ jobs:
           git config user.name "nfl-dashboard-bot"
           git config user.email "nfl-dashboard-bot@users.noreply.github.com"
 
-          # Stage all validated generated data.
           git add data/
 
           echo "Git status after staging:"
           git status --short
 
-          # Stop successfully if nothing changed.
           if git diff --cached --quiet; then
             echo "No NFL data changes detected."
             exit 0
           fi
 
-          git commit -m "Update NFL player and matchup data"
+          git commit -m "Update NFL player matchup and schedule data"
 
           git push
 
-          echo "NFL player and matchup data successfully committed and pushed."
+          echo "NFL dashboard data successfully committed and pushed."
