@@ -3,227 +3,96 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>NFL Player Data Dashboard</title>
+<title>NFL Player Dashboard</title>
 
 <style>
-:root {
-  --bg: #0b1020;
-  --panel: #121a2d;
-  --panel2: #182238;
-  --border: #26334e;
-  --text: #edf2f7;
-  --muted: #98a6bd;
-  --accent: #4ea1ff;
-  --good: #35c98b;
-  --warn: #f3b64c;
-  --bad: #ff6b6b;
+:root{
+  --bg:#09101e;
+  --panel:#111a2b;
+  --panel2:#172238;
+  --border:#283750;
+  --text:#edf3fb;
+  --muted:#94a3b8;
+  --accent:#4ea1ff;
+  --green:#3dd598;
+  --yellow:#f5bd4f;
 }
-
-* {
-  box-sizing: border-box;
+*{box-sizing:border-box}
+body{
+  margin:0;background:var(--bg);color:var(--text);
+  font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;
 }
-
-body {
-  margin: 0;
-  background: var(--bg);
-  color: var(--text);
-  font-family:
-    Inter,
-    ui-sans-serif,
-    system-ui,
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    sans-serif;
+header{
+  padding:26px 30px 18px;border-bottom:1px solid var(--border);
 }
-
-header {
-  padding: 28px 32px 18px;
-  border-bottom: 1px solid var(--border);
+h1{margin:0;font-size:28px}
+.subtitle{color:var(--muted);margin-top:5px}
+main{padding:20px 30px 40px}
+.status{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}
+.badge{
+  padding:6px 10px;background:var(--panel);
+  border:1px solid var(--border);border-radius:7px;
+  color:var(--muted);font-size:12px
 }
-
-h1 {
-  margin: 0;
-  font-size: 28px;
+.good{color:var(--green)}
+.cards{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(145px,1fr));
+  gap:10px;margin-bottom:16px
 }
-
-.subtitle {
-  color: var(--muted);
-  margin-top: 6px;
+.card{
+  background:var(--panel);border:1px solid var(--border);
+  border-radius:10px;padding:14px
 }
-
-.container {
-  padding: 22px 32px 40px;
+.card-label{
+  color:var(--muted);font-size:11px;text-transform:uppercase;
+  letter-spacing:.05em
 }
-
-.status {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  margin-bottom: 18px;
+.card-value{font-size:22px;font-weight:700;margin-top:5px}
+.filters{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(135px,1fr));
+  gap:8px;background:var(--panel);border:1px solid var(--border);
+  border-radius:10px;padding:12px;margin-bottom:14px
 }
-
-.badge {
-  background: var(--panel);
-  border: 1px solid var(--border);
-  padding: 7px 11px;
-  border-radius: 8px;
-  color: var(--muted);
-  font-size: 13px;
+select,input{
+  background:var(--panel2);color:var(--text);
+  border:1px solid var(--border);border-radius:6px;
+  padding:9px;width:100%
 }
-
-.badge.good {
-  color: var(--good);
+.tabs{display:flex;gap:6px;overflow:auto;margin-bottom:10px}
+.tab{
+  background:var(--panel);border:1px solid var(--border);
+  color:var(--muted);padding:8px 12px;border-radius:7px;
+  cursor:pointer;white-space:nowrap
 }
-
-.cards {
-  display: grid;
-  grid-template-columns:
-    repeat(auto-fit, minmax(160px, 1fr));
-  gap: 12px;
-  margin-bottom: 20px;
+.tab.active{
+  background:#173b67;border-color:var(--accent);color:white
 }
-
-.card {
-  background: var(--panel);
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  padding: 16px;
+.table-wrap{
+  border:1px solid var(--border);border-radius:10px;
+  overflow:auto;max-height:67vh;background:var(--panel)
 }
-
-.card-label {
-  color: var(--muted);
-  font-size: 12px;
-  text-transform: uppercase;
-  letter-spacing: .05em;
+table{border-collapse:collapse;width:100%;font-size:12.5px}
+thead{position:sticky;top:0;z-index:2}
+th{
+  background:#162139;padding:9px;text-align:left;
+  border-bottom:1px solid var(--border);
+  cursor:pointer;white-space:nowrap
 }
-
-.card-value {
-  font-size: 24px;
-  font-weight: 700;
-  margin-top: 6px;
+td{
+  padding:8px 9px;border-bottom:1px solid #202c43;
+  white-space:nowrap
 }
-
-.filters {
-  background: var(--panel);
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  padding: 14px;
-  display: grid;
-  grid-template-columns:
-    repeat(auto-fit, minmax(145px, 1fr));
-  gap: 10px;
-  margin-bottom: 16px;
+tbody tr:hover{background:#16233b}
+.player{font-weight:650}
+.pos{color:var(--accent);font-weight:700}
+.footer{
+  display:flex;justify-content:space-between;gap:10px;
+  margin-top:9px;color:var(--muted);font-size:12px
 }
-
-select,
-input {
-  width: 100%;
-  background: var(--panel2);
-  color: var(--text);
-  border: 1px solid var(--border);
-  border-radius: 7px;
-  padding: 9px 10px;
-}
-
-.tabs {
-  display: flex;
-  gap: 6px;
-  overflow-x: auto;
-  margin-bottom: 12px;
-}
-
-.tab {
-  border: 1px solid var(--border);
-  background: var(--panel);
-  color: var(--muted);
-  border-radius: 7px;
-  padding: 8px 13px;
-  cursor: pointer;
-  white-space: nowrap;
-}
-
-.tab.active {
-  color: white;
-  border-color: var(--accent);
-  background: #17365f;
-}
-
-.table-wrap {
-  background: var(--panel);
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  overflow: auto;
-  max-height: 68vh;
-}
-
-table {
-  border-collapse: collapse;
-  width: 100%;
-  font-size: 13px;
-}
-
-thead {
-  position: sticky;
-  top: 0;
-  z-index: 2;
-}
-
-th {
-  background: #162038;
-  color: #dbe6f5;
-  padding: 10px;
-  text-align: left;
-  border-bottom: 1px solid var(--border);
-  cursor: pointer;
-  white-space: nowrap;
-}
-
-td {
-  padding: 9px 10px;
-  border-bottom: 1px solid #202c43;
-  white-space: nowrap;
-}
-
-tbody tr:hover {
-  background: #16223a;
-}
-
-.player {
-  font-weight: 600;
-}
-
-.pos {
-  color: var(--accent);
-  font-weight: 700;
-}
-
-.footer-row {
-  display: flex;
-  justify-content: space-between;
-  gap: 10px;
-  color: var(--muted);
-  margin-top: 10px;
-  font-size: 13px;
-}
-
-.loading {
-  padding: 50px;
-  text-align: center;
-  color: var(--muted);
-}
-
-.error {
-  color: var(--bad);
-}
-
-@media(max-width:700px) {
-  header,
-  .container {
-    padding-left: 14px;
-    padding-right: 14px;
-  }
+.loading{text-align:center;padding:50px;color:var(--muted)}
+.error{color:#ff7373}
+@media(max-width:700px){
+  header,main{padding-left:12px;padding-right:12px}
 }
 </style>
 </head>
@@ -231,962 +100,557 @@ tbody tr:hover {
 <body>
 
 <header>
-  <h1>NFL Player Data Dashboard</h1>
-  <div class="subtitle">
-    2026 player usage, advanced statistics and fantasy performance
-  </div>
+<h1>NFL Player Data Dashboard</h1>
+<div class="subtitle">
+2026 usage • advanced statistics • fantasy production
+</div>
 </header>
 
-<div class="container">
+<main>
 
 <div id="status" class="status"></div>
-
 <div id="cards" class="cards"></div>
 
 <div class="filters">
 
-  <select id="mode">
-    <option value="weekly">Weekly Data</option>
-    <option value="season">Season Totals</option>
-  </select>
+<select id="range">
+<option value="weekly">Weekly</option>
+<option value="last3">Last 3 Weeks</option>
+<option value="season">Season</option>
+</select>
 
-  <select id="week">
-    <option value="">All Weeks</option>
-  </select>
+<select id="week">
+<option value="">Latest / All</option>
+</select>
 
-  <select id="position">
-    <option value="">All Positions</option>
-    <option>QB</option>
-    <option>RB</option>
-    <option>WR</option>
-    <option>TE</option>
-  </select>
+<select id="position">
+<option value="">All Positions</option>
+<option>QB</option>
+<option>RB</option>
+<option>WR</option>
+<option>TE</option>
+</select>
 
-  <select id="team">
-    <option value="">All Teams</option>
-  </select>
+<select id="team">
+<option value="">All Teams</option>
+</select>
 
-  <select id="opponent">
-    <option value="">All Opponents</option>
-  </select>
+<select id="opponent">
+<option value="">All Opponents</option>
+</select>
 
-  <input
-    id="search"
-    type="search"
-    placeholder="Search player..."
-  >
+<input id="minSnaps" type="number" min="0" placeholder="Min snaps">
+
+<input id="minTargets" type="number" min="0" placeholder="Min targets">
+
+<input id="minCarries" type="number" min="0" placeholder="Min carries">
+
+<input id="search" type="search" placeholder="Search player">
 
 </div>
 
-<div class="tabs" id="tabs"></div>
+<div id="tabs" class="tabs"></div>
 
 <div class="table-wrap">
 
-  <div id="loading" class="loading">
-    Loading player data...
-  </div>
+<div id="loading" class="loading">Loading player data...</div>
 
-  <table id="table" style="display:none">
-
-    <thead>
-      <tr id="thead"></tr>
-    </thead>
-
-    <tbody id="tbody"></tbody>
-
-  </table>
+<table id="table" style="display:none">
+<thead><tr id="thead"></tr></thead>
+<tbody id="tbody"></tbody>
+</table>
 
 </div>
 
-<div class="footer-row">
-
-  <div id="count"></div>
-
-  <div>
-    Data: nflverse • CC BY 4.0
-  </div>
-
+<div class="footer">
+<div id="count"></div>
+<div>Source: nflverse • CC BY 4.0</div>
 </div>
 
-</div>
+</main>
 
 <script>
 
-const VIEWS = {
+let RAW=[];
+let STATUS={};
+let activeView="Overview";
+let sortColumn="fantasy_points_ppr";
+let sortDirection=-1;
 
-  Overview: [
-    "player_display_name",
-    "position",
-    "recent_team",
-    "opponent",
-    "week",
-    "offense_snaps",
-    "offense_pct",
-    "carries",
-    "targets",
-    "receptions",
-    "touches",
-    "opportunities",
-    "fantasy_points",
-    "fantasy_points_ppr"
-  ],
+const COMMON=[
+"player_display_name","position","recent_team","opponent"
+];
 
-  "Playing Time": [
-    "player_display_name",
-    "position",
-    "recent_team",
-    "opponent",
-    "week",
-    "offense_snaps",
-    "offense_pct",
-    "targets",
-    "targets_per_snap",
-    "carries",
-    "carries_per_snap"
-  ],
+const VIEWS={
 
-  Usage: [
-    "player_display_name",
-    "position",
-    "recent_team",
-    "week",
-    "carries",
-    "targets",
-    "receptions",
-    "touches",
-    "opportunities",
-    "target_share",
-    "air_yards_share",
-    "wopr"
-  ],
+Overview:[
+...COMMON,"week","offense_snaps","offense_pct",
+"carries","targets","receptions","touches","opportunities",
+"fantasy_points_ppr"
+],
 
-  Passing: [
-    "player_display_name",
-    "recent_team",
-    "opponent",
-    "week",
-    "completions",
-    "attempts",
-    "passing_yards",
-    "passing_tds",
-    "interceptions",
-    "sacks",
-    "passing_epa",
-    "adv_pass_times_sacked",
-    "adv_pass_times_blitzed",
-    "adv_pass_times_hurried",
-    "adv_pass_times_hit",
-    "adv_pass_times_pressured",
-    "adv_pass_times_pressured_pct",
-    "adv_pass_passing_bad_throws",
-    "adv_pass_passing_bad_throw_pct"
-  ],
+QB:[
+"player_display_name","recent_team","opponent","week",
+"offense_snaps","completions","attempts","passing_yards",
+"passing_tds","interceptions","passing_epa",
+"adv_pass_times_pressured","adv_pass_times_pressured_pct",
+"adv_pass_times_blitzed","adv_pass_times_hurried",
+"adv_pass_times_hit","adv_pass_passing_bad_throws",
+"adv_pass_passing_bad_throw_pct","fantasy_points_ppr"
+],
 
-  Rushing: [
-    "player_display_name",
-    "position",
-    "recent_team",
-    "opponent",
-    "week",
-    "carries",
-    "rushing_yards",
-    "rushing_tds",
-    "rushing_first_downs",
-    "rushing_epa",
-    "rushing_yards_per_carry_calc",
-    "adv_rush_rushing_yards_before_contact",
-    "adv_rush_rushing_yards_before_contact_avg",
-    "adv_rush_rushing_yards_after_contact",
-    "adv_rush_rushing_yards_after_contact_avg",
-    "adv_rush_rushing_broken_tackles"
-  ],
+RB:[
+...COMMON,"week","offense_snaps","offense_pct",
+"carries","rushing_yards","rushing_tds","targets","receptions",
+"receiving_yards","touches","opportunities",
+"adv_rush_rushing_yards_before_contact_avg",
+"adv_rush_rushing_yards_after_contact_avg",
+"adv_rush_rushing_broken_tackles","fantasy_points_ppr"
+],
 
-  Receiving: [
-    "player_display_name",
-    "position",
-    "recent_team",
-    "opponent",
-    "week",
-    "targets",
-    "receptions",
-    "receiving_yards",
-    "receiving_tds",
-    "receiving_first_downs",
-    "receiving_epa",
-    "catch_rate",
-    "receiving_yards_per_target",
-    "adv_rec_receiving_broken_tackles",
-    "adv_rec_receiving_drop",
-    "adv_rec_receiving_drop_pct",
-    "adv_rec_receiving_int",
-    "adv_rec_receiving_rat"
-  ],
+WR:[
+...COMMON,"week","offense_snaps","offense_pct",
+"targets","receptions","receiving_yards","receiving_tds",
+"target_share","air_yards_share","wopr",
+"receiving_yards_per_target","adv_rec_receiving_drop_pct",
+"adv_rec_receiving_broken_tackles","fantasy_points_ppr"
+],
 
-  Fantasy: [
-    "player_display_name",
-    "position",
-    "recent_team",
-    "week",
-    "fantasy_points",
-    "fantasy_points_ppr",
-    "fantasy_points_per_snap",
-    "fantasy_points_per_100_snaps",
-    "ppr_points_per_snap",
-    "ppr_points_per_100_snaps",
-    "offense_snaps",
-    "touches",
-    "opportunities"
-  ],
+TE:[
+...COMMON,"week","offense_snaps","offense_pct",
+"targets","receptions","receiving_yards","receiving_tds",
+"target_share","air_yards_share","wopr",
+"receiving_yards_per_target","adv_rec_receiving_drop_pct",
+"fantasy_points_ppr"
+],
 
-  Advanced: [
-    "player_display_name",
-    "position",
-    "recent_team",
-    "week",
-    "target_share",
-    "air_yards_share",
-    "wopr",
-    "racr",
-    "receiving_epa",
-    "rushing_epa",
-    "passing_epa",
-    "adv_pass_times_pressured_pct",
-    "adv_rush_rushing_yards_after_contact_avg",
-    "adv_rec_receiving_drop_pct"
-  ]
+"Playing Time":[
+...COMMON,"week","offense_snaps","offense_pct",
+"targets","targets_per_snap","carries","carries_per_snap"
+],
+
+Usage:[
+...COMMON,"week","offense_snaps","carries","targets",
+"receptions","touches","opportunities",
+"target_share","air_yards_share","wopr"
+],
+
+Passing:[
+"player_display_name","recent_team","opponent","week",
+"completions","attempts","passing_yards","passing_tds",
+"interceptions","passing_epa",
+"adv_pass_times_sacked","adv_pass_times_blitzed",
+"adv_pass_times_hurried","adv_pass_times_hit",
+"adv_pass_times_pressured","adv_pass_times_pressured_pct",
+"adv_pass_passing_bad_throws","adv_pass_passing_bad_throw_pct"
+],
+
+Rushing:[
+...COMMON,"week","carries","rushing_yards","rushing_tds",
+"rushing_first_downs","rushing_epa","rushing_yards_per_carry_calc",
+"adv_rush_rushing_yards_before_contact",
+"adv_rush_rushing_yards_before_contact_avg",
+"adv_rush_rushing_yards_after_contact",
+"adv_rush_rushing_yards_after_contact_avg",
+"adv_rush_rushing_broken_tackles"
+],
+
+Receiving:[
+...COMMON,"week","targets","receptions","receiving_yards",
+"receiving_tds","receiving_first_downs","receiving_epa",
+"catch_rate","receiving_yards_per_target",
+"adv_rec_receiving_broken_tackles",
+"adv_rec_receiving_drop","adv_rec_receiving_drop_pct",
+"adv_rec_receiving_int","adv_rec_receiving_rat"
+],
+
+Fantasy:[
+...COMMON,"week","offense_snaps","touches","opportunities",
+"fantasy_points","fantasy_points_ppr",
+"fantasy_points_per_snap","fantasy_points_per_100_snaps",
+"ppr_points_per_snap","ppr_points_per_100_snaps"
+]
 
 };
 
-let RAW = [];
-let STATUS = {};
-let activeView = "Overview";
-let sortColumn = "fantasy_points_ppr";
-let sortDirection = -1;
 
+function label(k){
 
-/* ----------------------------------------------------------
-   Formatting
----------------------------------------------------------- */
+const map={
+player_display_name:"Player",
+recent_team:"Team",
+offense_snaps:"Snaps",
+offense_pct:"Snap %",
+fantasy_points:"FP",
+fantasy_points_ppr:"PPR",
+target_share:"Target Share",
+air_yards_share:"Air Yard Share",
+touches:"Touches",
+opportunities:"Opportunities"
+};
 
-function label(key) {
-
-  const replacements = {
-    player_display_name: "Player",
-    recent_team: "Team",
-    offense_snaps: "Snaps",
-    offense_pct: "Snap %",
-    fantasy_points: "FP",
-    fantasy_points_ppr: "PPR",
-    target_share: "Target Share",
-    air_yards_share: "Air Yard Share",
-    wopr: "WOPR",
-    racr: "RACR",
-    touches: "Touches",
-    opportunities: "Opportunities"
-  };
-
-  if (replacements[key]) {
-    return replacements[key];
-  }
-
-  return key
-    .replace(/^adv_pass_/, "Pass ")
-    .replace(/^adv_rush_/, "Rush ")
-    .replace(/^adv_rec_/, "Rec ")
-    .replaceAll("_", " ")
-    .replace(/\b\w/g, c => c.toUpperCase());
+return map[k]||
+k.replace(/^adv_pass_/,"Pass ")
+.replace(/^adv_rush_/,"Rush ")
+.replace(/^adv_rec_/,"Rec ")
+.replaceAll("_"," ")
+.replace(/\b\w/g,c=>c.toUpperCase());
 }
 
 
-function isPercentColumn(key) {
-
-  return (
-    key.endsWith("_pct") ||
-    key.includes("share") ||
-    key === "catch_rate" ||
-    key === "targets_per_snap" ||
-    key === "carries_per_snap"
-  );
+function pctColumn(k){
+return k.endsWith("_pct")||
+k.includes("share")||
+k==="catch_rate"||
+k==="targets_per_snap"||
+k==="carries_per_snap";
 }
 
 
-function formatValue(key, value) {
+function fmt(k,v){
 
-  if (
-    value === null ||
-    value === undefined ||
-    value === ""
-  ) {
-    return "—";
-  }
+if(v===null||v===undefined||v==="")return "—";
 
-  if (key === "player_display_name") {
-    return value;
-  }
+if(pctColumn(k)&&!isNaN(Number(v)))
+return (Number(v)*100).toFixed(1)+"%";
 
-  if (isPercentColumn(key)) {
+if(typeof v==="number"){
+if(Number.isInteger(v))return v.toLocaleString();
+return v.toFixed(2);
+}
 
-    const n = Number(value);
-
-    if (Number.isNaN(n)) {
-      return value;
-    }
-
-    return (n * 100).toFixed(1) + "%";
-  }
-
-  if (
-    typeof value === "number"
-  ) {
-
-    if (Number.isInteger(value)) {
-      return value.toLocaleString();
-    }
-
-    return value.toFixed(2);
-  }
-
-  return value;
+return v;
 }
 
 
-/* ----------------------------------------------------------
-   Filters
----------------------------------------------------------- */
+function populate(){
 
-function populateFilters() {
+const teams=[...new Set(RAW.map(x=>x.recent_team).filter(Boolean))].sort();
+const opps=[...new Set(RAW.map(x=>x.opponent).filter(Boolean))].sort();
+const weeks=[...new Set(RAW.map(x=>x.week).filter(Boolean))].sort((a,b)=>a-b);
 
-  const teams = [
-    ...new Set(
-      RAW
-        .map(r => r.recent_team)
-        .filter(Boolean)
-    )
-  ].sort();
-
-  const opponents = [
-    ...new Set(
-      RAW
-        .map(r => r.opponent)
-        .filter(Boolean)
-    )
-  ].sort();
-
-  const weeks = [
-    ...new Set(
-      RAW
-        .map(r => r.week)
-        .filter(Boolean)
-    )
-  ].sort((a,b) => a-b);
-
-  for (const t of teams) {
-
-    team.insertAdjacentHTML(
-      "beforeend",
-      `<option>${t}</option>`
-    );
-  }
-
-  for (const o of opponents) {
-
-    opponent.insertAdjacentHTML(
-      "beforeend",
-      `<option>${o}</option>`
-    );
-  }
-
-  for (const w of weeks) {
-
-    week.insertAdjacentHTML(
-      "beforeend",
-      `<option value="${w}">
-        Week ${w}
-      </option>`
-    );
-  }
+teams.forEach(x=>team.insertAdjacentHTML("beforeend",`<option>${x}</option>`));
+opps.forEach(x=>opponent.insertAdjacentHTML("beforeend",`<option>${x}</option>`));
+weeks.forEach(x=>week.insertAdjacentHTML("beforeend",`<option value="${x}">Week ${x}</option>`));
 }
 
 
-function filteredRows() {
+function baseFilter(){
 
-  const pos = position.value;
-  const tm = team.value;
-  const opp = opponent.value;
-  const wk = week.value;
-  const q = search.value
-    .trim()
-    .toLowerCase();
+const q=search.value.toLowerCase().trim();
 
-  return RAW.filter(row => {
+return RAW.filter(r=>{
 
-    if (
-      pos &&
-      row.position !== pos
-    ) return false;
+if(position.value&&r.position!==position.value)return false;
+if(team.value&&r.recent_team!==team.value)return false;
+if(opponent.value&&r.opponent!==opponent.value)return false;
 
-    if (
-      tm &&
-      row.recent_team !== tm
-    ) return false;
+if(q&&!String(r.player_display_name||"").toLowerCase().includes(q))
+return false;
 
-    if (
-      opp &&
-      row.opponent !== opp
-    ) return false;
-
-    if (
-      wk &&
-      String(row.week) !== wk
-    ) return false;
-
-    if (
-      q &&
-      !String(
-        row.player_display_name || ""
-      )
-      .toLowerCase()
-      .includes(q)
-    ) return false;
-
-    return true;
-  });
+return true;
+});
 }
 
 
-/* ----------------------------------------------------------
-   Season aggregation
----------------------------------------------------------- */
+function aggregate(rows){
 
-function seasonRows(rows) {
+const map=new Map();
 
-  const grouped = new Map();
+rows.forEach(r=>{
 
-  for (const row of rows) {
+const key=r.player_id||r.player_display_name;
 
-    const key =
-      row.player_id ||
-      row.player_display_name;
+if(!map.has(key)){
+map.set(key,{...r,week:"Aggregate"});
+return;
+}
 
-    if (!grouped.has(key)) {
+const x=map.get(key);
 
-      grouped.set(
-        key,
-        {
-          ...row,
-          week: "Season"
-        }
-      );
+Object.entries(r).forEach(([k,v])=>{
 
-      continue;
-    }
+if(typeof v!=="number")return;
+if(["season","week"].includes(k))return;
 
-    const target = grouped.get(key);
+if(
+k.endsWith("_pct")||
+k.includes("share")||
+k.includes("per_")||
+k==="wopr"||
+k==="racr"
+)return;
 
-    for (
-      const [column, value]
-      of Object.entries(row)
-    ) {
+x[k]=Number(x[k]||0)+v;
 
-      if (
-        typeof value === "number"
-      ) {
+});
+});
 
-        if (
-          column === "season" ||
-          column === "week"
-        ) {
-          continue;
-        }
+const result=[...map.values()];
 
-        if (
-          column.endsWith("_pct") ||
-          column.includes("share") ||
-          column.includes("per_") ||
-          column === "wopr" ||
-          column === "racr"
-        ) {
-          continue;
-        }
+result.forEach(x=>{
 
-        target[column] =
-          Number(target[column] || 0)
-          + value;
-      }
-    }
-  }
+if(x.targets){
+x.catch_rate=(x.receptions||0)/x.targets;
+x.receiving_yards_per_target=(x.receiving_yards||0)/x.targets;
+}
 
-  const result = [
-    ...grouped.values()
-  ];
+if(x.carries)
+x.rushing_yards_per_carry_calc=(x.rushing_yards||0)/x.carries;
 
-  for (const row of result) {
+if(x.offense_snaps){
 
-    if (
-      row.targets &&
-      row.receptions !== undefined
-    ) {
-      row.catch_rate =
-        row.receptions /
-        row.targets;
-    }
+x.targets_per_snap=(x.targets||0)/x.offense_snaps;
+x.carries_per_snap=(x.carries||0)/x.offense_snaps;
 
-    if (
-      row.targets &&
-      row.receiving_yards !== undefined
-    ) {
-      row.receiving_yards_per_target =
-        row.receiving_yards /
-        row.targets;
-    }
+x.fantasy_points_per_snap=(x.fantasy_points||0)/x.offense_snaps;
+x.fantasy_points_per_100_snaps=x.fantasy_points_per_snap*100;
 
-    if (
-      row.carries &&
-      row.rushing_yards !== undefined
-    ) {
-      row.rushing_yards_per_carry_calc =
-        row.rushing_yards /
-        row.carries;
-    }
+x.ppr_points_per_snap=(x.fantasy_points_ppr||0)/x.offense_snaps;
+x.ppr_points_per_100_snaps=x.ppr_points_per_snap*100;
 
-    if (
-      row.offense_snaps &&
-      row.targets !== undefined
-    ) {
-      row.targets_per_snap =
-        row.targets /
-        row.offense_snaps;
-    }
+}
 
-    if (
-      row.offense_snaps &&
-      row.carries !== undefined
-    ) {
-      row.carries_per_snap =
-        row.carries /
-        row.offense_snaps;
-    }
+});
 
-    if (
-      row.offense_snaps &&
-      row.fantasy_points !== undefined
-    ) {
-
-      row.fantasy_points_per_snap =
-        row.fantasy_points /
-        row.offense_snaps;
-
-      row.fantasy_points_per_100_snaps =
-        row.fantasy_points_per_snap * 100;
-    }
-
-    if (
-      row.offense_snaps &&
-      row.fantasy_points_ppr !== undefined
-    ) {
-
-      row.ppr_points_per_snap =
-        row.fantasy_points_ppr /
-        row.offense_snaps;
-
-      row.ppr_points_per_100_snaps =
-        row.ppr_points_per_snap * 100;
-    }
-  }
-
-  return result;
+return result;
 }
 
 
-/* ----------------------------------------------------------
-   Tabs
----------------------------------------------------------- */
+function getRows(){
 
-function createTabs() {
+let rows=baseFilter();
 
-  const names = [
-    ...Object.keys(VIEWS),
-    "All Data"
-  ];
+const latest=STATUS.latest_week||Math.max(...RAW.map(x=>x.week));
 
-  tabs.innerHTML = "";
+if(range.value==="weekly"){
 
-  for (const name of names) {
+if(week.value)
+rows=rows.filter(x=>String(x.week)===week.value);
+else
+rows=rows.filter(x=>Number(x.week)===Number(latest));
 
-    const button =
-      document.createElement("button");
+}
 
-    button.className =
-      "tab" +
-      (
-        name === activeView
-        ? " active"
-        : ""
-      );
+if(range.value==="last3"){
 
-    button.textContent = name;
+const start=Math.max(1,latest-2);
+rows=rows.filter(x=>x.week>=start&&x.week<=latest);
+rows=aggregate(rows);
 
-    button.onclick = () => {
+}
 
-      activeView = name;
+if(range.value==="season")
+rows=aggregate(rows);
 
-      createTabs();
-      render();
-    };
+const ms=Number(minSnaps.value||0);
+const mt=Number(minTargets.value||0);
+const mc=Number(minCarries.value||0);
 
-    tabs.appendChild(button);
-  }
+rows=rows.filter(x=>
+Number(x.offense_snaps||0)>=ms&&
+Number(x.targets||0)>=mt&&
+Number(x.carries||0)>=mc
+);
+
+return rows;
 }
 
 
-/* ----------------------------------------------------------
-   Render
----------------------------------------------------------- */
+function createTabs(){
 
-function render() {
+const names=[
+"Overview","QB","RB","WR","TE",
+"Playing Time","Usage","Passing",
+"Rushing","Receiving","Fantasy","All Data"
+];
 
-  let rows = filteredRows();
+tabs.innerHTML="";
 
-  if (
-    mode.value === "season"
-  ) {
-    rows = seasonRows(rows);
-  }
+names.forEach(name=>{
 
-  let columns;
+const b=document.createElement("button");
+b.className="tab"+(name===activeView?" active":"");
+b.textContent=name;
 
-  if (
-    activeView === "All Data"
-  ) {
+b.onclick=()=>{
+activeView=name;
 
-    columns = [
-      ...new Set(
-        RAW.flatMap(
-          row => Object.keys(row)
-        )
-      )
-    ];
+if(["QB","RB","WR","TE"].includes(name))
+position.value=name;
 
-  } else {
+createTabs();
+render();
+};
 
-    columns = VIEWS[
-      activeView
-    ].filter(
-      column =>
-        RAW.some(
-          row =>
-            column in row
-        )
-    );
-  }
+tabs.appendChild(b);
 
-  if (
-    activeView === "Passing"
-  ) {
-    rows = rows.filter(
-      r => r.position === "QB"
-    );
-  }
-
-  if (
-    activeView === "Rushing"
-  ) {
-    rows = rows.filter(
-      r =>
-        Number(r.carries || 0) > 0
-    );
-  }
-
-  if (
-    activeView === "Receiving"
-  ) {
-    rows = rows.filter(
-      r =>
-        Number(r.targets || 0) > 0
-    );
-  }
-
-  rows.sort((a,b) => {
-
-    const av = a[sortColumn];
-    const bv = b[sortColumn];
-
-    if (
-      typeof av === "number" &&
-      typeof bv === "number"
-    ) {
-      return (
-        (av - bv)
-        * sortDirection
-      );
-    }
-
-    return (
-      String(av ?? "")
-      .localeCompare(
-        String(bv ?? "")
-      )
-      * sortDirection
-    );
-  });
-
-  thead.innerHTML = "";
-
-  for (const column of columns) {
-
-    const th =
-      document.createElement("th");
-
-    th.textContent =
-      label(column);
-
-    th.onclick = () => {
-
-      if (
-        sortColumn === column
-      ) {
-        sortDirection *= -1;
-      } else {
-        sortColumn = column;
-        sortDirection = -1;
-      }
-
-      render();
-    };
-
-    thead.appendChild(th);
-  }
-
-  tbody.innerHTML = "";
-
-  for (const row of rows) {
-
-    const tr =
-      document.createElement("tr");
-
-    for (const column of columns) {
-
-      const td =
-        document.createElement("td");
-
-      td.textContent =
-        formatValue(
-          column,
-          row[column]
-        );
-
-      if (
-        column ===
-        "player_display_name"
-      ) {
-        td.className = "player";
-      }
-
-      if (
-        column === "position"
-      ) {
-        td.className = "pos";
-      }
-
-      tr.appendChild(td);
-    }
-
-    tbody.appendChild(tr);
-  }
-
-  count.textContent =
-    `${rows.length.toLocaleString()} records`;
-
-  loading.style.display =
-    "none";
-
-  table.style.display =
-    "table";
+});
 }
 
 
-/* ----------------------------------------------------------
-   Header/status
----------------------------------------------------------- */
+function render(){
 
-function renderStatus() {
+let rows=getRows();
 
-  status.innerHTML = `
-    <span class="badge good">
-      ✓ ${STATUS.status || "Loaded"}
-    </span>
+if(activeView==="Passing")
+rows=rows.filter(x=>x.position==="QB");
 
-    <span class="badge">
-      Season ${STATUS.season || 2026}
-    </span>
+if(activeView==="Rushing")
+rows=rows.filter(x=>Number(x.carries||0)>0);
 
-    <span class="badge">
-      Through Week ${STATUS.latest_week ?? "—"}
-    </span>
+if(activeView==="Receiving")
+rows=rows.filter(x=>Number(x.targets||0)>0);
 
-    <span class="badge">
-      nflverse
-    </span>
-  `;
+let columns;
 
-  cards.innerHTML = `
+if(activeView==="All Data")
+columns=[...new Set(RAW.flatMap(x=>Object.keys(x)))];
+else
+columns=VIEWS[activeView].filter(c=>RAW.some(r=>c in r));
 
-    <div class="card">
-      <div class="card-label">
-        Players
-      </div>
-      <div class="card-value">
-        ${(
-          STATUS.unique_players || 0
-        ).toLocaleString()}
-      </div>
-    </div>
+rows.sort((a,b)=>{
 
-    <div class="card">
-      <div class="card-label">
-        Player-Weeks
-      </div>
-      <div class="card-value">
-        ${(
-          STATUS.player_week_records || 0
-        ).toLocaleString()}
-      </div>
-    </div>
+const av=a[sortColumn],bv=b[sortColumn];
 
-    <div class="card">
-      <div class="card-label">
-        Teams
-      </div>
-      <div class="card-value">
-        ${STATUS.teams_found || 0}/32
-      </div>
-    </div>
+if(typeof av==="number"&&typeof bv==="number")
+return(av-bv)*sortDirection;
 
-    <div class="card">
-      <div class="card-label">
-        Snap Coverage
-      </div>
-      <div class="card-value">
-        ${(
-          (
-            STATUS.sources
-            ?.snap_counts
-            ?.coverage || 0
-          ) * 100
-        ).toFixed(1)}%
-      </div>
-    </div>
+return String(av??"").localeCompare(String(bv??""))*sortDirection;
 
-  `;
+});
+
+thead.innerHTML="";
+
+columns.forEach(c=>{
+
+const th=document.createElement("th");
+th.textContent=label(c);
+
+th.onclick=()=>{
+
+if(sortColumn===c)sortDirection*=-1;
+else{
+sortColumn=c;
+sortDirection=-1;
+}
+
+render();
+};
+
+thead.appendChild(th);
+
+});
+
+tbody.innerHTML="";
+
+rows.forEach(r=>{
+
+const tr=document.createElement("tr");
+
+columns.forEach(c=>{
+
+const td=document.createElement("td");
+td.textContent=fmt(c,r[c]);
+
+if(c==="player_display_name")td.className="player";
+if(c==="position")td.className="pos";
+
+tr.appendChild(td);
+
+});
+
+tbody.appendChild(tr);
+
+});
+
+count.textContent=`${rows.length.toLocaleString()} players / records shown`;
+
+loading.style.display="none";
+table.style.display="table";
 }
 
 
-/* ----------------------------------------------------------
-   Events
----------------------------------------------------------- */
+function header(){
+
+const generated=STATUS.generated_at_utc
+?new Date(STATUS.generated_at_utc).toLocaleString()
+:"—";
+
+status.innerHTML=`
+<span class="badge good">✓ Validated</span>
+<span class="badge">2026</span>
+<span class="badge">Through Week ${STATUS.latest_week}</span>
+<span class="badge">Updated ${generated}</span>
+`;
+
+cards.innerHTML=`
+
+<div class="card">
+<div class="card-label">Players</div>
+<div class="card-value">${STATUS.unique_players}</div>
+</div>
+
+<div class="card">
+<div class="card-label">Player-Weeks</div>
+<div class="card-value">${STATUS.player_week_records.toLocaleString()}</div>
+</div>
+
+<div class="card">
+<div class="card-label">Teams</div>
+<div class="card-value">${STATUS.teams_found}/32</div>
+</div>
+
+<div class="card">
+<div class="card-label">Snap Coverage</div>
+<div class="card-value">${((STATUS.sources?.snap_counts?.coverage||0)*100).toFixed(1)}%</div>
+</div>
+
+`;
+
+}
+
 
 [
-  mode,
-  week,
-  position,
-  team,
-  opponent
-].forEach(
-  element =>
-    element.addEventListener(
-      "change",
-      render
-    )
-);
+range,week,position,team,opponent,
+minSnaps,minTargets,minCarries
+].forEach(x=>x.addEventListener("change",render));
 
-search.addEventListener(
-  "input",
-  render
-);
+search.addEventListener("input",render);
 
 
-/* ----------------------------------------------------------
-   Load
----------------------------------------------------------- */
+async function start(){
 
-async function start() {
+try{
 
-  try {
+const [p,s]=await Promise.all([
+fetch("data/players.json",{cache:"no-store"}),
+fetch("data/data-status.json",{cache:"no-store"})
+]);
 
-    const [
-      playerResponse,
-      statusResponse
-    ] = await Promise.all([
-      fetch(
-        "data/players.json",
-        {
-          cache: "no-store"
-        }
-      ),
-      fetch(
-        "data/data-status.json",
-        {
-          cache: "no-store"
-        }
-      )
-    ]);
+if(!p.ok)throw new Error("players.json failed to load");
+if(!s.ok)throw new Error("data-status.json failed to load");
 
-    if (
-      !playerResponse.ok
-    ) {
-      throw new Error(
-        "players.json could not be loaded."
-      );
-    }
+RAW=await p.json();
+STATUS=await s.json();
 
-    if (
-      !statusResponse.ok
-    ) {
-      throw new Error(
-        "data-status.json could not be loaded."
-      );
-    }
+if(!Array.isArray(RAW)||!RAW.length)
+throw new Error("Player dataset is empty");
 
-    RAW =
-      await playerResponse.json();
+header();
+populate();
+createTabs();
+render();
 
-    STATUS =
-      await statusResponse.json();
+}catch(e){
 
-    if (
-      !Array.isArray(RAW) ||
-      RAW.length === 0
-    ) {
-      throw new Error(
-        "Player dataset is empty."
-      );
-    }
+loading.innerHTML=
+`<div class="error"><strong>Dashboard failed to load.</strong><br><br>${e.message}</div>`;
 
-    renderStatus();
-    populateFilters();
-    createTabs();
-    render();
+console.error(e);
 
-  } catch(error) {
+}
 
-    loading.innerHTML = `
-      <div class="error">
-        <strong>
-          Dashboard data could not be loaded.
-        </strong>
-        <br><br>
-        ${error.message}
-        <br><br>
-        Confirm that
-        <code>data/players.json</code>
-        and
-        <code>data/data-status.json</code>
-        exist in the repository.
-      </div>
-    `;
-
-    console.error(error);
-  }
 }
 
 start();
