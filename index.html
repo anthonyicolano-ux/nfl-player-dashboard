@@ -365,6 +365,7 @@ const VIEWS={
   "recent_team",
   "upcoming_opponent",
   "start_score",
+  "start_confidence",
   "start_usage_score",
   "start_production_score",
   "start_matchup_score",
@@ -647,6 +648,7 @@ const LABELS={
   recent_team:"Team",
 
   start_score:"Start/Sit Score",
+  start_confidence:"Confidence",
   start_usage_score:"Usage",
   start_production_score:"Production",
   start_matchup_score:"Matchup",
@@ -1506,7 +1508,7 @@ function addStartSitScores(rows){
         );
 
 
-      /*
+           /*
       --------------------------------
       MATCHUP SCORE
 
@@ -1594,32 +1596,127 @@ function addStartSitScores(rows){
         player.start_matchup_score;
 
 
+      /*
+      --------------------------------
+      BYE PROTECTION
+      --------------------------------
+      */
+
       if(
+        player.upcoming_bye
+      ){
+
+        player.start_score=
+          null;
+
+        player.start_confidence=
+          "BYE";
+
+      }else if(
         Number.isFinite(usage) &&
         Number.isFinite(production) &&
         Number.isFinite(matchup)
       ){
 
+        /*
+        --------------------------------
+        CALCULATE OVERALL SCORE
+        --------------------------------
+        */
+
         player.start_score=
+          Math.round(
+            (
+              (
+                usage*0.40
+              )+
+              (
+                production*0.35
+              )+
+              (
+                matchup*0.25
+              )
+            )*10
+          )/10;
 
-          (
-            usage*0.40
-          )+
 
-          (
-            production*0.35
-          )+
+        /*
+        --------------------------------
+        CONFIDENCE
 
-          (
-            matchup*0.25
+        Based on available snaps in
+        the selected period.
+        --------------------------------
+        */
+
+        const snaps=
+          Number(
+            player.offense_snaps||0
           );
+
+
+        if(
+          snaps>=100
+        ){
+
+          player.start_confidence=
+            "High";
+
+        }else if(
+          snaps>=40
+        ){
+
+          player.start_confidence=
+            "Medium";
+
+        }else{
+
+          player.start_confidence=
+            "Low";
+
+        }
 
       }else{
 
         player.start_score=
           null;
 
+        player.start_confidence=
+          "Low";
+
       }
+
+
+      /*
+      --------------------------------
+      ROUND COMPONENT SCORES
+
+      Display all component scores
+      with one decimal place.
+      --------------------------------
+      */
+
+      [
+        "start_usage_score",
+        "start_production_score",
+        "start_matchup_score"
+      ]
+      .forEach(k=>{
+
+        if(
+          Number.isFinite(
+            player[k]
+          )
+        ){
+
+          player[k]=
+            Math.round(
+              player[k]*10
+            )/10;
+
+        }
+
+      });
 
     });
 
@@ -1628,6 +1725,7 @@ function addStartSitScores(rows){
   return rows;
 
 }
+
 
 /* ------------------------------
    POSITION RANKS
