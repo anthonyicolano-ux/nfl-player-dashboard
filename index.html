@@ -2571,16 +2571,19 @@ function render(){
 
   }else{
 
-    columns=
-      VIEWS[activeView]
-      .filter(
-        c=>
-        RAW.some(
-          r=>c in r
-        ) ||
-        rankColumn(c) ||
-        trendColumn(c)
-      );
+columns=
+  VIEWS[activeView]
+  .filter(
+    c=>
+    rows.some(
+      r=>c in r
+    ) ||
+    RAW.some(
+      r=>c in r
+    ) ||
+    rankColumn(c) ||
+    trendColumn(c)
+  );
 
   }
 
