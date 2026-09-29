@@ -278,6 +278,14 @@ tbody tr:hover{background:#16233b}
 <option value="">All Opponents</option>
 </select>
 
+<select id="matchupDifficulty">
+<option value="">All Matchups</option>
+<option value="favorable">Favorable (Ranks 1–10)</option>
+<option value="neutral">Neutral (Ranks 11–22)</option>
+<option value="tough">Tough (Ranks 23–32)</option>
+<option value="bye">Bye</option>
+</select>
+  
 <input id="minSnaps" type="number" min="0" placeholder="Min snaps">
 <input id="minTargets" type="number" min="0" placeholder="Min targets">
 <input id="minCarries" type="number" min="0" placeholder="Min carries">
@@ -907,6 +915,9 @@ function baseFilter(){
     .toLowerCase()
     .trim();
 
+  const difficulty=
+    matchupDifficulty.value;
+
   return RAW.filter(r=>{
 
     if(
@@ -923,6 +934,72 @@ function baseFilter(){
       opponent.value &&
       r.opponent!==opponent.value
     ) return false;
+
+
+    /* ------------------------------
+       UPCOMING MATCHUP FILTER
+    ------------------------------ */
+
+    if(difficulty){
+
+      if(
+        difficulty==="bye"
+      ){
+
+        if(!r.upcoming_bye){
+          return false;
+        }
+
+      }else{
+
+        /*
+        A non-bye difficulty requires
+        an available matchup rank.
+        */
+
+        if(r.upcoming_bye){
+          return false;
+        }
+
+        const rank=
+          Number(
+            r.matchup_rank
+          );
+
+        if(
+          !Number.isFinite(rank)
+        ){
+          return false;
+        }
+
+
+        if(
+          difficulty==="favorable" &&
+          !(rank>=1 && rank<=10)
+        ){
+          return false;
+        }
+
+
+        if(
+          difficulty==="neutral" &&
+          !(rank>=11 && rank<=22)
+        ){
+          return false;
+        }
+
+
+        if(
+          difficulty==="tough" &&
+          !(rank>=23 && rank<=32)
+        ){
+          return false;
+        }
+
+      }
+
+    }
+
 
     if(
       q &&
@@ -2201,6 +2278,7 @@ function header(){
   position,
   team,
   opponent,
+  matchupDifficulty,
   minSnaps,
   minTargets,
   minCarries
