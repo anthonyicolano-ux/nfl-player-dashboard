@@ -7,7 +7,6 @@ on:
     # Runs daily at 11:30 UTC.
     - cron: "30 11 * * *"
 
-# This workflow can only modify contents in this repository.
 permissions:
   contents: write
 
@@ -76,6 +75,14 @@ jobs:
           python scripts/update_schedule_data.py
 
       # ------------------------------------------------------
+      # PLAYER + UPCOMING MATCHUP DATA
+      # ------------------------------------------------------
+
+      - name: Build player upcoming matchup data
+        run: |
+          python scripts/build_player_matchups.py
+
+      # ------------------------------------------------------
       # VERIFY OUTPUT FILES
       # ------------------------------------------------------
 
@@ -103,6 +110,11 @@ jobs:
             exit 1
           fi
 
+          if [ ! -f "data/player-matchups.json" ]; then
+            echo "ERROR: data/player-matchups.json was not created."
+            exit 1
+          fi
+
           echo ""
           echo "All required data files exist:"
           ls -lh data/
@@ -126,7 +138,7 @@ jobs:
             exit 0
           fi
 
-          git commit -m "Update NFL player matchup and schedule data"
+          git commit -m "Update NFL dashboard data"
 
           git push
 
