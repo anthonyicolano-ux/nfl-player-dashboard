@@ -359,6 +359,23 @@ const COMMON=[
 
 const VIEWS={
 
+"Start/Sit":[
+  "player_display_name",
+  "position",
+  "recent_team",
+  "upcoming_opponent",
+  "start_score",
+  "start_usage_score",
+  "start_production_score",
+  "start_matchup_score",
+  "fantasy_points_ppr",
+  "offense_snaps",
+  "opportunities",
+  "targets",
+  "carries",
+  "matchup_rank"
+],
+
 "Upcoming Matchup":[
   "player_display_name",
   "position",
@@ -629,6 +646,11 @@ const LABELS={
   player_display_name:"Player",
   recent_team:"Team",
 
+  start_score:"Start/Sit Score",
+  start_usage_score:"Usage",
+  start_production_score:"Production",
+  start_matchup_score:"Matchup",
+  
   upcoming_opponent:"Opp",
   upcoming_home_away:"H/A",
   upcoming_game_date:"Game Date",
@@ -1283,6 +1305,329 @@ function addTrends(rows){
 
 }
 
+/* ------------------------------
+   START / SIT SCORING
+------------------------------ */
+
+function percentileScore(
+  players,
+  player,
+  metric
+){
+
+  const value=
+    Number(
+      player[metric]
+    );
+
+  if(
+    !Number.isFinite(value)
+  ){
+    return null;
+  }
+
+  const values=
+    players
+    .map(
+      p=>Number(p[metric])
+    )
+    .filter(
+      Number.isFinite
+    )
+    .sort(
+      (a,b)=>a-b
+    );
+
+  if(!values.length){
+    return null;
+  }
+
+  if(values.length===1){
+    return 100;
+  }
+
+  let below=0;
+
+  values.forEach(v=>{
+
+    if(v<value){
+      below++;
+    }
+
+  });
+
+  return(
+    below/
+    (values.length-1)
+  )*100;
+
+}
+
+
+/* ------------------------------
+   AVERAGE VALID SCORES
+------------------------------ */
+
+function averageScores(values){
+
+  const valid=
+    values.filter(
+      Number.isFinite
+    );
+
+  if(!valid.length){
+    return null;
+  }
+
+  return(
+    valid.reduce(
+      (a,b)=>a+b,
+      0
+    )/
+    valid.length
+  );
+
+}
+
+
+/* ------------------------------
+   CALCULATE START / SIT SCORES
+------------------------------ */
+
+function addStartSitScores(rows){
+
+  const positions=[
+    "QB",
+    "RB",
+    "WR",
+    "TE"
+  ];
+
+  positions.forEach(pos=>{
+
+    const players=
+      rows.filter(
+        r=>r.position===pos
+      );
+
+
+    players.forEach(player=>{
+
+
+      /*
+      --------------------------------
+      USAGE SCORE
+
+      Snaps
+      Opportunities
+      Targets
+      Carries
+      --------------------------------
+      */
+
+      const usageMetrics=[
+        "offense_snaps",
+        "opportunities"
+      ];
+
+      if(
+        pos==="RB"
+      ){
+
+        usageMetrics.push(
+          "carries",
+          "targets"
+        );
+
+      }
+
+      if(
+        pos==="WR" ||
+        pos==="TE"
+      ){
+
+        usageMetrics.push(
+          "targets",
+          "target_share"
+        );
+
+      }
+
+      if(
+        pos==="QB"
+      ){
+
+        usageMetrics.push(
+          "attempts"
+        );
+
+      }
+
+
+      const usageScores=
+        usageMetrics.map(
+          metric=>
+            percentileScore(
+              players,
+              player,
+              metric
+            )
+        );
+
+
+      player.start_usage_score=
+        averageScores(
+          usageScores
+        );
+
+
+      /*
+      --------------------------------
+      PRODUCTION SCORE
+
+      PPR fantasy production
+      --------------------------------
+      */
+
+      const productionScores=[
+
+        percentileScore(
+          players,
+          player,
+          "fantasy_points_ppr"
+        )
+
+      ];
+
+
+      player.start_production_score=
+        averageScores(
+          productionScores
+        );
+
+
+      /*
+      --------------------------------
+      MATCHUP SCORE
+
+      Matchup Rank:
+      1 = favorable
+      32 = difficult
+
+      Convert rank to 0–100.
+      --------------------------------
+      */
+
+      const matchupRank=
+        Number(
+          player.matchup_rank
+        );
+
+      const last3Rank=
+        Number(
+          player.matchup_last3_rank
+        );
+
+
+      const matchupScores=[];
+
+
+      if(
+        Number.isFinite(
+          matchupRank
+        )
+      ){
+
+        matchupScores.push(
+
+          (
+            (32-matchupRank)/
+            31
+          )*100
+
+        );
+
+      }
+
+
+      if(
+        Number.isFinite(
+          last3Rank
+        )
+      ){
+
+        matchupScores.push(
+
+          (
+            (32-last3Rank)/
+            31
+          )*100
+
+        );
+
+      }
+
+
+      player.start_matchup_score=
+        averageScores(
+          matchupScores
+        );
+
+
+      /*
+      --------------------------------
+      OVERALL SCORE
+
+      Usage      40%
+      Production 35%
+      Matchup    25%
+      --------------------------------
+      */
+
+      const usage=
+        player.start_usage_score;
+
+      const production=
+        player.start_production_score;
+
+      const matchup=
+        player.start_matchup_score;
+
+
+      if(
+        Number.isFinite(usage) &&
+        Number.isFinite(production) &&
+        Number.isFinite(matchup)
+      ){
+
+        player.start_score=
+
+          (
+            usage*0.40
+          )+
+
+          (
+            production*0.35
+          )+
+
+          (
+            matchup*0.25
+          );
+
+      }else{
+
+        player.start_score=
+          null;
+
+      }
+
+    });
+
+  });
+
+  return rows;
+
+}
 
 /* ------------------------------
    POSITION RANKS
@@ -1414,14 +1759,172 @@ function periodRows(source=RAW){
 
 function getRows(){
 
+  /*
+  --------------------------------
+  BUILD FULL PERIOD PLAYER POOL
+
+  Start/Sit scores must be calculated
+  against all players at the same
+  position, not only currently
+  filtered players.
+  --------------------------------
+  */
+
   let rows=
     addRanks(
       addTrends(
         periodRows(
-          baseFilter()
+          RAW
         )
       )
     );
+
+
+  /*
+  --------------------------------
+  CALCULATE START / SIT SCORES
+  --------------------------------
+  */
+
+  rows=
+    addStartSitScores(
+      rows
+    );
+
+
+  /*
+  --------------------------------
+  APPLY DASHBOARD FILTERS AFTER
+  SCORING
+  --------------------------------
+  */
+
+  const q=
+    search.value
+    .toLowerCase()
+    .trim();
+
+  const difficulty=
+    matchupDifficulty.value;
+
+
+  rows=
+    rows.filter(r=>{
+
+
+      /* POSITION */
+
+      if(
+        position.value &&
+        r.position!==position.value
+      ){
+        return false;
+      }
+
+
+      /* TEAM */
+
+      if(
+        team.value &&
+        r.recent_team!==team.value
+      ){
+        return false;
+      }
+
+
+      /* HISTORICAL OPPONENT */
+
+      if(
+        opponent.value &&
+        r.opponent!==opponent.value
+      ){
+        return false;
+      }
+
+
+      /* UPCOMING MATCHUP */
+
+      if(difficulty){
+
+        if(
+          difficulty==="bye"
+        ){
+
+          if(!r.upcoming_bye){
+            return false;
+          }
+
+        }else{
+
+          if(r.upcoming_bye){
+            return false;
+          }
+
+          const rank=
+            Number(
+              r.matchup_rank
+            );
+
+
+          if(
+            !Number.isFinite(rank)
+          ){
+            return false;
+          }
+
+
+          if(
+            difficulty==="favorable" &&
+            !(rank>=1 && rank<=10)
+          ){
+            return false;
+          }
+
+
+          if(
+            difficulty==="neutral" &&
+            !(rank>=11 && rank<=22)
+          ){
+            return false;
+          }
+
+
+          if(
+            difficulty==="tough" &&
+            !(rank>=23 && rank<=32)
+          ){
+            return false;
+          }
+
+        }
+
+      }
+
+
+      /* PLAYER SEARCH */
+
+      if(
+        q &&
+        !String(
+          r.player_display_name||""
+        )
+        .toLowerCase()
+        .includes(q)
+      ){
+        return false;
+      }
+
+
+      return true;
+
+    });
+
+
+  /*
+  --------------------------------
+  MINIMUM USAGE FILTERS
+  --------------------------------
+  */
 
   const ms=
     Number(
@@ -1438,15 +1941,25 @@ function getRows(){
       minCarries.value||0
     );
 
-  return rows.filter(
-    x=>
-    Number(x.offense_snaps||0)>=ms &&
-    Number(x.targets||0)>=mt &&
-    Number(x.carries||0)>=mc
-  );
+
+  rows=
+    rows.filter(
+      x=>
+      Number(
+        x.offense_snaps||0
+      )>=ms &&
+      Number(
+        x.targets||0
+      )>=mt &&
+      Number(
+        x.carries||0
+      )>=mc
+    );
+
+
+  return rows;
 
 }
-
 
 /* ------------------------------
    TABS
@@ -1456,6 +1969,7 @@ function createTabs(){
 
   const names=[
 
+    "Start/Sit",
     "Rankings",
     "Upcoming Matchup",
     "Compare",
@@ -1501,66 +2015,85 @@ function createTabs(){
     b.textContent=name;
 
 
-    /*
-    --------------------------------
-    TAB CLICK
-    --------------------------------
-    */
+/*
+--------------------------------
+TAB CLICK
+--------------------------------
+*/
 
-    b.onclick=()=>{
+b.onclick=()=>{
 
-      activeView=name;
-
-
-      /*
-      --------------------------------
-      POSITION TABS
-      --------------------------------
-      */
-
-      if(
-        [
-          "QB",
-          "RB",
-          "WR",
-          "TE"
-        ]
-        .includes(name)
-      ){
-
-        position.value=name;
-
-      }
+  activeView=name;
 
 
-      /*
-      --------------------------------
-      UPCOMING MATCHUP DEFAULT SORT
-      --------------------------------
-      */
+  /*
+  --------------------------------
+  POSITION TABS
+  --------------------------------
+  */
 
-      if(
-        name==="Upcoming Matchup"
-      ){
+  if(
+    [
+      "QB",
+      "RB",
+      "WR",
+      "TE"
+    ]
+    .includes(name)
+  ){
 
-        sortColumn=
-          "matchup_rank";
+    position.value=name;
 
-        sortDirection=
-          1;
-
-      }
-
-
-      createTabs();
-      render();
-
-    };
+  }
 
 
-    tabs.appendChild(b);
+  /*
+  --------------------------------
+  UPCOMING MATCHUP DEFAULT SORT
+  --------------------------------
+  */
 
-  });
+  if(
+    name==="Upcoming Matchup"
+  ){
+
+    sortColumn=
+      "matchup_rank";
+
+    sortDirection=
+      1;
+
+  }
+
+
+  /*
+  --------------------------------
+  START / SIT DEFAULT SORT
+  --------------------------------
+  */
+
+  if(
+    name==="Start/Sit"
+  ){
+
+    sortColumn=
+      "start_score";
+
+    sortDirection=
+      -1;
+
+  }
+
+
+  createTabs();
+  render();
+
+};
+
+
+tabs.appendChild(b);
+
+});
 
 }
 
