@@ -114,6 +114,57 @@ tbody tr:hover{background:#16233b}
   color:var(--muted);
   font-size:12px
 }
+
+/* ------------------------------
+   ABOUT / DATA SOURCES
+------------------------------ */
+
+.about-section{
+  margin-top:18px;
+  padding-top:14px;
+  border-top:1px solid #283750;
+  color:var(--muted);
+  font-size:12px;
+}
+
+.about-section details{
+  background:#111a2b;
+  border:1px solid #283750;
+  border-radius:8px;
+  padding:10px 12px;
+}
+
+.about-section summary{
+  cursor:pointer;
+  color:#cbd5e1;
+  font-weight:700;
+  font-size:13px;
+  user-select:none;
+}
+
+.about-section summary:hover{
+  color:var(--accent);
+}
+
+.about-content{
+  margin-top:12px;
+  line-height:1.6;
+  max-width:900px;
+}
+
+.about-content p{
+  margin:8px 0;
+}
+
+.about-content a{
+  color:var(--accent);
+  text-decoration:none;
+}
+
+.about-content a:hover{
+  text-decoration:underline;
+}
+  
 .loading{
   text-align:center;
   padding:50px;
@@ -335,8 +386,72 @@ Loading player data...
 </div>
 
 <div class="footer">
-<div id="count"></div>
-<div>Source: nflverse • CC BY 4.0</div>
+  <div id="count"></div>
+  <div>Data: nflverse • Dashboard analytics calculated independently</div>
+</div>
+
+
+<!-- ==========================================
+     ABOUT / DATA SOURCES
+=========================================== -->
+
+<div class="about-section">
+
+  <details>
+
+    <summary>
+      About &amp; Data Sources
+    </summary>
+
+    <div class="about-content">
+
+      <p>
+        This dashboard is an independent fantasy football
+        analysis tool for the 2026 NFL season.
+      </p>
+
+      <p>
+        Player statistics, snap counts, advanced statistics,
+        and schedule information are sourced through the
+        nflverse project and processed by this dashboard.
+      </p>
+
+      <p>
+        Defense-vs-position rankings, matchup ratings,
+        Start/Sit Scores, Usage Scores, Production Scores,
+        Matchup Scores, trends, and other derived analytics
+        are calculated independently by this dashboard.
+        They are not official NFL or nflverse rankings.
+      </p>
+
+      <p>
+        nflverse data and software are subject to their
+        respective source licenses and terms. Portions of
+        nflverse-data are made available under CC BY 4.0.
+      </p>
+
+      <p>
+        This dashboard is provided for informational and
+        fantasy-football analysis purposes only. NFL, team,
+        and player names and related marks belong to their
+        respective owners.
+      </p>
+
+      <p>
+        Data source:
+        <a
+          href="https://nflverse.nflverse.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          nflverse
+        </a>
+      </p>
+
+    </div>
+
+  </details>
+
 </div>
 
 </main>
