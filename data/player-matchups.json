@@ -12,10 +12,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 28.975,
+    "opponent_ppr_allowed_per_game": 29.26,
     "opponent_matchup_rank": 24,
-    "opponent_last3_ppr_allowed_per_game": 30.8,
-    "opponent_last3_matchup_rank": 19
+    "opponent_last3_ppr_allowed_per_game": 30.666666666666668,
+    "opponent_last3_matchup_rank": 21
   },
   {
     "season": 2026,
@@ -30,9 +30,9 @@
     "game_date": "2026-10-15",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 15.475,
-    "opponent_matchup_rank": 13,
-    "opponent_last3_ppr_allowed_per_game": 21.5,
+    "opponent_ppr_allowed_per_game": 14.86,
+    "opponent_matchup_rank": 12,
+    "opponent_last3_ppr_allowed_per_game": 18.466666666666665,
     "opponent_last3_matchup_rank": 9
   },
   {
@@ -48,10 +48,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 22.525,
-    "opponent_matchup_rank": 13,
-    "opponent_last3_ppr_allowed_per_game": 26.85,
-    "opponent_last3_matchup_rank": 6
+    "opponent_ppr_allowed_per_game": 20.759999999999998,
+    "opponent_matchup_rank": 16,
+    "opponent_last3_ppr_allowed_per_game": 22.46666666666667,
+    "opponent_last3_matchup_rank": 12
   },
   {
     "season": 2026,
@@ -85,7 +85,7 @@
     "bye": false,
     "matchup_available": true,
     "opponent_ppr_allowed_per_game": 14.004,
-    "opponent_matchup_rank": 25,
+    "opponent_matchup_rank": 24,
     "opponent_last3_ppr_allowed_per_game": 12.046666666666667,
     "opponent_last3_matchup_rank": 29
   },
@@ -102,10 +102,10 @@
     "game_date": "2026-10-15",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 10.700000000000001,
-    "opponent_matchup_rank": 19,
-    "opponent_last3_ppr_allowed_per_game": 5.95,
-    "opponent_last3_matchup_rank": 27
+    "opponent_ppr_allowed_per_game": 10.040000000000001,
+    "opponent_matchup_rank": 20,
+    "opponent_last3_ppr_allowed_per_game": 6.433333333333334,
+    "opponent_last3_matchup_rank": 28
   },
   {
     "season": 2026,
@@ -120,10 +120,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 34.875,
-    "opponent_matchup_rank": 13,
-    "opponent_last3_ppr_allowed_per_game": 41.6,
-    "opponent_last3_matchup_rank": 8
+    "opponent_ppr_allowed_per_game": 31.359999999999996,
+    "opponent_matchup_rank": 16,
+    "opponent_last3_ppr_allowed_per_game": 33.5,
+    "opponent_last3_matchup_rank": 16
   },
   {
     "season": 2026,
@@ -138,10 +138,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 34.1,
-    "opponent_matchup_rank": 14,
-    "opponent_last3_ppr_allowed_per_game": 27.0,
-    "opponent_last3_matchup_rank": 26
+    "opponent_ppr_allowed_per_game": 35.9,
+    "opponent_matchup_rank": 11,
+    "opponent_last3_ppr_allowed_per_game": 32.36666666666667,
+    "opponent_last3_matchup_rank": 17
   },
   {
     "season": 2026,
@@ -156,9 +156,9 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 38.375,
-    "opponent_matchup_rank": 6,
-    "opponent_last3_ppr_allowed_per_game": 36.1,
+    "opponent_ppr_allowed_per_game": 37.019999999999996,
+    "opponent_matchup_rank": 7,
+    "opponent_last3_ppr_allowed_per_game": 34.6,
     "opponent_last3_matchup_rank": 12
   },
   {
@@ -174,10 +174,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 21.25,
+    "opponent_ppr_allowed_per_game": 20.919999999999998,
     "opponent_matchup_rank": 15,
-    "opponent_last3_ppr_allowed_per_game": 16.75,
-    "opponent_last3_matchup_rank": 26
+    "opponent_last3_ppr_allowed_per_game": 17.7,
+    "opponent_last3_matchup_rank": 25
   },
   {
     "season": 2026,
@@ -192,10 +192,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 17.3,
-    "opponent_matchup_rank": 24,
-    "opponent_last3_ppr_allowed_per_game": 22.150000000000002,
-    "opponent_last3_matchup_rank": 14
+    "opponent_ppr_allowed_per_game": 16.9,
+    "opponent_matchup_rank": 28,
+    "opponent_last3_ppr_allowed_per_game": 19.866666666666667,
+    "opponent_last3_matchup_rank": 17
   },
   {
     "season": 2026,
@@ -246,10 +246,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 10.3,
-    "opponent_matchup_rank": 22,
-    "opponent_last3_ppr_allowed_per_game": 11.2,
-    "opponent_last3_matchup_rank": 18
+    "opponent_ppr_allowed_per_game": 10.0,
+    "opponent_matchup_rank": 21,
+    "opponent_last3_ppr_allowed_per_game": 10.4,
+    "opponent_last3_matchup_rank": 21
   },
   {
     "season": 2026,
@@ -267,7 +267,7 @@
     "opponent_ppr_allowed_per_game": 19.35,
     "opponent_matchup_rank": 8,
     "opponent_last3_ppr_allowed_per_game": 20.37,
-    "opponent_last3_matchup_rank": 4
+    "opponent_last3_matchup_rank": 5
   },
   {
     "season": 2026,
@@ -282,10 +282,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 34.1,
-    "opponent_matchup_rank": 14,
-    "opponent_last3_ppr_allowed_per_game": 27.0,
-    "opponent_last3_matchup_rank": 26
+    "opponent_ppr_allowed_per_game": 35.9,
+    "opponent_matchup_rank": 11,
+    "opponent_last3_ppr_allowed_per_game": 32.36666666666667,
+    "opponent_last3_matchup_rank": 17
   },
   {
     "season": 2026,
@@ -300,10 +300,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 22.525,
-    "opponent_matchup_rank": 13,
-    "opponent_last3_ppr_allowed_per_game": 26.85,
-    "opponent_last3_matchup_rank": 6
+    "opponent_ppr_allowed_per_game": 20.759999999999998,
+    "opponent_matchup_rank": 16,
+    "opponent_last3_ppr_allowed_per_game": 22.46666666666667,
+    "opponent_last3_matchup_rank": 12
   },
   {
     "season": 2026,
@@ -318,10 +318,10 @@
     "game_date": "2026-10-19",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 27.45,
-    "opponent_matchup_rank": 27,
-    "opponent_last3_ppr_allowed_per_game": 31.349999999999998,
-    "opponent_last3_matchup_rank": 18
+    "opponent_ppr_allowed_per_game": 28.080000000000002,
+    "opponent_matchup_rank": 26,
+    "opponent_last3_ppr_allowed_per_game": 31.099999999999998,
+    "opponent_last3_matchup_rank": 20
   },
   {
     "season": 2026,
@@ -336,10 +336,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 34.875,
-    "opponent_matchup_rank": 13,
-    "opponent_last3_ppr_allowed_per_game": 41.6,
-    "opponent_last3_matchup_rank": 8
+    "opponent_ppr_allowed_per_game": 31.359999999999996,
+    "opponent_matchup_rank": 16,
+    "opponent_last3_ppr_allowed_per_game": 33.5,
+    "opponent_last3_matchup_rank": 16
   },
   {
     "season": 2026,
@@ -354,10 +354,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 34.1,
-    "opponent_matchup_rank": 14,
-    "opponent_last3_ppr_allowed_per_game": 27.0,
-    "opponent_last3_matchup_rank": 26
+    "opponent_ppr_allowed_per_game": 35.9,
+    "opponent_matchup_rank": 11,
+    "opponent_last3_ppr_allowed_per_game": 32.36666666666667,
+    "opponent_last3_matchup_rank": 17
   },
   {
     "season": 2026,
@@ -373,9 +373,9 @@
     "bye": false,
     "matchup_available": true,
     "opponent_ppr_allowed_per_game": 26.275,
-    "opponent_matchup_rank": 6,
+    "opponent_matchup_rank": 5,
     "opponent_last3_ppr_allowed_per_game": 22.45,
-    "opponent_last3_matchup_rank": 12
+    "opponent_last3_matchup_rank": 13
   },
   {
     "season": 2026,
@@ -390,10 +390,10 @@
     "game_date": "2026-10-19",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 14.290000000000001,
-    "opponent_matchup_rank": 23,
-    "opponent_last3_ppr_allowed_per_game": 19.580000000000002,
-    "opponent_last3_matchup_rank": 6
+    "opponent_ppr_allowed_per_game": 13.092000000000002,
+    "opponent_matchup_rank": 27,
+    "opponent_last3_ppr_allowed_per_game": 15.82,
+    "opponent_last3_matchup_rank": 21
   },
   {
     "season": 2026,
@@ -408,9 +408,9 @@
     "game_date": "2026-10-19",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 25.6,
-    "opponent_matchup_rank": 8,
-    "opponent_last3_ppr_allowed_per_game": 30.6,
+    "opponent_ppr_allowed_per_game": 24.14,
+    "opponent_matchup_rank": 9,
+    "opponent_last3_ppr_allowed_per_game": 26.5,
     "opponent_last3_matchup_rank": 4
   },
   {
@@ -426,10 +426,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 6.725,
+    "opponent_ppr_allowed_per_game": 7.7,
     "opponent_matchup_rank": 30,
-    "opponent_last3_ppr_allowed_per_game": 2.7,
-    "opponent_last3_matchup_rank": 32
+    "opponent_last3_ppr_allowed_per_game": 5.666666666666667,
+    "opponent_last3_matchup_rank": 30
   },
   {
     "season": 2026,
@@ -444,10 +444,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 12.309999999999999,
-    "opponent_matchup_rank": 30,
-    "opponent_last3_ppr_allowed_per_game": 17.75,
-    "opponent_last3_matchup_rank": 14
+    "opponent_ppr_allowed_per_game": 12.063999999999998,
+    "opponent_matchup_rank": 31,
+    "opponent_last3_ppr_allowed_per_game": 15.526666666666666,
+    "opponent_last3_matchup_rank": 22
   },
   {
     "season": 2026,
@@ -463,9 +463,9 @@
     "bye": false,
     "matchup_available": true,
     "opponent_ppr_allowed_per_game": 15.5,
-    "opponent_matchup_rank": 30,
+    "opponent_matchup_rank": 31,
     "opponent_last3_ppr_allowed_per_game": 14.6,
-    "opponent_last3_matchup_rank": 30
+    "opponent_last3_matchup_rank": 31
   },
   {
     "season": 2026,
@@ -480,10 +480,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 33.1,
-    "opponent_matchup_rank": 16,
-    "opponent_last3_ppr_allowed_per_game": 29.299999999999997,
-    "opponent_last3_matchup_rank": 22
+    "opponent_ppr_allowed_per_game": 31.3,
+    "opponent_matchup_rank": 17,
+    "opponent_last3_ppr_allowed_per_game": 27.566666666666666,
+    "opponent_last3_matchup_rank": 24
   },
   {
     "season": 2026,
@@ -498,10 +498,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 9.925,
-    "opponent_matchup_rank": 23,
-    "opponent_last3_ppr_allowed_per_game": 14.35,
-    "opponent_last3_matchup_rank": 13
+    "opponent_ppr_allowed_per_game": 13.180000000000001,
+    "opponent_matchup_rank": 17,
+    "opponent_last3_ppr_allowed_per_game": 18.3,
+    "opponent_last3_matchup_rank": 10
   },
   {
     "season": 2026,
@@ -516,10 +516,10 @@
     "game_date": "2026-10-19",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 8.7,
-    "opponent_matchup_rank": 27,
-    "opponent_last3_ppr_allowed_per_game": 12.3,
-    "opponent_last3_matchup_rank": 15
+    "opponent_ppr_allowed_per_game": 7.959999999999999,
+    "opponent_matchup_rank": 29,
+    "opponent_last3_ppr_allowed_per_game": 9.866666666666667,
+    "opponent_last3_matchup_rank": 22
   },
   {
     "season": 2026,
@@ -535,9 +535,9 @@
     "bye": false,
     "matchup_available": true,
     "opponent_ppr_allowed_per_game": 30.68,
-    "opponent_matchup_rank": 18,
+    "opponent_matchup_rank": 19,
     "opponent_last3_ppr_allowed_per_game": 34.53333333333333,
-    "opponent_last3_matchup_rank": 15
+    "opponent_last3_matchup_rank": 13
   },
   {
     "season": 2026,
@@ -552,10 +552,28 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 22.85,
-    "opponent_matchup_rank": 12,
-    "opponent_last3_ppr_allowed_per_game": 29.2,
-    "opponent_last3_matchup_rank": 5
+    "opponent_ppr_allowed_per_game": 21.72,
+    "opponent_matchup_rank": 13,
+    "opponent_last3_ppr_allowed_per_game": 25.2,
+    "opponent_last3_matchup_rank": 7
+  },
+  {
+    "season": 2026,
+    "through_week": 5,
+    "upcoming_week": 6,
+    "player_id": "00-0040509",
+    "player_name": "B.Yurosek",
+    "position": "TE",
+    "team": "MIN",
+    "opponent": null,
+    "home_away": null,
+    "game_date": null,
+    "bye": true,
+    "matchup_available": false,
+    "opponent_ppr_allowed_per_game": null,
+    "opponent_matchup_rank": null,
+    "opponent_last3_ppr_allowed_per_game": null,
+    "opponent_last3_matchup_rank": null
   },
   {
     "season": 2026,
@@ -570,10 +588,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 17.3,
-    "opponent_matchup_rank": 24,
-    "opponent_last3_ppr_allowed_per_game": 22.150000000000002,
-    "opponent_last3_matchup_rank": 14
+    "opponent_ppr_allowed_per_game": 16.9,
+    "opponent_matchup_rank": 28,
+    "opponent_last3_ppr_allowed_per_game": 19.866666666666667,
+    "opponent_last3_matchup_rank": 17
   },
   {
     "season": 2026,
@@ -588,9 +606,9 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 16.925,
-    "opponent_matchup_rank": 26,
-    "opponent_last3_ppr_allowed_per_game": 9.649999999999999,
+    "opponent_ppr_allowed_per_game": 18.36,
+    "opponent_matchup_rank": 25,
+    "opponent_last3_ppr_allowed_per_game": 14.466666666666667,
     "opponent_last3_matchup_rank": 32
   },
   {
@@ -606,10 +624,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 15.2,
-    "opponent_matchup_rank": 31,
-    "opponent_last3_ppr_allowed_per_game": 17.45,
-    "opponent_last3_matchup_rank": 24
+    "opponent_ppr_allowed_per_game": 19.919999999999998,
+    "opponent_matchup_rank": 18,
+    "opponent_last3_ppr_allowed_per_game": 24.566666666666666,
+    "opponent_last3_matchup_rank": 9
   },
   {
     "season": 2026,
@@ -624,10 +642,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 10.375,
-    "opponent_matchup_rank": 21,
-    "opponent_last3_ppr_allowed_per_game": 9.4,
-    "opponent_last3_matchup_rank": 22
+    "opponent_ppr_allowed_per_game": 11.8,
+    "opponent_matchup_rank": 18,
+    "opponent_last3_ppr_allowed_per_game": 12.1,
+    "opponent_last3_matchup_rank": 17
   },
   {
     "season": 2026,
@@ -643,9 +661,9 @@
     "bye": false,
     "matchup_available": true,
     "opponent_ppr_allowed_per_game": 35.46,
-    "opponent_matchup_rank": 11,
+    "opponent_matchup_rank": 12,
     "opponent_last3_ppr_allowed_per_game": 39.0,
-    "opponent_last3_matchup_rank": 11
+    "opponent_last3_matchup_rank": 10
   },
   {
     "season": 2026,
@@ -660,10 +678,10 @@
     "game_date": "2026-10-15",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 11.575000000000001,
-    "opponent_matchup_rank": 31,
-    "opponent_last3_ppr_allowed_per_game": 14.990000000000002,
-    "opponent_last3_matchup_rank": 21
+    "opponent_ppr_allowed_per_game": 12.492,
+    "opponent_matchup_rank": 28,
+    "opponent_last3_ppr_allowed_per_game": 15.38,
+    "opponent_last3_matchup_rank": 23
   },
   {
     "season": 2026,
@@ -678,10 +696,10 @@
     "game_date": "2026-10-15",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 25.825,
+    "opponent_ppr_allowed_per_game": 25.34,
     "opponent_matchup_rank": 7,
-    "opponent_last3_ppr_allowed_per_game": 21.3,
-    "opponent_last3_matchup_rank": 16
+    "opponent_last3_ppr_allowed_per_game": 22.0,
+    "opponent_last3_matchup_rank": 15
   },
   {
     "season": 2026,
@@ -696,10 +714,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 20.925,
-    "opponent_matchup_rank": 18,
-    "opponent_last3_ppr_allowed_per_game": 25.5,
-    "opponent_last3_matchup_rank": 10
+    "opponent_ppr_allowed_per_game": 21.58,
+    "opponent_matchup_rank": 14,
+    "opponent_last3_ppr_allowed_per_game": 25.066666666666663,
+    "opponent_last3_matchup_rank": 8
   },
   {
     "season": 2026,
@@ -714,10 +732,10 @@
     "game_date": "2026-10-19",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 40.315,
+    "opponent_ppr_allowed_per_game": 39.552,
     "opponent_matchup_rank": 4,
-    "opponent_last3_ppr_allowed_per_game": 41.23,
-    "opponent_last3_matchup_rank": 9
+    "opponent_last3_ppr_allowed_per_game": 39.653333333333336,
+    "opponent_last3_matchup_rank": 6
   },
   {
     "season": 2026,
@@ -732,10 +750,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 22.85,
-    "opponent_matchup_rank": 12,
-    "opponent_last3_ppr_allowed_per_game": 29.2,
-    "opponent_last3_matchup_rank": 5
+    "opponent_ppr_allowed_per_game": 21.72,
+    "opponent_matchup_rank": 13,
+    "opponent_last3_ppr_allowed_per_game": 25.2,
+    "opponent_last3_matchup_rank": 7
   },
   {
     "season": 2026,
@@ -750,10 +768,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 29.5,
-    "opponent_matchup_rank": 21,
-    "opponent_last3_ppr_allowed_per_game": 24.65,
-    "opponent_last3_matchup_rank": 28
+    "opponent_ppr_allowed_per_game": 29.740000000000002,
+    "opponent_matchup_rank": 22,
+    "opponent_last3_ppr_allowed_per_game": 26.666666666666668,
+    "opponent_last3_matchup_rank": 27
   },
   {
     "season": 2026,
@@ -768,10 +786,10 @@
     "game_date": "2026-10-19",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 18.325,
-    "opponent_matchup_rank": 5,
-    "opponent_last3_ppr_allowed_per_game": 14.65,
-    "opponent_last3_matchup_rank": 11
+    "opponent_ppr_allowed_per_game": 22.240000000000002,
+    "opponent_matchup_rank": 3,
+    "opponent_last3_ppr_allowed_per_game": 22.399999999999995,
+    "opponent_last3_matchup_rank": 7
   },
   {
     "season": 2026,
@@ -786,10 +804,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 20.925,
-    "opponent_matchup_rank": 18,
-    "opponent_last3_ppr_allowed_per_game": 25.5,
-    "opponent_last3_matchup_rank": 10
+    "opponent_ppr_allowed_per_game": 21.58,
+    "opponent_matchup_rank": 14,
+    "opponent_last3_ppr_allowed_per_game": 25.066666666666663,
+    "opponent_last3_matchup_rank": 8
   },
   {
     "season": 2026,
@@ -807,7 +825,7 @@
     "opponent_ppr_allowed_per_game": 21.45,
     "opponent_matchup_rank": 32,
     "opponent_last3_ppr_allowed_per_game": 22.25,
-    "opponent_last3_matchup_rank": 30
+    "opponent_last3_matchup_rank": 31
   },
   {
     "season": 2026,
@@ -822,10 +840,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 10.899999999999999,
-    "opponent_matchup_rank": 18,
-    "opponent_last3_ppr_allowed_per_game": 10.7,
-    "opponent_last3_matchup_rank": 20
+    "opponent_ppr_allowed_per_game": 9.02,
+    "opponent_matchup_rank": 27,
+    "opponent_last3_ppr_allowed_per_game": 7.633333333333333,
+    "opponent_last3_matchup_rank": 26
   },
   {
     "season": 2026,
@@ -840,10 +858,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 9.425,
+    "opponent_ppr_allowed_per_game": 9.5,
     "opponent_matchup_rank": 26,
-    "opponent_last3_ppr_allowed_per_game": 7.85,
-    "opponent_last3_matchup_rank": 25
+    "opponent_last3_ppr_allowed_per_game": 8.5,
+    "opponent_last3_matchup_rank": 24
   },
   {
     "season": 2026,
@@ -858,10 +876,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 10.575,
-    "opponent_matchup_rank": 20,
-    "opponent_last3_ppr_allowed_per_game": 9.15,
-    "opponent_last3_matchup_rank": 23
+    "opponent_ppr_allowed_per_game": 9.6,
+    "opponent_matchup_rank": 25,
+    "opponent_last3_ppr_allowed_per_game": 8.0,
+    "opponent_last3_matchup_rank": 25
   },
   {
     "season": 2026,
@@ -876,9 +894,9 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 16.925,
-    "opponent_matchup_rank": 26,
-    "opponent_last3_ppr_allowed_per_game": 9.649999999999999,
+    "opponent_ppr_allowed_per_game": 18.36,
+    "opponent_matchup_rank": 25,
+    "opponent_last3_ppr_allowed_per_game": 14.466666666666667,
     "opponent_last3_matchup_rank": 32
   },
   {
@@ -894,10 +912,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 44.6,
-    "opponent_matchup_rank": 1,
-    "opponent_last3_ppr_allowed_per_game": 46.25,
-    "opponent_last3_matchup_rank": 2
+    "opponent_ppr_allowed_per_game": 41.019999999999996,
+    "opponent_matchup_rank": 2,
+    "opponent_last3_ppr_allowed_per_game": 39.733333333333334,
+    "opponent_last3_matchup_rank": 5
   },
   {
     "season": 2026,
@@ -915,7 +933,7 @@
     "opponent_ppr_allowed_per_game": 28.675,
     "opponent_matchup_rank": 25,
     "opponent_last3_ppr_allowed_per_game": 28.1,
-    "opponent_last3_matchup_rank": 24
+    "opponent_last3_matchup_rank": 23
   },
   {
     "season": 2026,
@@ -930,10 +948,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 17.525,
-    "opponent_matchup_rank": 23,
-    "opponent_last3_ppr_allowed_per_game": 17.1,
-    "opponent_last3_matchup_rank": 25
+    "opponent_ppr_allowed_per_game": 16.32,
+    "opponent_matchup_rank": 29,
+    "opponent_last3_ppr_allowed_per_game": 15.233333333333334,
+    "opponent_last3_matchup_rank": 29
   },
   {
     "season": 2026,
@@ -949,9 +967,9 @@
     "bye": false,
     "matchup_available": true,
     "opponent_ppr_allowed_per_game": 11.25,
-    "opponent_matchup_rank": 17,
+    "opponent_matchup_rank": 19,
     "opponent_last3_ppr_allowed_per_game": 6.699999999999999,
-    "opponent_last3_matchup_rank": 26
+    "opponent_last3_matchup_rank": 27
   },
   {
     "season": 2026,
@@ -966,10 +984,10 @@
     "game_date": "2026-10-19",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 22.515,
+    "opponent_ppr_allowed_per_game": 23.2,
     "opponent_matchup_rank": 2,
-    "opponent_last3_ppr_allowed_per_game": 17.79,
-    "opponent_last3_matchup_rank": 13
+    "opponent_last3_ppr_allowed_per_game": 20.506666666666668,
+    "opponent_last3_matchup_rank": 4
   },
   {
     "season": 2026,
@@ -1002,10 +1020,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 33.1,
-    "opponent_matchup_rank": 16,
-    "opponent_last3_ppr_allowed_per_game": 29.299999999999997,
-    "opponent_last3_matchup_rank": 22
+    "opponent_ppr_allowed_per_game": 31.3,
+    "opponent_matchup_rank": 17,
+    "opponent_last3_ppr_allowed_per_game": 27.566666666666666,
+    "opponent_last3_matchup_rank": 24
   },
   {
     "season": 2026,
@@ -1020,10 +1038,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 17.96,
-    "opponent_matchup_rank": 10,
-    "opponent_last3_ppr_allowed_per_game": 17.08,
-    "opponent_last3_matchup_rank": 18
+    "opponent_ppr_allowed_per_game": 18.716,
+    "opponent_matchup_rank": 11,
+    "opponent_last3_ppr_allowed_per_game": 18.633333333333333,
+    "opponent_last3_matchup_rank": 10
   },
   {
     "season": 2026,
@@ -1038,10 +1056,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 36.95,
-    "opponent_matchup_rank": 10,
-    "opponent_last3_ppr_allowed_per_game": 44.550000000000004,
-    "opponent_last3_matchup_rank": 4
+    "opponent_ppr_allowed_per_game": 38.239999999999995,
+    "opponent_matchup_rank": 5,
+    "opponent_last3_ppr_allowed_per_game": 44.166666666666664,
+    "opponent_last3_matchup_rank": 1
   },
   {
     "season": 2026,
@@ -1056,10 +1074,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 24.575000000000003,
-    "opponent_matchup_rank": 10,
-    "opponent_last3_ppr_allowed_per_game": 22.650000000000002,
-    "opponent_last3_matchup_rank": 11
+    "opponent_ppr_allowed_per_game": 22.48,
+    "opponent_matchup_rank": 11,
+    "opponent_last3_ppr_allowed_per_game": 19.8,
+    "opponent_last3_matchup_rank": 18
   },
   {
     "season": 2026,
@@ -1074,10 +1092,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 14.25,
-    "opponent_matchup_rank": 24,
-    "opponent_last3_ppr_allowed_per_game": 14.44,
-    "opponent_last3_matchup_rank": 23
+    "opponent_ppr_allowed_per_game": 14.0,
+    "opponent_matchup_rank": 25,
+    "opponent_last3_ppr_allowed_per_game": 13.959999999999999,
+    "opponent_last3_matchup_rank": 26
   },
   {
     "season": 2026,
@@ -1092,10 +1110,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 21.25,
+    "opponent_ppr_allowed_per_game": 20.919999999999998,
     "opponent_matchup_rank": 15,
-    "opponent_last3_ppr_allowed_per_game": 16.75,
-    "opponent_last3_matchup_rank": 26
+    "opponent_last3_ppr_allowed_per_game": 17.7,
+    "opponent_last3_matchup_rank": 25
   },
   {
     "season": 2026,
@@ -1110,10 +1128,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 9.925,
-    "opponent_matchup_rank": 23,
-    "opponent_last3_ppr_allowed_per_game": 14.35,
-    "opponent_last3_matchup_rank": 13
+    "opponent_ppr_allowed_per_game": 13.180000000000001,
+    "opponent_matchup_rank": 17,
+    "opponent_last3_ppr_allowed_per_game": 18.3,
+    "opponent_last3_matchup_rank": 10
   },
   {
     "season": 2026,
@@ -1128,10 +1146,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 9.425,
+    "opponent_ppr_allowed_per_game": 9.5,
     "opponent_matchup_rank": 26,
-    "opponent_last3_ppr_allowed_per_game": 7.85,
-    "opponent_last3_matchup_rank": 25
+    "opponent_last3_ppr_allowed_per_game": 8.5,
+    "opponent_last3_matchup_rank": 24
   },
   {
     "season": 2026,
@@ -1164,10 +1182,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 17.66,
-    "opponent_matchup_rank": 11,
-    "opponent_last3_ppr_allowed_per_game": 17.21,
-    "opponent_last3_matchup_rank": 17
+    "opponent_ppr_allowed_per_game": 18.936,
+    "opponent_matchup_rank": 9,
+    "opponent_last3_ppr_allowed_per_game": 19.486666666666668,
+    "opponent_last3_matchup_rank": 6
   },
   {
     "season": 2026,
@@ -1182,10 +1200,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 34.95,
-    "opponent_matchup_rank": 12,
-    "opponent_last3_ppr_allowed_per_game": 27.45,
-    "opponent_last3_matchup_rank": 25
+    "opponent_ppr_allowed_per_game": 31.9,
+    "opponent_matchup_rank": 15,
+    "opponent_last3_ppr_allowed_per_game": 24.866666666666664,
+    "opponent_last3_matchup_rank": 29
   },
   {
     "season": 2026,
@@ -1200,10 +1218,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 33.75,
+    "opponent_ppr_allowed_per_game": 31.48,
     "opponent_matchup_rank": 1,
-    "opponent_last3_ppr_allowed_per_game": 38.55,
-    "opponent_last3_matchup_rank": 2
+    "opponent_last3_ppr_allowed_per_game": 33.166666666666664,
+    "opponent_last3_matchup_rank": 1
   },
   {
     "season": 2026,
@@ -1218,10 +1236,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 20.5,
-    "opponent_matchup_rank": 6,
-    "opponent_last3_ppr_allowed_per_game": 14.03,
-    "opponent_last3_matchup_rank": 25
+    "opponent_ppr_allowed_per_game": 20.759999999999998,
+    "opponent_matchup_rank": 7,
+    "opponent_last3_ppr_allowed_per_game": 16.62,
+    "opponent_last3_matchup_rank": 18
   },
   {
     "season": 2026,
@@ -1236,10 +1254,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 9.725,
-    "opponent_matchup_rank": 25,
-    "opponent_last3_ppr_allowed_per_game": 13.45,
-    "opponent_last3_matchup_rank": 14
+    "opponent_ppr_allowed_per_game": 8.059999999999999,
+    "opponent_matchup_rank": 28,
+    "opponent_last3_ppr_allowed_per_game": 9.433333333333334,
+    "opponent_last3_matchup_rank": 23
   },
   {
     "season": 2026,
@@ -1254,10 +1272,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 34.95,
-    "opponent_matchup_rank": 12,
-    "opponent_last3_ppr_allowed_per_game": 27.45,
-    "opponent_last3_matchup_rank": 25
+    "opponent_ppr_allowed_per_game": 31.9,
+    "opponent_matchup_rank": 15,
+    "opponent_last3_ppr_allowed_per_game": 24.866666666666664,
+    "opponent_last3_matchup_rank": 29
   },
   {
     "season": 2026,
@@ -1272,10 +1290,28 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 10.375,
-    "opponent_matchup_rank": 21,
-    "opponent_last3_ppr_allowed_per_game": 9.4,
-    "opponent_last3_matchup_rank": 22
+    "opponent_ppr_allowed_per_game": 11.8,
+    "opponent_matchup_rank": 18,
+    "opponent_last3_ppr_allowed_per_game": 12.1,
+    "opponent_last3_matchup_rank": 17
+  },
+  {
+    "season": 2026,
+    "through_week": 5,
+    "upcoming_week": 6,
+    "player_id": "00-0039325",
+    "player_name": "C.Steele",
+    "position": "RB",
+    "team": "PHI",
+    "opponent": "CAR",
+    "home_away": "HOME",
+    "game_date": "2026-10-18",
+    "bye": false,
+    "matchup_available": true,
+    "opponent_ppr_allowed_per_game": 28.0,
+    "opponent_matchup_rank": 3,
+    "opponent_last3_ppr_allowed_per_game": 19.7,
+    "opponent_last3_matchup_rank": 19
   },
   {
     "season": 2026,
@@ -1308,10 +1344,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 17.66,
-    "opponent_matchup_rank": 11,
-    "opponent_last3_ppr_allowed_per_game": 17.21,
-    "opponent_last3_matchup_rank": 17
+    "opponent_ppr_allowed_per_game": 18.936,
+    "opponent_matchup_rank": 9,
+    "opponent_last3_ppr_allowed_per_game": 19.486666666666668,
+    "opponent_last3_matchup_rank": 6
   },
   {
     "season": 2026,
@@ -1326,10 +1362,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 32.75,
-    "opponent_matchup_rank": 17,
-    "opponent_last3_ppr_allowed_per_game": 30.0,
-    "opponent_last3_matchup_rank": 21
+    "opponent_ppr_allowed_per_game": 30.3,
+    "opponent_matchup_rank": 20,
+    "opponent_last3_ppr_allowed_per_game": 26.833333333333332,
+    "opponent_last3_matchup_rank": 26
   },
   {
     "season": 2026,
@@ -1344,10 +1380,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 29.5,
-    "opponent_matchup_rank": 21,
-    "opponent_last3_ppr_allowed_per_game": 24.65,
-    "opponent_last3_matchup_rank": 28
+    "opponent_ppr_allowed_per_game": 29.740000000000002,
+    "opponent_matchup_rank": 22,
+    "opponent_last3_ppr_allowed_per_game": 26.666666666666668,
+    "opponent_last3_matchup_rank": 27
   },
   {
     "season": 2026,
@@ -1365,7 +1401,7 @@
     "opponent_ppr_allowed_per_game": 22.55,
     "opponent_matchup_rank": 2,
     "opponent_last3_ppr_allowed_per_game": 29.25,
-    "opponent_last3_matchup_rank": 1
+    "opponent_last3_matchup_rank": 2
   },
   {
     "season": 2026,
@@ -1380,10 +1416,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 6.725,
+    "opponent_ppr_allowed_per_game": 7.7,
     "opponent_matchup_rank": 30,
-    "opponent_last3_ppr_allowed_per_game": 2.7,
-    "opponent_last3_matchup_rank": 32
+    "opponent_last3_ppr_allowed_per_game": 5.666666666666667,
+    "opponent_last3_matchup_rank": 30
   },
   {
     "season": 2026,
@@ -1416,10 +1452,10 @@
     "game_date": "2026-10-19",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 8.7,
-    "opponent_matchup_rank": 27,
-    "opponent_last3_ppr_allowed_per_game": 12.3,
-    "opponent_last3_matchup_rank": 15
+    "opponent_ppr_allowed_per_game": 7.959999999999999,
+    "opponent_matchup_rank": 29,
+    "opponent_last3_ppr_allowed_per_game": 9.866666666666667,
+    "opponent_last3_matchup_rank": 22
   },
   {
     "season": 2026,
@@ -1434,10 +1470,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 34.95,
-    "opponent_matchup_rank": 12,
-    "opponent_last3_ppr_allowed_per_game": 27.45,
-    "opponent_last3_matchup_rank": 25
+    "opponent_ppr_allowed_per_game": 31.9,
+    "opponent_matchup_rank": 15,
+    "opponent_last3_ppr_allowed_per_game": 24.866666666666664,
+    "opponent_last3_matchup_rank": 29
   },
   {
     "season": 2026,
@@ -1470,10 +1506,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 25.375,
-    "opponent_matchup_rank": 29,
-    "opponent_last3_ppr_allowed_per_game": 22.3,
-    "opponent_last3_matchup_rank": 29
+    "opponent_ppr_allowed_per_game": 32.019999999999996,
+    "opponent_matchup_rank": 14,
+    "opponent_last3_ppr_allowed_per_game": 34.4,
+    "opponent_last3_matchup_rank": 14
   },
   {
     "season": 2026,
@@ -1489,9 +1525,9 @@
     "bye": false,
     "matchup_available": true,
     "opponent_ppr_allowed_per_game": 25.32,
-    "opponent_matchup_rank": 9,
+    "opponent_matchup_rank": 8,
     "opponent_last3_ppr_allowed_per_game": 25.599999999999998,
-    "opponent_last3_matchup_rank": 9
+    "opponent_last3_matchup_rank": 6
   },
   {
     "season": 2026,
@@ -1506,10 +1542,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 29.0,
-    "opponent_matchup_rank": 23,
-    "opponent_last3_ppr_allowed_per_game": 42.5,
-    "opponent_last3_matchup_rank": 7
+    "opponent_ppr_allowed_per_game": 27.72,
+    "opponent_matchup_rank": 27,
+    "opponent_last3_ppr_allowed_per_game": 35.86666666666667,
+    "opponent_last3_matchup_rank": 11
   },
   {
     "season": 2026,
@@ -1524,10 +1560,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 17.9,
+    "opponent_ppr_allowed_per_game": 16.72,
     "opponent_matchup_rank": 7,
-    "opponent_last3_ppr_allowed_per_game": 24.7,
-    "opponent_last3_matchup_rank": 4
+    "opponent_last3_ppr_allowed_per_game": 20.466666666666665,
+    "opponent_last3_matchup_rank": 8
   },
   {
     "season": 2026,
@@ -1542,10 +1578,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 37.275,
-    "opponent_matchup_rank": 8,
-    "opponent_last3_ppr_allowed_per_game": 35.45,
-    "opponent_last3_matchup_rank": 13
+    "opponent_ppr_allowed_per_game": 36.0,
+    "opponent_matchup_rank": 10,
+    "opponent_last3_ppr_allowed_per_game": 33.93333333333333,
+    "opponent_last3_matchup_rank": 15
   },
   {
     "season": 2026,
@@ -1560,10 +1596,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 33.1,
-    "opponent_matchup_rank": 16,
-    "opponent_last3_ppr_allowed_per_game": 29.299999999999997,
-    "opponent_last3_matchup_rank": 22
+    "opponent_ppr_allowed_per_game": 31.3,
+    "opponent_matchup_rank": 17,
+    "opponent_last3_ppr_allowed_per_game": 27.566666666666666,
+    "opponent_last3_matchup_rank": 24
   },
   {
     "season": 2026,
@@ -1578,10 +1614,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 17.3,
-    "opponent_matchup_rank": 24,
-    "opponent_last3_ppr_allowed_per_game": 22.150000000000002,
-    "opponent_last3_matchup_rank": 14
+    "opponent_ppr_allowed_per_game": 16.9,
+    "opponent_matchup_rank": 28,
+    "opponent_last3_ppr_allowed_per_game": 19.866666666666667,
+    "opponent_last3_matchup_rank": 17
   },
   {
     "season": 2026,
@@ -1596,10 +1632,10 @@
     "game_date": "2026-10-19",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 16.075,
-    "opponent_matchup_rank": 29,
-    "opponent_last3_ppr_allowed_per_game": 21.95,
-    "opponent_last3_matchup_rank": 15
+    "opponent_ppr_allowed_per_game": 15.780000000000001,
+    "opponent_matchup_rank": 30,
+    "opponent_last3_ppr_allowed_per_game": 19.5,
+    "opponent_last3_matchup_rank": 20
   },
   {
     "season": 2026,
@@ -1615,9 +1651,9 @@
     "bye": false,
     "matchup_available": true,
     "opponent_ppr_allowed_per_game": 35.46,
-    "opponent_matchup_rank": 11,
+    "opponent_matchup_rank": 12,
     "opponent_last3_ppr_allowed_per_game": 39.0,
-    "opponent_last3_matchup_rank": 11
+    "opponent_last3_matchup_rank": 10
   },
   {
     "season": 2026,
@@ -1632,10 +1668,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 22.525,
-    "opponent_matchup_rank": 13,
-    "opponent_last3_ppr_allowed_per_game": 26.85,
-    "opponent_last3_matchup_rank": 6
+    "opponent_ppr_allowed_per_game": 20.759999999999998,
+    "opponent_matchup_rank": 16,
+    "opponent_last3_ppr_allowed_per_game": 22.46666666666667,
+    "opponent_last3_matchup_rank": 12
   },
   {
     "season": 2026,
@@ -1651,9 +1687,9 @@
     "bye": false,
     "matchup_available": true,
     "opponent_ppr_allowed_per_game": 41.025,
-    "opponent_matchup_rank": 3,
+    "opponent_matchup_rank": 1,
     "opponent_last3_ppr_allowed_per_game": 39.5,
-    "opponent_last3_matchup_rank": 10
+    "opponent_last3_matchup_rank": 8
   },
   {
     "season": 2026,
@@ -1686,9 +1722,9 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 18.625,
-    "opponent_matchup_rank": 3,
-    "opponent_last3_ppr_allowed_per_game": 23.95,
+    "opponent_ppr_allowed_per_game": 19.28,
+    "opponent_matchup_rank": 5,
+    "opponent_last3_ppr_allowed_per_game": 23.266666666666666,
     "opponent_last3_matchup_rank": 6
   },
   {
@@ -1704,10 +1740,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 15.875,
-    "opponent_matchup_rank": 11,
-    "opponent_last3_ppr_allowed_per_game": 11.05,
-    "opponent_last3_matchup_rank": 19
+    "opponent_ppr_allowed_per_game": 14.580000000000002,
+    "opponent_matchup_rank": 13,
+    "opponent_last3_ppr_allowed_per_game": 10.5,
+    "opponent_last3_matchup_rank": 20
   },
   {
     "season": 2026,
@@ -1722,10 +1758,10 @@
     "game_date": "2026-10-19",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 8.7,
-    "opponent_matchup_rank": 27,
-    "opponent_last3_ppr_allowed_per_game": 12.3,
-    "opponent_last3_matchup_rank": 15
+    "opponent_ppr_allowed_per_game": 7.959999999999999,
+    "opponent_matchup_rank": 29,
+    "opponent_last3_ppr_allowed_per_game": 9.866666666666667,
+    "opponent_last3_matchup_rank": 22
   },
   {
     "season": 2026,
@@ -1740,10 +1776,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 15.875,
-    "opponent_matchup_rank": 11,
-    "opponent_last3_ppr_allowed_per_game": 11.05,
-    "opponent_last3_matchup_rank": 19
+    "opponent_ppr_allowed_per_game": 14.580000000000002,
+    "opponent_matchup_rank": 13,
+    "opponent_last3_ppr_allowed_per_game": 10.5,
+    "opponent_last3_matchup_rank": 20
   },
   {
     "season": 2026,
@@ -1758,10 +1794,10 @@
     "game_date": "2026-10-15",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 28.275,
-    "opponent_matchup_rank": 26,
-    "opponent_last3_ppr_allowed_per_game": 35.4,
-    "opponent_last3_matchup_rank": 14
+    "opponent_ppr_allowed_per_game": 24.7,
+    "opponent_matchup_rank": 30,
+    "opponent_last3_ppr_allowed_per_game": 27.066666666666666,
+    "opponent_last3_matchup_rank": 25
   },
   {
     "season": 2026,
@@ -1776,10 +1812,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 14.885,
-    "opponent_matchup_rank": 22,
-    "opponent_last3_ppr_allowed_per_game": 9.69,
-    "opponent_last3_matchup_rank": 31
+    "opponent_ppr_allowed_per_game": 16.924,
+    "opponent_matchup_rank": 13,
+    "opponent_last3_ppr_allowed_per_game": 14.82,
+    "opponent_last3_matchup_rank": 25
   },
   {
     "season": 2026,
@@ -1794,10 +1830,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 27.25,
-    "opponent_matchup_rank": 4,
-    "opponent_last3_ppr_allowed_per_game": 42.4,
-    "opponent_last3_matchup_rank": 1
+    "opponent_ppr_allowed_per_game": 23.86,
+    "opponent_matchup_rank": 10,
+    "opponent_last3_ppr_allowed_per_game": 31.7,
+    "opponent_last3_matchup_rank": 3
   },
   {
     "season": 2026,
@@ -1812,10 +1848,10 @@
     "game_date": "2026-10-15",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 21.775,
-    "opponent_matchup_rank": 31,
-    "opponent_last3_ppr_allowed_per_game": 29.25,
-    "opponent_last3_matchup_rank": 23
+    "opponent_ppr_allowed_per_game": 25.1,
+    "opponent_matchup_rank": 29,
+    "opponent_last3_ppr_allowed_per_game": 32.300000000000004,
+    "opponent_last3_matchup_rank": 18
   },
   {
     "season": 2026,
@@ -1830,9 +1866,9 @@
     "game_date": "2026-10-19",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 25.6,
-    "opponent_matchup_rank": 8,
-    "opponent_last3_ppr_allowed_per_game": 30.6,
+    "opponent_ppr_allowed_per_game": 24.14,
+    "opponent_matchup_rank": 9,
+    "opponent_last3_ppr_allowed_per_game": 26.5,
     "opponent_last3_matchup_rank": 4
   },
   {
@@ -1848,10 +1884,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 33.4,
-    "opponent_matchup_rank": 15,
-    "opponent_last3_ppr_allowed_per_game": 26.9,
-    "opponent_last3_matchup_rank": 27
+    "opponent_ppr_allowed_per_game": 31.3,
+    "opponent_matchup_rank": 17,
+    "opponent_last3_ppr_allowed_per_game": 25.566666666666666,
+    "opponent_last3_matchup_rank": 28
   },
   {
     "season": 2026,
@@ -1866,10 +1902,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 16.85,
-    "opponent_matchup_rank": 27,
-    "opponent_last3_ppr_allowed_per_game": 18.4,
-    "opponent_last3_matchup_rank": 22
+    "opponent_ppr_allowed_per_game": 19.64,
+    "opponent_matchup_rank": 19,
+    "opponent_last3_ppr_allowed_per_game": 22.53333333333333,
+    "opponent_last3_matchup_rank": 11
   },
   {
     "season": 2026,
@@ -1902,10 +1938,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 26.85,
-    "opponent_matchup_rank": 28,
-    "opponent_last3_ppr_allowed_per_game": 32.85,
-    "opponent_last3_matchup_rank": 17
+    "opponent_ppr_allowed_per_game": 32.3,
+    "opponent_matchup_rank": 13,
+    "opponent_last3_ppr_allowed_per_game": 39.93333333333334,
+    "opponent_last3_matchup_rank": 4
   },
   {
     "season": 2026,
@@ -1921,9 +1957,9 @@
     "bye": false,
     "matchup_available": true,
     "opponent_ppr_allowed_per_game": 30.68,
-    "opponent_matchup_rank": 18,
+    "opponent_matchup_rank": 19,
     "opponent_last3_ppr_allowed_per_game": 34.53333333333333,
-    "opponent_last3_matchup_rank": 15
+    "opponent_last3_matchup_rank": 13
   },
   {
     "season": 2026,
@@ -1938,10 +1974,28 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 14.969999999999999,
-    "opponent_matchup_rank": 21,
-    "opponent_last3_ppr_allowed_per_game": 12.73,
-    "opponent_last3_matchup_rank": 28
+    "opponent_ppr_allowed_per_game": 12.355999999999998,
+    "opponent_matchup_rank": 30,
+    "opponent_last3_ppr_allowed_per_game": 9.12,
+    "opponent_last3_matchup_rank": 31
+  },
+  {
+    "season": 2026,
+    "through_week": 5,
+    "upcoming_week": 6,
+    "player_id": "00-0040431",
+    "player_name": "D.Cambre",
+    "position": "WR",
+    "team": "NYG",
+    "opponent": "NO",
+    "home_away": "HOME",
+    "game_date": "2026-10-18",
+    "bye": false,
+    "matchup_available": true,
+    "opponent_ppr_allowed_per_game": 29.740000000000002,
+    "opponent_matchup_rank": 22,
+    "opponent_last3_ppr_allowed_per_game": 26.666666666666668,
+    "opponent_last3_matchup_rank": 27
   },
   {
     "season": 2026,
@@ -1957,9 +2011,9 @@
     "bye": false,
     "matchup_available": true,
     "opponent_ppr_allowed_per_game": 16.575,
-    "opponent_matchup_rank": 10,
+    "opponent_matchup_rank": 9,
     "opponent_last3_ppr_allowed_per_game": 24.15,
-    "opponent_last3_matchup_rank": 5
+    "opponent_last3_matchup_rank": 4
   },
   {
     "season": 2026,
@@ -1974,9 +2028,9 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 17.6,
-    "opponent_matchup_rank": 8,
-    "opponent_last3_ppr_allowed_per_game": 24.900000000000002,
+    "opponent_ppr_allowed_per_game": 18.9,
+    "opponent_matchup_rank": 6,
+    "opponent_last3_ppr_allowed_per_game": 24.633333333333336,
     "opponent_last3_matchup_rank": 3
   },
   {
@@ -1992,10 +2046,28 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 9.425,
+    "opponent_ppr_allowed_per_game": 9.5,
     "opponent_matchup_rank": 26,
-    "opponent_last3_ppr_allowed_per_game": 7.85,
-    "opponent_last3_matchup_rank": 25
+    "opponent_last3_ppr_allowed_per_game": 8.5,
+    "opponent_last3_matchup_rank": 24
+  },
+  {
+    "season": 2026,
+    "through_week": 5,
+    "upcoming_week": 6,
+    "player_id": "00-0037258",
+    "player_name": "D.Pierce",
+    "position": "RB",
+    "team": "PHI",
+    "opponent": "CAR",
+    "home_away": "HOME",
+    "game_date": "2026-10-18",
+    "bye": false,
+    "matchup_available": true,
+    "opponent_ppr_allowed_per_game": 28.0,
+    "opponent_matchup_rank": 3,
+    "opponent_last3_ppr_allowed_per_game": 19.7,
+    "opponent_last3_matchup_rank": 19
   },
   {
     "season": 2026,
@@ -2010,10 +2082,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 13.725000000000001,
-    "opponent_matchup_rank": 15,
-    "opponent_last3_ppr_allowed_per_game": 8.6,
-    "opponent_last3_matchup_rank": 24
+    "opponent_ppr_allowed_per_game": 15.920000000000002,
+    "opponent_matchup_rank": 10,
+    "opponent_last3_ppr_allowed_per_game": 13.966666666666667,
+    "opponent_last3_matchup_rank": 13
   },
   {
     "season": 2026,
@@ -2028,10 +2100,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 13.645,
-    "opponent_matchup_rank": 27,
-    "opponent_last3_ppr_allowed_per_game": 14.56,
-    "opponent_last3_matchup_rank": 22
+    "opponent_ppr_allowed_per_game": 15.104000000000003,
+    "opponent_matchup_rank": 21,
+    "opponent_last3_ppr_allowed_per_game": 16.686666666666667,
+    "opponent_last3_matchup_rank": 17
   },
   {
     "season": 2026,
@@ -2047,9 +2119,9 @@
     "bye": false,
     "matchup_available": true,
     "opponent_ppr_allowed_per_game": 41.025,
-    "opponent_matchup_rank": 3,
+    "opponent_matchup_rank": 1,
     "opponent_last3_ppr_allowed_per_game": 39.5,
-    "opponent_last3_matchup_rank": 10
+    "opponent_last3_matchup_rank": 8
   },
   {
     "season": 2026,
@@ -2067,7 +2139,7 @@
     "opponent_ppr_allowed_per_game": 28.675,
     "opponent_matchup_rank": 25,
     "opponent_last3_ppr_allowed_per_game": 28.1,
-    "opponent_last3_matchup_rank": 24
+    "opponent_last3_matchup_rank": 23
   },
   {
     "season": 2026,
@@ -2082,10 +2154,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 29.5,
-    "opponent_matchup_rank": 21,
-    "opponent_last3_ppr_allowed_per_game": 24.65,
-    "opponent_last3_matchup_rank": 28
+    "opponent_ppr_allowed_per_game": 29.740000000000002,
+    "opponent_matchup_rank": 22,
+    "opponent_last3_ppr_allowed_per_game": 26.666666666666668,
+    "opponent_last3_matchup_rank": 27
   },
   {
     "season": 2026,
@@ -2101,9 +2173,9 @@
     "bye": false,
     "matchup_available": true,
     "opponent_ppr_allowed_per_game": 15.680000000000001,
-    "opponent_matchup_rank": 12,
+    "opponent_matchup_rank": 11,
     "opponent_last3_ppr_allowed_per_game": 11.4,
-    "opponent_last3_matchup_rank": 17
+    "opponent_last3_matchup_rank": 19
   },
   {
     "season": 2026,
@@ -2118,10 +2190,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 7.8999999999999995,
-    "opponent_matchup_rank": 28,
-    "opponent_last3_ppr_allowed_per_game": 10.7,
-    "opponent_last3_matchup_rank": 20
+    "opponent_ppr_allowed_per_game": 9.879999999999999,
+    "opponent_matchup_rank": 23,
+    "opponent_last3_ppr_allowed_per_game": 13.066666666666668,
+    "opponent_last3_matchup_rank": 15
   },
   {
     "season": 2026,
@@ -2136,9 +2208,9 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 38.375,
-    "opponent_matchup_rank": 6,
-    "opponent_last3_ppr_allowed_per_game": 36.1,
+    "opponent_ppr_allowed_per_game": 37.019999999999996,
+    "opponent_matchup_rank": 7,
+    "opponent_last3_ppr_allowed_per_game": 34.6,
     "opponent_last3_matchup_rank": 12
   },
   {
@@ -2154,10 +2226,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 17.525,
-    "opponent_matchup_rank": 23,
-    "opponent_last3_ppr_allowed_per_game": 17.1,
-    "opponent_last3_matchup_rank": 25
+    "opponent_ppr_allowed_per_game": 16.32,
+    "opponent_matchup_rank": 29,
+    "opponent_last3_ppr_allowed_per_game": 15.233333333333334,
+    "opponent_last3_matchup_rank": 29
   },
   {
     "season": 2026,
@@ -2172,10 +2244,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 36.95,
-    "opponent_matchup_rank": 10,
-    "opponent_last3_ppr_allowed_per_game": 44.550000000000004,
-    "opponent_last3_matchup_rank": 4
+    "opponent_ppr_allowed_per_game": 38.239999999999995,
+    "opponent_matchup_rank": 5,
+    "opponent_last3_ppr_allowed_per_game": 44.166666666666664,
+    "opponent_last3_matchup_rank": 1
   },
   {
     "season": 2026,
@@ -2193,7 +2265,7 @@
     "opponent_ppr_allowed_per_game": 22.55,
     "opponent_matchup_rank": 2,
     "opponent_last3_ppr_allowed_per_game": 29.25,
-    "opponent_last3_matchup_rank": 1
+    "opponent_last3_matchup_rank": 2
   },
   {
     "season": 2026,
@@ -2208,9 +2280,9 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 18.625,
-    "opponent_matchup_rank": 3,
-    "opponent_last3_ppr_allowed_per_game": 23.95,
+    "opponent_ppr_allowed_per_game": 19.28,
+    "opponent_matchup_rank": 5,
+    "opponent_last3_ppr_allowed_per_game": 23.266666666666666,
     "opponent_last3_matchup_rank": 6
   },
   {
@@ -2226,9 +2298,9 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 17.6,
-    "opponent_matchup_rank": 8,
-    "opponent_last3_ppr_allowed_per_game": 24.900000000000002,
+    "opponent_ppr_allowed_per_game": 18.9,
+    "opponent_matchup_rank": 6,
+    "opponent_last3_ppr_allowed_per_game": 24.633333333333336,
     "opponent_last3_matchup_rank": 3
   },
   {
@@ -2262,10 +2334,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 28.975,
+    "opponent_ppr_allowed_per_game": 29.26,
     "opponent_matchup_rank": 24,
-    "opponent_last3_ppr_allowed_per_game": 30.8,
-    "opponent_last3_matchup_rank": 19
+    "opponent_last3_ppr_allowed_per_game": 30.666666666666668,
+    "opponent_last3_matchup_rank": 21
   },
   {
     "season": 2026,
@@ -2283,7 +2355,7 @@
     "opponent_ppr_allowed_per_game": 28.675,
     "opponent_matchup_rank": 25,
     "opponent_last3_ppr_allowed_per_game": 28.1,
-    "opponent_last3_matchup_rank": 24
+    "opponent_last3_matchup_rank": 23
   },
   {
     "season": 2026,
@@ -2298,10 +2370,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 15.2,
-    "opponent_matchup_rank": 31,
-    "opponent_last3_ppr_allowed_per_game": 17.45,
-    "opponent_last3_matchup_rank": 24
+    "opponent_ppr_allowed_per_game": 19.919999999999998,
+    "opponent_matchup_rank": 18,
+    "opponent_last3_ppr_allowed_per_game": 24.566666666666666,
+    "opponent_last3_matchup_rank": 9
   },
   {
     "season": 2026,
@@ -2334,10 +2406,10 @@
     "game_date": "2026-10-19",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 40.315,
+    "opponent_ppr_allowed_per_game": 39.552,
     "opponent_matchup_rank": 4,
-    "opponent_last3_ppr_allowed_per_game": 41.23,
-    "opponent_last3_matchup_rank": 9
+    "opponent_last3_ppr_allowed_per_game": 39.653333333333336,
+    "opponent_last3_matchup_rank": 6
   },
   {
     "season": 2026,
@@ -2352,10 +2424,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 34.1,
-    "opponent_matchup_rank": 14,
-    "opponent_last3_ppr_allowed_per_game": 27.0,
-    "opponent_last3_matchup_rank": 26
+    "opponent_ppr_allowed_per_game": 35.9,
+    "opponent_matchup_rank": 11,
+    "opponent_last3_ppr_allowed_per_game": 32.36666666666667,
+    "opponent_last3_matchup_rank": 17
   },
   {
     "season": 2026,
@@ -2370,10 +2442,10 @@
     "game_date": "2026-10-19",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 40.315,
+    "opponent_ppr_allowed_per_game": 39.552,
     "opponent_matchup_rank": 4,
-    "opponent_last3_ppr_allowed_per_game": 41.23,
-    "opponent_last3_matchup_rank": 9
+    "opponent_last3_ppr_allowed_per_game": 39.653333333333336,
+    "opponent_last3_matchup_rank": 6
   },
   {
     "season": 2026,
@@ -2406,10 +2478,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 37.85,
-    "opponent_matchup_rank": 7,
-    "opponent_last3_ppr_allowed_per_game": 44.45,
-    "opponent_last3_matchup_rank": 6
+    "opponent_ppr_allowed_per_game": 36.22,
+    "opponent_matchup_rank": 9,
+    "opponent_last3_ppr_allowed_per_game": 39.53333333333333,
+    "opponent_last3_matchup_rank": 7
   },
   {
     "season": 2026,
@@ -2427,7 +2499,7 @@
     "opponent_ppr_allowed_per_game": 21.45,
     "opponent_matchup_rank": 32,
     "opponent_last3_ppr_allowed_per_game": 22.25,
-    "opponent_last3_matchup_rank": 30
+    "opponent_last3_matchup_rank": 31
   },
   {
     "season": 2026,
@@ -2442,10 +2514,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 16.675,
-    "opponent_matchup_rank": 28,
-    "opponent_last3_ppr_allowed_per_game": 16.45,
-    "opponent_last3_matchup_rank": 27
+    "opponent_ppr_allowed_per_game": 17.6,
+    "opponent_matchup_rank": 26,
+    "opponent_last3_ppr_allowed_per_game": 18.066666666666666,
+    "opponent_last3_matchup_rank": 23
   },
   {
     "season": 2026,
@@ -2460,10 +2532,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 16.485,
-    "opponent_matchup_rank": 16,
-    "opponent_last3_ppr_allowed_per_game": 17.26,
-    "opponent_last3_matchup_rank": 16
+    "opponent_ppr_allowed_per_game": 15.940000000000001,
+    "opponent_matchup_rank": 18,
+    "opponent_last3_ppr_allowed_per_game": 16.093333333333334,
+    "opponent_last3_matchup_rank": 20
   },
   {
     "season": 2026,
@@ -2478,10 +2550,28 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 33.1,
-    "opponent_matchup_rank": 16,
-    "opponent_last3_ppr_allowed_per_game": 29.299999999999997,
-    "opponent_last3_matchup_rank": 22
+    "opponent_ppr_allowed_per_game": 31.3,
+    "opponent_matchup_rank": 17,
+    "opponent_last3_ppr_allowed_per_game": 27.566666666666666,
+    "opponent_last3_matchup_rank": 24
+  },
+  {
+    "season": 2026,
+    "through_week": 5,
+    "upcoming_week": 6,
+    "player_id": "00-0037487",
+    "player_name": "D.Thompkins",
+    "position": "WR",
+    "team": "LV",
+    "opponent": "BUF",
+    "home_away": "HOME",
+    "game_date": "2026-10-18",
+    "bye": false,
+    "matchup_available": true,
+    "opponent_ppr_allowed_per_game": 41.025,
+    "opponent_matchup_rank": 1,
+    "opponent_last3_ppr_allowed_per_game": 39.5,
+    "opponent_last3_matchup_rank": 8
   },
   {
     "season": 2026,
@@ -2497,9 +2587,9 @@
     "bye": false,
     "matchup_available": true,
     "opponent_ppr_allowed_per_game": 30.275,
-    "opponent_matchup_rank": 19,
+    "opponent_matchup_rank": 21,
     "opponent_last3_ppr_allowed_per_game": 30.150000000000002,
-    "opponent_last3_matchup_rank": 20
+    "opponent_last3_matchup_rank": 22
   },
   {
     "season": 2026,
@@ -2514,10 +2604,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 33.75,
+    "opponent_ppr_allowed_per_game": 31.48,
     "opponent_matchup_rank": 1,
-    "opponent_last3_ppr_allowed_per_game": 38.55,
-    "opponent_last3_matchup_rank": 2
+    "opponent_last3_ppr_allowed_per_game": 33.166666666666664,
+    "opponent_last3_matchup_rank": 1
   },
   {
     "season": 2026,
@@ -2532,10 +2622,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 37.275,
-    "opponent_matchup_rank": 8,
-    "opponent_last3_ppr_allowed_per_game": 35.45,
-    "opponent_last3_matchup_rank": 13
+    "opponent_ppr_allowed_per_game": 36.0,
+    "opponent_matchup_rank": 10,
+    "opponent_last3_ppr_allowed_per_game": 33.93333333333333,
+    "opponent_last3_matchup_rank": 15
   },
   {
     "season": 2026,
@@ -2571,7 +2661,7 @@
     "opponent_ppr_allowed_per_game": 28.675,
     "opponent_matchup_rank": 25,
     "opponent_last3_ppr_allowed_per_game": 28.1,
-    "opponent_last3_matchup_rank": 24
+    "opponent_last3_matchup_rank": 23
   },
   {
     "season": 2026,
@@ -2586,10 +2676,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 25.375,
-    "opponent_matchup_rank": 29,
-    "opponent_last3_ppr_allowed_per_game": 22.3,
-    "opponent_last3_matchup_rank": 29
+    "opponent_ppr_allowed_per_game": 32.019999999999996,
+    "opponent_matchup_rank": 14,
+    "opponent_last3_ppr_allowed_per_game": 34.4,
+    "opponent_last3_matchup_rank": 14
   },
   {
     "season": 2026,
@@ -2604,10 +2694,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 13.42,
-    "opponent_matchup_rank": 28,
-    "opponent_last3_ppr_allowed_per_game": 14.09,
-    "opponent_last3_matchup_rank": 24
+    "opponent_ppr_allowed_per_game": 13.175999999999998,
+    "opponent_matchup_rank": 26,
+    "opponent_last3_ppr_allowed_per_game": 13.459999999999999,
+    "opponent_last3_matchup_rank": 27
   },
   {
     "season": 2026,
@@ -2622,10 +2712,10 @@
     "game_date": "2026-10-15",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 17.085,
-    "opponent_matchup_rank": 13,
-    "opponent_last3_ppr_allowed_per_game": 20.259999999999998,
-    "opponent_last3_matchup_rank": 5
+    "opponent_ppr_allowed_per_game": 15.716,
+    "opponent_matchup_rank": 19,
+    "opponent_last3_ppr_allowed_per_game": 16.919999999999998,
+    "opponent_last3_matchup_rank": 16
   },
   {
     "season": 2026,
@@ -2658,10 +2748,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 16.8,
-    "opponent_matchup_rank": 9,
-    "opponent_last3_ppr_allowed_per_game": 23.099999999999998,
-    "opponent_last3_matchup_rank": 8
+    "opponent_ppr_allowed_per_game": 14.580000000000002,
+    "opponent_matchup_rank": 13,
+    "opponent_last3_ppr_allowed_per_game": 17.3,
+    "opponent_last3_matchup_rank": 11
   },
   {
     "season": 2026,
@@ -2676,10 +2766,10 @@
     "game_date": "2026-10-19",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 27.45,
-    "opponent_matchup_rank": 27,
-    "opponent_last3_ppr_allowed_per_game": 31.349999999999998,
-    "opponent_last3_matchup_rank": 18
+    "opponent_ppr_allowed_per_game": 28.080000000000002,
+    "opponent_matchup_rank": 26,
+    "opponent_last3_ppr_allowed_per_game": 31.099999999999998,
+    "opponent_last3_matchup_rank": 20
   },
   {
     "season": 2026,
@@ -2695,9 +2785,9 @@
     "bye": false,
     "matchup_available": true,
     "opponent_ppr_allowed_per_game": 26.275,
-    "opponent_matchup_rank": 6,
+    "opponent_matchup_rank": 5,
     "opponent_last3_ppr_allowed_per_game": 22.45,
-    "opponent_last3_matchup_rank": 12
+    "opponent_last3_matchup_rank": 13
   },
   {
     "season": 2026,
@@ -2712,10 +2802,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 19.1,
+    "opponent_ppr_allowed_per_game": 18.759999999999998,
     "opponent_matchup_rank": 22,
-    "opponent_last3_ppr_allowed_per_game": 17.9,
-    "opponent_last3_matchup_rank": 23
+    "opponent_last3_ppr_allowed_per_game": 17.733333333333334,
+    "opponent_last3_matchup_rank": 24
   },
   {
     "season": 2026,
@@ -2731,9 +2821,9 @@
     "bye": false,
     "matchup_available": true,
     "opponent_ppr_allowed_per_game": 16.575,
-    "opponent_matchup_rank": 10,
+    "opponent_matchup_rank": 9,
     "opponent_last3_ppr_allowed_per_game": 24.15,
-    "opponent_last3_matchup_rank": 5
+    "opponent_last3_matchup_rank": 4
   },
   {
     "season": 2026,
@@ -2748,10 +2838,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 28.975,
+    "opponent_ppr_allowed_per_game": 29.26,
     "opponent_matchup_rank": 24,
-    "opponent_last3_ppr_allowed_per_game": 30.8,
-    "opponent_last3_matchup_rank": 19
+    "opponent_last3_ppr_allowed_per_game": 30.666666666666668,
+    "opponent_last3_matchup_rank": 21
   },
   {
     "season": 2026,
@@ -2767,7 +2857,7 @@
     "bye": false,
     "matchup_available": true,
     "opponent_ppr_allowed_per_game": 16.96,
-    "opponent_matchup_rank": 25,
+    "opponent_matchup_rank": 27,
     "opponent_last3_ppr_allowed_per_game": 15.266666666666666,
     "opponent_last3_matchup_rank": 28
   },
@@ -2784,10 +2874,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 9.725,
-    "opponent_matchup_rank": 25,
-    "opponent_last3_ppr_allowed_per_game": 13.45,
-    "opponent_last3_matchup_rank": 14
+    "opponent_ppr_allowed_per_game": 8.059999999999999,
+    "opponent_matchup_rank": 28,
+    "opponent_last3_ppr_allowed_per_game": 9.433333333333334,
+    "opponent_last3_matchup_rank": 23
   },
   {
     "season": 2026,
@@ -2802,10 +2892,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 34.95,
-    "opponent_matchup_rank": 12,
-    "opponent_last3_ppr_allowed_per_game": 27.45,
-    "opponent_last3_matchup_rank": 25
+    "opponent_ppr_allowed_per_game": 31.9,
+    "opponent_matchup_rank": 15,
+    "opponent_last3_ppr_allowed_per_game": 24.866666666666664,
+    "opponent_last3_matchup_rank": 29
   },
   {
     "season": 2026,
@@ -2820,9 +2910,9 @@
     "game_date": "2026-10-15",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 15.475,
-    "opponent_matchup_rank": 13,
-    "opponent_last3_ppr_allowed_per_game": 21.5,
+    "opponent_ppr_allowed_per_game": 14.86,
+    "opponent_matchup_rank": 12,
+    "opponent_last3_ppr_allowed_per_game": 18.466666666666665,
     "opponent_last3_matchup_rank": 9
   },
   {
@@ -2839,9 +2929,9 @@
     "bye": false,
     "matchup_available": true,
     "opponent_ppr_allowed_per_game": 6.625,
-    "opponent_matchup_rank": 31,
+    "opponent_matchup_rank": 32,
     "opponent_last3_ppr_allowed_per_game": 5.55,
-    "opponent_last3_matchup_rank": 29
+    "opponent_last3_matchup_rank": 32
   },
   {
     "season": 2026,
@@ -2856,10 +2946,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 37.275,
-    "opponent_matchup_rank": 8,
-    "opponent_last3_ppr_allowed_per_game": 35.45,
-    "opponent_last3_matchup_rank": 13
+    "opponent_ppr_allowed_per_game": 36.0,
+    "opponent_matchup_rank": 10,
+    "opponent_last3_ppr_allowed_per_game": 33.93333333333333,
+    "opponent_last3_matchup_rank": 15
   },
   {
     "season": 2026,
@@ -2874,10 +2964,10 @@
     "game_date": "2026-10-15",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 25.825,
+    "opponent_ppr_allowed_per_game": 25.34,
     "opponent_matchup_rank": 7,
-    "opponent_last3_ppr_allowed_per_game": 21.3,
-    "opponent_last3_matchup_rank": 16
+    "opponent_last3_ppr_allowed_per_game": 22.0,
+    "opponent_last3_matchup_rank": 15
   },
   {
     "season": 2026,
@@ -2892,10 +2982,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 28.95,
+    "opponent_ppr_allowed_per_game": 28.419999999999998,
     "opponent_matchup_rank": 2,
-    "opponent_last3_ppr_allowed_per_game": 35.05,
-    "opponent_last3_matchup_rank": 3
+    "opponent_last3_ppr_allowed_per_game": 32.13333333333333,
+    "opponent_last3_matchup_rank": 2
   },
   {
     "season": 2026,
@@ -2910,10 +3000,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 29.0,
-    "opponent_matchup_rank": 23,
-    "opponent_last3_ppr_allowed_per_game": 42.5,
-    "opponent_last3_matchup_rank": 7
+    "opponent_ppr_allowed_per_game": 27.72,
+    "opponent_matchup_rank": 27,
+    "opponent_last3_ppr_allowed_per_game": 35.86666666666667,
+    "opponent_last3_matchup_rank": 11
   },
   {
     "season": 2026,
@@ -2928,10 +3018,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 22.85,
-    "opponent_matchup_rank": 12,
-    "opponent_last3_ppr_allowed_per_game": 29.2,
-    "opponent_last3_matchup_rank": 5
+    "opponent_ppr_allowed_per_game": 21.72,
+    "opponent_matchup_rank": 13,
+    "opponent_last3_ppr_allowed_per_game": 25.2,
+    "opponent_last3_matchup_rank": 7
   },
   {
     "season": 2026,
@@ -2946,9 +3036,9 @@
     "game_date": "2026-10-15",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 15.475,
-    "opponent_matchup_rank": 13,
-    "opponent_last3_ppr_allowed_per_game": 21.5,
+    "opponent_ppr_allowed_per_game": 14.86,
+    "opponent_matchup_rank": 12,
+    "opponent_last3_ppr_allowed_per_game": 18.466666666666665,
     "opponent_last3_matchup_rank": 9
   },
   {
@@ -2982,10 +3072,10 @@
     "game_date": "2026-10-15",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 10.700000000000001,
-    "opponent_matchup_rank": 19,
-    "opponent_last3_ppr_allowed_per_game": 5.95,
-    "opponent_last3_matchup_rank": 27
+    "opponent_ppr_allowed_per_game": 10.040000000000001,
+    "opponent_matchup_rank": 20,
+    "opponent_last3_ppr_allowed_per_game": 6.433333333333334,
+    "opponent_last3_matchup_rank": 28
   },
   {
     "season": 2026,
@@ -3000,10 +3090,28 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 7.8999999999999995,
-    "opponent_matchup_rank": 28,
-    "opponent_last3_ppr_allowed_per_game": 10.7,
-    "opponent_last3_matchup_rank": 20
+    "opponent_ppr_allowed_per_game": 9.879999999999999,
+    "opponent_matchup_rank": 23,
+    "opponent_last3_ppr_allowed_per_game": 13.066666666666668,
+    "opponent_last3_matchup_rank": 15
+  },
+  {
+    "season": 2026,
+    "through_week": 5,
+    "upcoming_week": 6,
+    "player_id": "00-0041562",
+    "player_name": "F.Mendoza",
+    "position": "QB",
+    "team": "LV",
+    "opponent": "BUF",
+    "home_away": "HOME",
+    "game_date": "2026-10-18",
+    "bye": false,
+    "matchup_available": true,
+    "opponent_ppr_allowed_per_game": 21.285,
+    "opponent_matchup_rank": 5,
+    "opponent_last3_ppr_allowed_per_game": 19.45,
+    "opponent_last3_matchup_rank": 7
   },
   {
     "season": 2026,
@@ -3018,10 +3126,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 9.425,
+    "opponent_ppr_allowed_per_game": 9.5,
     "opponent_matchup_rank": 26,
-    "opponent_last3_ppr_allowed_per_game": 7.85,
-    "opponent_last3_matchup_rank": 25
+    "opponent_last3_ppr_allowed_per_game": 8.5,
+    "opponent_last3_matchup_rank": 24
   },
   {
     "season": 2026,
@@ -3036,10 +3144,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 21.075,
-    "opponent_matchup_rank": 17,
-    "opponent_last3_ppr_allowed_per_game": 25.7,
-    "opponent_last3_matchup_rank": 8
+    "opponent_ppr_allowed_per_game": 22.3,
+    "opponent_matchup_rank": 12,
+    "opponent_last3_ppr_allowed_per_game": 26.2,
+    "opponent_last3_matchup_rank": 5
   },
   {
     "season": 2026,
@@ -3054,10 +3162,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 34.875,
-    "opponent_matchup_rank": 13,
-    "opponent_last3_ppr_allowed_per_game": 41.6,
-    "opponent_last3_matchup_rank": 8
+    "opponent_ppr_allowed_per_game": 31.359999999999996,
+    "opponent_matchup_rank": 16,
+    "opponent_last3_ppr_allowed_per_game": 33.5,
+    "opponent_last3_matchup_rank": 16
   },
   {
     "season": 2026,
@@ -3090,10 +3198,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 13.969999999999999,
-    "opponent_matchup_rank": 26,
-    "opponent_last3_ppr_allowed_per_game": 19.15,
-    "opponent_last3_matchup_rank": 8
+    "opponent_ppr_allowed_per_game": 14.363999999999999,
+    "opponent_matchup_rank": 23,
+    "opponent_last3_ppr_allowed_per_game": 18.080000000000002,
+    "opponent_last3_matchup_rank": 12
   },
   {
     "season": 2026,
@@ -3108,10 +3216,10 @@
     "game_date": "2026-10-15",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 25.825,
+    "opponent_ppr_allowed_per_game": 25.34,
     "opponent_matchup_rank": 7,
-    "opponent_last3_ppr_allowed_per_game": 21.3,
-    "opponent_last3_matchup_rank": 16
+    "opponent_last3_ppr_allowed_per_game": 22.0,
+    "opponent_last3_matchup_rank": 15
   },
   {
     "season": 2026,
@@ -3126,10 +3234,10 @@
     "game_date": "2026-10-19",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 18.325,
-    "opponent_matchup_rank": 5,
-    "opponent_last3_ppr_allowed_per_game": 14.65,
-    "opponent_last3_matchup_rank": 11
+    "opponent_ppr_allowed_per_game": 22.240000000000002,
+    "opponent_matchup_rank": 3,
+    "opponent_last3_ppr_allowed_per_game": 22.399999999999995,
+    "opponent_last3_matchup_rank": 7
   },
   {
     "season": 2026,
@@ -3144,10 +3252,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 32.75,
-    "opponent_matchup_rank": 17,
-    "opponent_last3_ppr_allowed_per_game": 30.0,
-    "opponent_last3_matchup_rank": 21
+    "opponent_ppr_allowed_per_game": 30.3,
+    "opponent_matchup_rank": 20,
+    "opponent_last3_ppr_allowed_per_game": 26.833333333333332,
+    "opponent_last3_matchup_rank": 26
   },
   {
     "season": 2026,
@@ -3163,9 +3271,9 @@
     "bye": false,
     "matchup_available": true,
     "opponent_ppr_allowed_per_game": 30.68,
-    "opponent_matchup_rank": 18,
+    "opponent_matchup_rank": 19,
     "opponent_last3_ppr_allowed_per_game": 34.53333333333333,
-    "opponent_last3_matchup_rank": 15
+    "opponent_last3_matchup_rank": 13
   },
   {
     "season": 2026,
@@ -3180,10 +3288,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 26.85,
-    "opponent_matchup_rank": 28,
-    "opponent_last3_ppr_allowed_per_game": 32.85,
-    "opponent_last3_matchup_rank": 17
+    "opponent_ppr_allowed_per_game": 32.3,
+    "opponent_matchup_rank": 13,
+    "opponent_last3_ppr_allowed_per_game": 39.93333333333334,
+    "opponent_last3_matchup_rank": 4
   },
   {
     "season": 2026,
@@ -3216,10 +3324,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 13.725000000000001,
-    "opponent_matchup_rank": 15,
-    "opponent_last3_ppr_allowed_per_game": 8.6,
-    "opponent_last3_matchup_rank": 24
+    "opponent_ppr_allowed_per_game": 15.920000000000002,
+    "opponent_matchup_rank": 10,
+    "opponent_last3_ppr_allowed_per_game": 13.966666666666667,
+    "opponent_last3_matchup_rank": 13
   },
   {
     "season": 2026,
@@ -3234,10 +3342,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 10.375,
-    "opponent_matchup_rank": 21,
-    "opponent_last3_ppr_allowed_per_game": 9.4,
-    "opponent_last3_matchup_rank": 22
+    "opponent_ppr_allowed_per_game": 11.8,
+    "opponent_matchup_rank": 18,
+    "opponent_last3_ppr_allowed_per_game": 12.1,
+    "opponent_last3_matchup_rank": 17
   },
   {
     "season": 2026,
@@ -3255,7 +3363,7 @@
     "opponent_ppr_allowed_per_game": 22.55,
     "opponent_matchup_rank": 2,
     "opponent_last3_ppr_allowed_per_game": 29.25,
-    "opponent_last3_matchup_rank": 1
+    "opponent_last3_matchup_rank": 2
   },
   {
     "season": 2026,
@@ -3270,10 +3378,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 9.725,
-    "opponent_matchup_rank": 25,
-    "opponent_last3_ppr_allowed_per_game": 13.45,
-    "opponent_last3_matchup_rank": 14
+    "opponent_ppr_allowed_per_game": 8.059999999999999,
+    "opponent_matchup_rank": 28,
+    "opponent_last3_ppr_allowed_per_game": 9.433333333333334,
+    "opponent_last3_matchup_rank": 23
   },
   {
     "season": 2026,
@@ -3289,9 +3397,9 @@
     "bye": false,
     "matchup_available": true,
     "opponent_ppr_allowed_per_game": 6.625,
-    "opponent_matchup_rank": 31,
+    "opponent_matchup_rank": 32,
     "opponent_last3_ppr_allowed_per_game": 5.55,
-    "opponent_last3_matchup_rank": 29
+    "opponent_last3_matchup_rank": 32
   },
   {
     "season": 2026,
@@ -3306,10 +3414,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 28.95,
+    "opponent_ppr_allowed_per_game": 28.419999999999998,
     "opponent_matchup_rank": 2,
-    "opponent_last3_ppr_allowed_per_game": 35.05,
-    "opponent_last3_matchup_rank": 3
+    "opponent_last3_ppr_allowed_per_game": 32.13333333333333,
+    "opponent_last3_matchup_rank": 2
   },
   {
     "season": 2026,
@@ -3325,9 +3433,9 @@
     "bye": false,
     "matchup_available": true,
     "opponent_ppr_allowed_per_game": 11.25,
-    "opponent_matchup_rank": 17,
+    "opponent_matchup_rank": 19,
     "opponent_last3_ppr_allowed_per_game": 6.699999999999999,
-    "opponent_last3_matchup_rank": 26
+    "opponent_last3_matchup_rank": 27
   },
   {
     "season": 2026,
@@ -3360,10 +3468,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 37.85,
-    "opponent_matchup_rank": 7,
-    "opponent_last3_ppr_allowed_per_game": 44.45,
-    "opponent_last3_matchup_rank": 6
+    "opponent_ppr_allowed_per_game": 36.22,
+    "opponent_matchup_rank": 9,
+    "opponent_last3_ppr_allowed_per_game": 39.53333333333333,
+    "opponent_last3_matchup_rank": 7
   },
   {
     "season": 2026,
@@ -3378,10 +3486,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 20.925,
-    "opponent_matchup_rank": 18,
-    "opponent_last3_ppr_allowed_per_game": 25.5,
-    "opponent_last3_matchup_rank": 10
+    "opponent_ppr_allowed_per_game": 21.58,
+    "opponent_matchup_rank": 14,
+    "opponent_last3_ppr_allowed_per_game": 25.066666666666663,
+    "opponent_last3_matchup_rank": 8
   },
   {
     "season": 2026,
@@ -3396,10 +3504,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 17.9,
+    "opponent_ppr_allowed_per_game": 16.72,
     "opponent_matchup_rank": 7,
-    "opponent_last3_ppr_allowed_per_game": 24.7,
-    "opponent_last3_matchup_rank": 4
+    "opponent_last3_ppr_allowed_per_game": 20.466666666666665,
+    "opponent_last3_matchup_rank": 8
   },
   {
     "season": 2026,
@@ -3414,10 +3522,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 34.875,
-    "opponent_matchup_rank": 13,
-    "opponent_last3_ppr_allowed_per_game": 41.6,
-    "opponent_last3_matchup_rank": 8
+    "opponent_ppr_allowed_per_game": 31.359999999999996,
+    "opponent_matchup_rank": 16,
+    "opponent_last3_ppr_allowed_per_game": 33.5,
+    "opponent_last3_matchup_rank": 16
   },
   {
     "season": 2026,
@@ -3433,9 +3541,27 @@
     "bye": false,
     "matchup_available": true,
     "opponent_ppr_allowed_per_game": 35.46,
-    "opponent_matchup_rank": 11,
+    "opponent_matchup_rank": 12,
     "opponent_last3_ppr_allowed_per_game": 39.0,
-    "opponent_last3_matchup_rank": 11
+    "opponent_last3_matchup_rank": 10
+  },
+  {
+    "season": 2026,
+    "through_week": 5,
+    "upcoming_week": 6,
+    "player_id": "00-0039923",
+    "player_name": "J.McCarthy",
+    "position": "QB",
+    "team": "NYG",
+    "opponent": "NO",
+    "home_away": "HOME",
+    "game_date": "2026-10-18",
+    "bye": false,
+    "matchup_available": true,
+    "opponent_ppr_allowed_per_game": 16.887999999999998,
+    "opponent_matchup_rank": 14,
+    "opponent_last3_ppr_allowed_per_game": 17.733333333333334,
+    "opponent_last3_matchup_rank": 13
   },
   {
     "season": 2026,
@@ -3450,10 +3576,10 @@
     "game_date": "2026-10-15",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 21.225,
+    "opponent_ppr_allowed_per_game": 20.759999999999998,
     "opponent_matchup_rank": 16,
-    "opponent_last3_ppr_allowed_per_game": 26.3,
-    "opponent_last3_matchup_rank": 7
+    "opponent_last3_ppr_allowed_per_game": 23.833333333333332,
+    "opponent_last3_matchup_rank": 10
   },
   {
     "season": 2026,
@@ -3468,10 +3594,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 37.275,
-    "opponent_matchup_rank": 8,
-    "opponent_last3_ppr_allowed_per_game": 35.45,
-    "opponent_last3_matchup_rank": 13
+    "opponent_ppr_allowed_per_game": 36.0,
+    "opponent_matchup_rank": 10,
+    "opponent_last3_ppr_allowed_per_game": 33.93333333333333,
+    "opponent_last3_matchup_rank": 15
   },
   {
     "season": 2026,
@@ -3504,10 +3630,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 36.95,
-    "opponent_matchup_rank": 10,
-    "opponent_last3_ppr_allowed_per_game": 44.550000000000004,
-    "opponent_last3_matchup_rank": 4
+    "opponent_ppr_allowed_per_game": 38.239999999999995,
+    "opponent_matchup_rank": 5,
+    "opponent_last3_ppr_allowed_per_game": 44.166666666666664,
+    "opponent_last3_matchup_rank": 1
   },
   {
     "season": 2026,
@@ -3523,9 +3649,9 @@
     "bye": false,
     "matchup_available": true,
     "opponent_ppr_allowed_per_game": 41.025,
-    "opponent_matchup_rank": 3,
+    "opponent_matchup_rank": 1,
     "opponent_last3_ppr_allowed_per_game": 39.5,
-    "opponent_last3_matchup_rank": 10
+    "opponent_last3_matchup_rank": 8
   },
   {
     "season": 2026,
@@ -3540,10 +3666,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 14.885,
-    "opponent_matchup_rank": 22,
-    "opponent_last3_ppr_allowed_per_game": 9.69,
-    "opponent_last3_matchup_rank": 31
+    "opponent_ppr_allowed_per_game": 16.924,
+    "opponent_matchup_rank": 13,
+    "opponent_last3_ppr_allowed_per_game": 14.82,
+    "opponent_last3_matchup_rank": 25
   },
   {
     "season": 2026,
@@ -3558,9 +3684,9 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 17.6,
-    "opponent_matchup_rank": 8,
-    "opponent_last3_ppr_allowed_per_game": 24.900000000000002,
+    "opponent_ppr_allowed_per_game": 18.9,
+    "opponent_matchup_rank": 6,
+    "opponent_last3_ppr_allowed_per_game": 24.633333333333336,
     "opponent_last3_matchup_rank": 3
   },
   {
@@ -3594,10 +3720,10 @@
     "game_date": "2026-10-19",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 40.315,
+    "opponent_ppr_allowed_per_game": 39.552,
     "opponent_matchup_rank": 4,
-    "opponent_last3_ppr_allowed_per_game": 41.23,
-    "opponent_last3_matchup_rank": 9
+    "opponent_last3_ppr_allowed_per_game": 39.653333333333336,
+    "opponent_last3_matchup_rank": 6
   },
   {
     "season": 2026,
@@ -3631,9 +3757,9 @@
     "bye": false,
     "matchup_available": true,
     "opponent_ppr_allowed_per_game": 15.525,
-    "opponent_matchup_rank": 19,
+    "opponent_matchup_rank": 20,
     "opponent_last3_ppr_allowed_per_game": 18.83,
-    "opponent_last3_matchup_rank": 10
+    "opponent_last3_matchup_rank": 9
   },
   {
     "season": 2026,
@@ -3648,9 +3774,9 @@
     "game_date": "2026-10-19",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 25.6,
-    "opponent_matchup_rank": 8,
-    "opponent_last3_ppr_allowed_per_game": 30.6,
+    "opponent_ppr_allowed_per_game": 24.14,
+    "opponent_matchup_rank": 9,
+    "opponent_last3_ppr_allowed_per_game": 26.5,
     "opponent_last3_matchup_rank": 4
   },
   {
@@ -3666,10 +3792,10 @@
     "game_date": "2026-10-15",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 25.825,
+    "opponent_ppr_allowed_per_game": 25.34,
     "opponent_matchup_rank": 7,
-    "opponent_last3_ppr_allowed_per_game": 21.3,
-    "opponent_last3_matchup_rank": 16
+    "opponent_last3_ppr_allowed_per_game": 22.0,
+    "opponent_last3_matchup_rank": 15
   },
   {
     "season": 2026,
@@ -3684,10 +3810,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 25.375,
-    "opponent_matchup_rank": 29,
-    "opponent_last3_ppr_allowed_per_game": 22.3,
-    "opponent_last3_matchup_rank": 29
+    "opponent_ppr_allowed_per_game": 32.019999999999996,
+    "opponent_matchup_rank": 14,
+    "opponent_last3_ppr_allowed_per_game": 34.4,
+    "opponent_last3_matchup_rank": 14
   },
   {
     "season": 2026,
@@ -3702,10 +3828,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 38.4,
-    "opponent_matchup_rank": 5,
-    "opponent_last3_ppr_allowed_per_game": 46.550000000000004,
-    "opponent_last3_matchup_rank": 1
+    "opponent_ppr_allowed_per_game": 37.660000000000004,
+    "opponent_matchup_rank": 6,
+    "opponent_last3_ppr_allowed_per_game": 42.6,
+    "opponent_last3_matchup_rank": 2
   },
   {
     "season": 2026,
@@ -3738,10 +3864,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 9.85,
+    "opponent_ppr_allowed_per_game": 9.78,
     "opponent_matchup_rank": 24,
-    "opponent_last3_ppr_allowed_per_game": 3.75,
-    "opponent_last3_matchup_rank": 31
+    "opponent_last3_ppr_allowed_per_game": 5.666666666666667,
+    "opponent_last3_matchup_rank": 30
   },
   {
     "season": 2026,
@@ -3756,10 +3882,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 10.575,
-    "opponent_matchup_rank": 20,
-    "opponent_last3_ppr_allowed_per_game": 9.15,
-    "opponent_last3_matchup_rank": 23
+    "opponent_ppr_allowed_per_game": 9.6,
+    "opponent_matchup_rank": 25,
+    "opponent_last3_ppr_allowed_per_game": 8.0,
+    "opponent_last3_matchup_rank": 25
   },
   {
     "season": 2026,
@@ -3774,10 +3900,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 44.6,
-    "opponent_matchup_rank": 1,
-    "opponent_last3_ppr_allowed_per_game": 46.25,
-    "opponent_last3_matchup_rank": 2
+    "opponent_ppr_allowed_per_game": 41.019999999999996,
+    "opponent_matchup_rank": 2,
+    "opponent_last3_ppr_allowed_per_game": 39.733333333333334,
+    "opponent_last3_matchup_rank": 5
   },
   {
     "season": 2026,
@@ -3792,10 +3918,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 19.1,
+    "opponent_ppr_allowed_per_game": 18.759999999999998,
     "opponent_matchup_rank": 22,
-    "opponent_last3_ppr_allowed_per_game": 17.9,
-    "opponent_last3_matchup_rank": 23
+    "opponent_last3_ppr_allowed_per_game": 17.733333333333334,
+    "opponent_last3_matchup_rank": 24
   },
   {
     "season": 2026,
@@ -3811,9 +3937,9 @@
     "bye": false,
     "matchup_available": true,
     "opponent_ppr_allowed_per_game": 30.275,
-    "opponent_matchup_rank": 19,
+    "opponent_matchup_rank": 21,
     "opponent_last3_ppr_allowed_per_game": 30.150000000000002,
-    "opponent_last3_matchup_rank": 20
+    "opponent_last3_matchup_rank": 22
   },
   {
     "season": 2026,
@@ -3828,10 +3954,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 36.95,
-    "opponent_matchup_rank": 10,
-    "opponent_last3_ppr_allowed_per_game": 44.550000000000004,
-    "opponent_last3_matchup_rank": 4
+    "opponent_ppr_allowed_per_game": 38.239999999999995,
+    "opponent_matchup_rank": 5,
+    "opponent_last3_ppr_allowed_per_game": 44.166666666666664,
+    "opponent_last3_matchup_rank": 1
   },
   {
     "season": 2026,
@@ -3846,10 +3972,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 33.1,
-    "opponent_matchup_rank": 16,
-    "opponent_last3_ppr_allowed_per_game": 29.299999999999997,
-    "opponent_last3_matchup_rank": 22
+    "opponent_ppr_allowed_per_game": 31.3,
+    "opponent_matchup_rank": 17,
+    "opponent_last3_ppr_allowed_per_game": 27.566666666666666,
+    "opponent_last3_matchup_rank": 24
   },
   {
     "season": 2026,
@@ -3867,7 +3993,7 @@
     "opponent_ppr_allowed_per_game": 19.35,
     "opponent_matchup_rank": 8,
     "opponent_last3_ppr_allowed_per_game": 20.37,
-    "opponent_last3_matchup_rank": 4
+    "opponent_last3_matchup_rank": 5
   },
   {
     "season": 2026,
@@ -3882,10 +4008,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 29.0,
-    "opponent_matchup_rank": 23,
-    "opponent_last3_ppr_allowed_per_game": 42.5,
-    "opponent_last3_matchup_rank": 7
+    "opponent_ppr_allowed_per_game": 27.72,
+    "opponent_matchup_rank": 27,
+    "opponent_last3_ppr_allowed_per_game": 35.86666666666667,
+    "opponent_last3_matchup_rank": 11
   },
   {
     "season": 2026,
@@ -3901,9 +4027,9 @@
     "bye": false,
     "matchup_available": true,
     "opponent_ppr_allowed_per_game": 41.025,
-    "opponent_matchup_rank": 3,
+    "opponent_matchup_rank": 1,
     "opponent_last3_ppr_allowed_per_game": 39.5,
-    "opponent_last3_matchup_rank": 10
+    "opponent_last3_matchup_rank": 8
   },
   {
     "season": 2026,
@@ -3918,10 +4044,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 33.4,
-    "opponent_matchup_rank": 15,
-    "opponent_last3_ppr_allowed_per_game": 26.9,
-    "opponent_last3_matchup_rank": 27
+    "opponent_ppr_allowed_per_game": 31.3,
+    "opponent_matchup_rank": 17,
+    "opponent_last3_ppr_allowed_per_game": 25.566666666666666,
+    "opponent_last3_matchup_rank": 28
   },
   {
     "season": 2026,
@@ -3954,10 +4080,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 12.309999999999999,
-    "opponent_matchup_rank": 30,
-    "opponent_last3_ppr_allowed_per_game": 17.75,
-    "opponent_last3_matchup_rank": 14
+    "opponent_ppr_allowed_per_game": 12.063999999999998,
+    "opponent_matchup_rank": 31,
+    "opponent_last3_ppr_allowed_per_game": 15.526666666666666,
+    "opponent_last3_matchup_rank": 22
   },
   {
     "season": 2026,
@@ -3972,10 +4098,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 34.875,
-    "opponent_matchup_rank": 13,
-    "opponent_last3_ppr_allowed_per_game": 41.6,
-    "opponent_last3_matchup_rank": 8
+    "opponent_ppr_allowed_per_game": 31.359999999999996,
+    "opponent_matchup_rank": 16,
+    "opponent_last3_ppr_allowed_per_game": 33.5,
+    "opponent_last3_matchup_rank": 16
   },
   {
     "season": 2026,
@@ -3990,10 +4116,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 16.545,
-    "opponent_matchup_rank": 15,
-    "opponent_last3_ppr_allowed_per_game": 17.47,
-    "opponent_last3_matchup_rank": 15
+    "opponent_ppr_allowed_per_game": 16.887999999999998,
+    "opponent_matchup_rank": 14,
+    "opponent_last3_ppr_allowed_per_game": 17.733333333333334,
+    "opponent_last3_matchup_rank": 13
   },
   {
     "season": 2026,
@@ -4008,10 +4134,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 21.075,
-    "opponent_matchup_rank": 17,
-    "opponent_last3_ppr_allowed_per_game": 25.7,
-    "opponent_last3_matchup_rank": 8
+    "opponent_ppr_allowed_per_game": 22.3,
+    "opponent_matchup_rank": 12,
+    "opponent_last3_ppr_allowed_per_game": 26.2,
+    "opponent_last3_matchup_rank": 5
   },
   {
     "season": 2026,
@@ -4062,10 +4188,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 36.985,
-    "opponent_matchup_rank": 9,
-    "opponent_last3_ppr_allowed_per_game": 44.519999999999996,
-    "opponent_last3_matchup_rank": 5
+    "opponent_ppr_allowed_per_game": 36.728,
+    "opponent_matchup_rank": 8,
+    "opponent_last3_ppr_allowed_per_game": 41.58,
+    "opponent_last3_matchup_rank": 3
   },
   {
     "season": 2026,
@@ -4098,10 +4224,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 28.95,
+    "opponent_ppr_allowed_per_game": 28.419999999999998,
     "opponent_matchup_rank": 2,
-    "opponent_last3_ppr_allowed_per_game": 35.05,
-    "opponent_last3_matchup_rank": 3
+    "opponent_last3_ppr_allowed_per_game": 32.13333333333333,
+    "opponent_last3_matchup_rank": 2
   },
   {
     "season": 2026,
@@ -4116,10 +4242,10 @@
     "game_date": "2026-10-15",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 28.275,
-    "opponent_matchup_rank": 26,
-    "opponent_last3_ppr_allowed_per_game": 35.4,
-    "opponent_last3_matchup_rank": 14
+    "opponent_ppr_allowed_per_game": 24.7,
+    "opponent_matchup_rank": 30,
+    "opponent_last3_ppr_allowed_per_game": 27.066666666666666,
+    "opponent_last3_matchup_rank": 25
   },
   {
     "season": 2026,
@@ -4134,10 +4260,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 16.545,
-    "opponent_matchup_rank": 15,
-    "opponent_last3_ppr_allowed_per_game": 17.47,
-    "opponent_last3_matchup_rank": 15
+    "opponent_ppr_allowed_per_game": 16.887999999999998,
+    "opponent_matchup_rank": 14,
+    "opponent_last3_ppr_allowed_per_game": 17.733333333333334,
+    "opponent_last3_matchup_rank": 13
   },
   {
     "season": 2026,
@@ -4152,10 +4278,10 @@
     "game_date": "2026-10-19",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 14.290000000000001,
-    "opponent_matchup_rank": 23,
-    "opponent_last3_ppr_allowed_per_game": 19.580000000000002,
-    "opponent_last3_matchup_rank": 6
+    "opponent_ppr_allowed_per_game": 13.092000000000002,
+    "opponent_matchup_rank": 27,
+    "opponent_last3_ppr_allowed_per_game": 15.82,
+    "opponent_last3_matchup_rank": 21
   },
   {
     "season": 2026,
@@ -4171,9 +4297,9 @@
     "bye": false,
     "matchup_available": true,
     "opponent_ppr_allowed_per_game": 35.46,
-    "opponent_matchup_rank": 11,
+    "opponent_matchup_rank": 12,
     "opponent_last3_ppr_allowed_per_game": 39.0,
-    "opponent_last3_matchup_rank": 11
+    "opponent_last3_matchup_rank": 10
   },
   {
     "season": 2026,
@@ -4188,10 +4314,10 @@
     "game_date": "2026-10-15",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 21.775,
-    "opponent_matchup_rank": 31,
-    "opponent_last3_ppr_allowed_per_game": 29.25,
-    "opponent_last3_matchup_rank": 23
+    "opponent_ppr_allowed_per_game": 25.1,
+    "opponent_matchup_rank": 29,
+    "opponent_last3_ppr_allowed_per_game": 32.300000000000004,
+    "opponent_last3_matchup_rank": 18
   },
   {
     "season": 2026,
@@ -4207,7 +4333,7 @@
     "bye": false,
     "matchup_available": true,
     "opponent_ppr_allowed_per_game": 16.96,
-    "opponent_matchup_rank": 25,
+    "opponent_matchup_rank": 27,
     "opponent_last3_ppr_allowed_per_game": 15.266666666666666,
     "opponent_last3_matchup_rank": 28
   },
@@ -4242,10 +4368,10 @@
     "game_date": "2026-10-19",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 27.45,
-    "opponent_matchup_rank": 27,
-    "opponent_last3_ppr_allowed_per_game": 31.349999999999998,
-    "opponent_last3_matchup_rank": 18
+    "opponent_ppr_allowed_per_game": 28.080000000000002,
+    "opponent_matchup_rank": 26,
+    "opponent_last3_ppr_allowed_per_game": 31.099999999999998,
+    "opponent_last3_matchup_rank": 20
   },
   {
     "season": 2026,
@@ -4260,10 +4386,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 36.985,
-    "opponent_matchup_rank": 9,
-    "opponent_last3_ppr_allowed_per_game": 44.519999999999996,
-    "opponent_last3_matchup_rank": 5
+    "opponent_ppr_allowed_per_game": 36.728,
+    "opponent_matchup_rank": 8,
+    "opponent_last3_ppr_allowed_per_game": 41.58,
+    "opponent_last3_matchup_rank": 3
   },
   {
     "season": 2026,
@@ -4278,10 +4404,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 5.9,
-    "opponent_matchup_rank": 32,
-    "opponent_last3_ppr_allowed_per_game": 5.6,
-    "opponent_last3_matchup_rank": 28
+    "opponent_ppr_allowed_per_game": 9.940000000000001,
+    "opponent_matchup_rank": 22,
+    "opponent_last3_ppr_allowed_per_game": 12.433333333333332,
+    "opponent_last3_matchup_rank": 16
   },
   {
     "season": 2026,
@@ -4297,9 +4423,9 @@
     "bye": false,
     "matchup_available": true,
     "opponent_ppr_allowed_per_game": 15.5,
-    "opponent_matchup_rank": 30,
+    "opponent_matchup_rank": 31,
     "opponent_last3_ppr_allowed_per_game": 14.6,
-    "opponent_last3_matchup_rank": 30
+    "opponent_last3_matchup_rank": 31
   },
   {
     "season": 2026,
@@ -4314,10 +4440,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 5.9,
-    "opponent_matchup_rank": 32,
-    "opponent_last3_ppr_allowed_per_game": 5.6,
-    "opponent_last3_matchup_rank": 28
+    "opponent_ppr_allowed_per_game": 9.940000000000001,
+    "opponent_matchup_rank": 22,
+    "opponent_last3_ppr_allowed_per_game": 12.433333333333332,
+    "opponent_last3_matchup_rank": 16
   },
   {
     "season": 2026,
@@ -4332,10 +4458,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 37.85,
-    "opponent_matchup_rank": 7,
-    "opponent_last3_ppr_allowed_per_game": 44.45,
-    "opponent_last3_matchup_rank": 6
+    "opponent_ppr_allowed_per_game": 36.22,
+    "opponent_matchup_rank": 9,
+    "opponent_last3_ppr_allowed_per_game": 39.53333333333333,
+    "opponent_last3_matchup_rank": 7
   },
   {
     "season": 2026,
@@ -4368,10 +4494,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 36.95,
-    "opponent_matchup_rank": 10,
-    "opponent_last3_ppr_allowed_per_game": 44.550000000000004,
-    "opponent_last3_matchup_rank": 4
+    "opponent_ppr_allowed_per_game": 38.239999999999995,
+    "opponent_matchup_rank": 5,
+    "opponent_last3_ppr_allowed_per_game": 44.166666666666664,
+    "opponent_last3_matchup_rank": 1
   },
   {
     "season": 2026,
@@ -4404,10 +4530,10 @@
     "game_date": "2026-10-19",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 8.7,
-    "opponent_matchup_rank": 27,
-    "opponent_last3_ppr_allowed_per_game": 12.3,
-    "opponent_last3_matchup_rank": 15
+    "opponent_ppr_allowed_per_game": 7.959999999999999,
+    "opponent_matchup_rank": 29,
+    "opponent_last3_ppr_allowed_per_game": 9.866666666666667,
+    "opponent_last3_matchup_rank": 22
   },
   {
     "season": 2026,
@@ -4422,10 +4548,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 36.95,
-    "opponent_matchup_rank": 10,
-    "opponent_last3_ppr_allowed_per_game": 44.550000000000004,
-    "opponent_last3_matchup_rank": 4
+    "opponent_ppr_allowed_per_game": 38.239999999999995,
+    "opponent_matchup_rank": 5,
+    "opponent_last3_ppr_allowed_per_game": 44.166666666666664,
+    "opponent_last3_matchup_rank": 1
   },
   {
     "season": 2026,
@@ -4441,9 +4567,9 @@
     "bye": false,
     "matchup_available": true,
     "opponent_ppr_allowed_per_game": 16.575,
-    "opponent_matchup_rank": 10,
+    "opponent_matchup_rank": 9,
     "opponent_last3_ppr_allowed_per_game": 24.15,
-    "opponent_last3_matchup_rank": 5
+    "opponent_last3_matchup_rank": 4
   },
   {
     "season": 2026,
@@ -4458,10 +4584,10 @@
     "game_date": "2026-10-15",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 21.225,
+    "opponent_ppr_allowed_per_game": 20.759999999999998,
     "opponent_matchup_rank": 16,
-    "opponent_last3_ppr_allowed_per_game": 26.3,
-    "opponent_last3_matchup_rank": 7
+    "opponent_last3_ppr_allowed_per_game": 23.833333333333332,
+    "opponent_last3_matchup_rank": 10
   },
   {
     "season": 2026,
@@ -4476,10 +4602,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 32.75,
-    "opponent_matchup_rank": 17,
-    "opponent_last3_ppr_allowed_per_game": 30.0,
-    "opponent_last3_matchup_rank": 21
+    "opponent_ppr_allowed_per_game": 30.3,
+    "opponent_matchup_rank": 20,
+    "opponent_last3_ppr_allowed_per_game": 26.833333333333332,
+    "opponent_last3_matchup_rank": 26
   },
   {
     "season": 2026,
@@ -4494,10 +4620,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 20.6,
-    "opponent_matchup_rank": 19,
-    "opponent_last3_ppr_allowed_per_game": 19.45,
-    "opponent_last3_matchup_rank": 20
+    "opponent_ppr_allowed_per_game": 19.2,
+    "opponent_matchup_rank": 21,
+    "opponent_last3_ppr_allowed_per_game": 17.5,
+    "opponent_last3_matchup_rank": 26
   },
   {
     "season": 2026,
@@ -4512,10 +4638,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 22.525,
-    "opponent_matchup_rank": 13,
-    "opponent_last3_ppr_allowed_per_game": 26.85,
-    "opponent_last3_matchup_rank": 6
+    "opponent_ppr_allowed_per_game": 20.759999999999998,
+    "opponent_matchup_rank": 16,
+    "opponent_last3_ppr_allowed_per_game": 22.46666666666667,
+    "opponent_last3_matchup_rank": 12
   },
   {
     "season": 2026,
@@ -4533,7 +4659,7 @@
     "opponent_ppr_allowed_per_game": 13.62,
     "opponent_matchup_rank": 16,
     "opponent_last3_ppr_allowed_per_game": 11.466666666666667,
-    "opponent_last3_matchup_rank": 16
+    "opponent_last3_matchup_rank": 18
   },
   {
     "season": 2026,
@@ -4566,10 +4692,10 @@
     "game_date": "2026-10-19",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 16.075,
-    "opponent_matchup_rank": 29,
-    "opponent_last3_ppr_allowed_per_game": 21.95,
-    "opponent_last3_matchup_rank": 15
+    "opponent_ppr_allowed_per_game": 15.780000000000001,
+    "opponent_matchup_rank": 30,
+    "opponent_last3_ppr_allowed_per_game": 19.5,
+    "opponent_last3_matchup_rank": 20
   },
   {
     "season": 2026,
@@ -4585,9 +4711,9 @@
     "bye": false,
     "matchup_available": true,
     "opponent_ppr_allowed_per_game": 21.492,
-    "opponent_matchup_rank": 3,
+    "opponent_matchup_rank": 4,
     "opponent_last3_ppr_allowed_per_game": 19.126666666666665,
-    "opponent_last3_matchup_rank": 9
+    "opponent_last3_matchup_rank": 8
   },
   {
     "season": 2026,
@@ -4620,10 +4746,10 @@
     "game_date": "2026-10-19",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 40.315,
+    "opponent_ppr_allowed_per_game": 39.552,
     "opponent_matchup_rank": 4,
-    "opponent_last3_ppr_allowed_per_game": 41.23,
-    "opponent_last3_matchup_rank": 9
+    "opponent_last3_ppr_allowed_per_game": 39.653333333333336,
+    "opponent_last3_matchup_rank": 6
   },
   {
     "season": 2026,
@@ -4638,9 +4764,9 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 38.375,
-    "opponent_matchup_rank": 6,
-    "opponent_last3_ppr_allowed_per_game": 36.1,
+    "opponent_ppr_allowed_per_game": 37.019999999999996,
+    "opponent_matchup_rank": 7,
+    "opponent_last3_ppr_allowed_per_game": 34.6,
     "opponent_last3_matchup_rank": 12
   },
   {
@@ -4656,10 +4782,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 16.345,
-    "opponent_matchup_rank": 17,
-    "opponent_last3_ppr_allowed_per_game": 20.4,
-    "opponent_last3_matchup_rank": 3
+    "opponent_ppr_allowed_per_game": 20.968,
+    "opponent_matchup_rank": 6,
+    "opponent_last3_ppr_allowed_per_game": 26.753333333333334,
+    "opponent_last3_matchup_rank": 1
   },
   {
     "season": 2026,
@@ -4674,10 +4800,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 44.6,
-    "opponent_matchup_rank": 1,
-    "opponent_last3_ppr_allowed_per_game": 46.25,
-    "opponent_last3_matchup_rank": 2
+    "opponent_ppr_allowed_per_game": 41.019999999999996,
+    "opponent_matchup_rank": 2,
+    "opponent_last3_ppr_allowed_per_game": 39.733333333333334,
+    "opponent_last3_matchup_rank": 5
   },
   {
     "season": 2026,
@@ -4692,10 +4818,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 16.8,
-    "opponent_matchup_rank": 9,
-    "opponent_last3_ppr_allowed_per_game": 23.099999999999998,
-    "opponent_last3_matchup_rank": 8
+    "opponent_ppr_allowed_per_game": 14.580000000000002,
+    "opponent_matchup_rank": 13,
+    "opponent_last3_ppr_allowed_per_game": 17.3,
+    "opponent_last3_matchup_rank": 11
   },
   {
     "season": 2026,
@@ -4710,10 +4836,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 34.1,
-    "opponent_matchup_rank": 14,
-    "opponent_last3_ppr_allowed_per_game": 27.0,
-    "opponent_last3_matchup_rank": 26
+    "opponent_ppr_allowed_per_game": 35.9,
+    "opponent_matchup_rank": 11,
+    "opponent_last3_ppr_allowed_per_game": 32.36666666666667,
+    "opponent_last3_matchup_rank": 17
   },
   {
     "season": 2026,
@@ -4746,10 +4872,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 26.85,
-    "opponent_matchup_rank": 28,
-    "opponent_last3_ppr_allowed_per_game": 32.85,
-    "opponent_last3_matchup_rank": 17
+    "opponent_ppr_allowed_per_game": 32.3,
+    "opponent_matchup_rank": 13,
+    "opponent_last3_ppr_allowed_per_game": 39.93333333333334,
+    "opponent_last3_matchup_rank": 4
   },
   {
     "season": 2026,
@@ -4764,10 +4890,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 24.575000000000003,
-    "opponent_matchup_rank": 10,
-    "opponent_last3_ppr_allowed_per_game": 22.650000000000002,
-    "opponent_last3_matchup_rank": 11
+    "opponent_ppr_allowed_per_game": 22.48,
+    "opponent_matchup_rank": 11,
+    "opponent_last3_ppr_allowed_per_game": 19.8,
+    "opponent_last3_matchup_rank": 18
   },
   {
     "season": 2026,
@@ -4782,10 +4908,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 24.2,
-    "opponent_matchup_rank": 11,
-    "opponent_last3_ppr_allowed_per_game": 14.200000000000001,
-    "opponent_last3_matchup_rank": 31
+    "opponent_ppr_allowed_per_game": 26.839999999999996,
+    "opponent_matchup_rank": 4,
+    "opponent_last3_ppr_allowed_per_game": 21.933333333333334,
+    "opponent_last3_matchup_rank": 16
   },
   {
     "season": 2026,
@@ -4800,10 +4926,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 16.675,
-    "opponent_matchup_rank": 28,
-    "opponent_last3_ppr_allowed_per_game": 16.45,
-    "opponent_last3_matchup_rank": 27
+    "opponent_ppr_allowed_per_game": 17.6,
+    "opponent_matchup_rank": 26,
+    "opponent_last3_ppr_allowed_per_game": 18.066666666666666,
+    "opponent_last3_matchup_rank": 23
   },
   {
     "season": 2026,
@@ -4854,10 +4980,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 14.95,
-    "opponent_matchup_rank": 14,
-    "opponent_last3_ppr_allowed_per_game": 14.5,
-    "opponent_last3_matchup_rank": 12
+    "opponent_ppr_allowed_per_game": 14.179999999999998,
+    "opponent_matchup_rank": 15,
+    "opponent_last3_ppr_allowed_per_game": 13.366666666666667,
+    "opponent_last3_matchup_rank": 14
   },
   {
     "season": 2026,
@@ -4872,10 +4998,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 37.85,
-    "opponent_matchup_rank": 7,
-    "opponent_last3_ppr_allowed_per_game": 44.45,
-    "opponent_last3_matchup_rank": 6
+    "opponent_ppr_allowed_per_game": 36.22,
+    "opponent_matchup_rank": 9,
+    "opponent_last3_ppr_allowed_per_game": 39.53333333333333,
+    "opponent_last3_matchup_rank": 7
   },
   {
     "season": 2026,
@@ -4890,10 +5016,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 32.75,
-    "opponent_matchup_rank": 17,
-    "opponent_last3_ppr_allowed_per_game": 30.0,
-    "opponent_last3_matchup_rank": 21
+    "opponent_ppr_allowed_per_game": 30.3,
+    "opponent_matchup_rank": 20,
+    "opponent_last3_ppr_allowed_per_game": 26.833333333333332,
+    "opponent_last3_matchup_rank": 26
   },
   {
     "season": 2026,
@@ -4908,10 +5034,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 38.4,
-    "opponent_matchup_rank": 5,
-    "opponent_last3_ppr_allowed_per_game": 46.550000000000004,
-    "opponent_last3_matchup_rank": 1
+    "opponent_ppr_allowed_per_game": 37.660000000000004,
+    "opponent_matchup_rank": 6,
+    "opponent_last3_ppr_allowed_per_game": 42.6,
+    "opponent_last3_matchup_rank": 2
   },
   {
     "season": 2026,
@@ -4927,9 +5053,9 @@
     "bye": false,
     "matchup_available": true,
     "opponent_ppr_allowed_per_game": 30.68,
-    "opponent_matchup_rank": 18,
+    "opponent_matchup_rank": 19,
     "opponent_last3_ppr_allowed_per_game": 34.53333333333333,
-    "opponent_last3_matchup_rank": 15
+    "opponent_last3_matchup_rank": 13
   },
   {
     "season": 2026,
@@ -4944,10 +5070,10 @@
     "game_date": "2026-10-19",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 16.075,
-    "opponent_matchup_rank": 29,
-    "opponent_last3_ppr_allowed_per_game": 21.95,
-    "opponent_last3_matchup_rank": 15
+    "opponent_ppr_allowed_per_game": 15.780000000000001,
+    "opponent_matchup_rank": 30,
+    "opponent_last3_ppr_allowed_per_game": 19.5,
+    "opponent_last3_matchup_rank": 20
   },
   {
     "season": 2026,
@@ -4963,9 +5089,27 @@
     "bye": false,
     "matchup_available": true,
     "opponent_ppr_allowed_per_game": 25.32,
-    "opponent_matchup_rank": 9,
+    "opponent_matchup_rank": 8,
     "opponent_last3_ppr_allowed_per_game": 25.599999999999998,
-    "opponent_last3_matchup_rank": 9
+    "opponent_last3_matchup_rank": 6
+  },
+  {
+    "season": 2026,
+    "through_week": 5,
+    "upcoming_week": 6,
+    "player_id": "00-0040205",
+    "player_name": "K.Mullings",
+    "position": "RB",
+    "team": "TEN",
+    "opponent": "IND",
+    "home_away": "AWAY",
+    "game_date": "2026-10-18",
+    "bye": false,
+    "matchup_available": true,
+    "opponent_ppr_allowed_per_game": 26.839999999999996,
+    "opponent_matchup_rank": 4,
+    "opponent_last3_ppr_allowed_per_game": 21.933333333333334,
+    "opponent_last3_matchup_rank": 16
   },
   {
     "season": 2026,
@@ -4980,10 +5124,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 38.4,
-    "opponent_matchup_rank": 5,
-    "opponent_last3_ppr_allowed_per_game": 46.550000000000004,
-    "opponent_last3_matchup_rank": 1
+    "opponent_ppr_allowed_per_game": 37.660000000000004,
+    "opponent_matchup_rank": 6,
+    "opponent_last3_ppr_allowed_per_game": 42.6,
+    "opponent_last3_matchup_rank": 2
   },
   {
     "season": 2026,
@@ -4998,10 +5142,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 29.0,
-    "opponent_matchup_rank": 23,
-    "opponent_last3_ppr_allowed_per_game": 42.5,
-    "opponent_last3_matchup_rank": 7
+    "opponent_ppr_allowed_per_game": 27.72,
+    "opponent_matchup_rank": 27,
+    "opponent_last3_ppr_allowed_per_game": 35.86666666666667,
+    "opponent_last3_matchup_rank": 11
   },
   {
     "season": 2026,
@@ -5016,10 +5160,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 36.985,
-    "opponent_matchup_rank": 9,
-    "opponent_last3_ppr_allowed_per_game": 44.519999999999996,
-    "opponent_last3_matchup_rank": 5
+    "opponent_ppr_allowed_per_game": 36.728,
+    "opponent_matchup_rank": 8,
+    "opponent_last3_ppr_allowed_per_game": 41.58,
+    "opponent_last3_matchup_rank": 3
   },
   {
     "season": 2026,
@@ -5034,9 +5178,9 @@
     "game_date": "2026-10-19",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 25.6,
-    "opponent_matchup_rank": 8,
-    "opponent_last3_ppr_allowed_per_game": 30.6,
+    "opponent_ppr_allowed_per_game": 24.14,
+    "opponent_matchup_rank": 9,
+    "opponent_last3_ppr_allowed_per_game": 26.5,
     "opponent_last3_matchup_rank": 4
   },
   {
@@ -5073,7 +5217,7 @@
     "opponent_ppr_allowed_per_game": 19.6,
     "opponent_matchup_rank": 20,
     "opponent_last3_ppr_allowed_per_game": 18.75,
-    "opponent_last3_matchup_rank": 21
+    "opponent_last3_matchup_rank": 22
   },
   {
     "season": 2026,
@@ -5088,10 +5232,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 34.1,
-    "opponent_matchup_rank": 14,
-    "opponent_last3_ppr_allowed_per_game": 27.0,
-    "opponent_last3_matchup_rank": 26
+    "opponent_ppr_allowed_per_game": 35.9,
+    "opponent_matchup_rank": 11,
+    "opponent_last3_ppr_allowed_per_game": 32.36666666666667,
+    "opponent_last3_matchup_rank": 17
   },
   {
     "season": 2026,
@@ -5106,9 +5250,9 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 17.6,
-    "opponent_matchup_rank": 8,
-    "opponent_last3_ppr_allowed_per_game": 24.900000000000002,
+    "opponent_ppr_allowed_per_game": 18.9,
+    "opponent_matchup_rank": 6,
+    "opponent_last3_ppr_allowed_per_game": 24.633333333333336,
     "opponent_last3_matchup_rank": 3
   },
   {
@@ -5124,10 +5268,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 21.25,
+    "opponent_ppr_allowed_per_game": 20.919999999999998,
     "opponent_matchup_rank": 15,
-    "opponent_last3_ppr_allowed_per_game": 16.75,
-    "opponent_last3_matchup_rank": 26
+    "opponent_last3_ppr_allowed_per_game": 17.7,
+    "opponent_last3_matchup_rank": 25
   },
   {
     "season": 2026,
@@ -5143,9 +5287,9 @@
     "bye": false,
     "matchup_available": true,
     "opponent_ppr_allowed_per_game": 30.275,
-    "opponent_matchup_rank": 19,
+    "opponent_matchup_rank": 21,
     "opponent_last3_ppr_allowed_per_game": 30.150000000000002,
-    "opponent_last3_matchup_rank": 20
+    "opponent_last3_matchup_rank": 22
   },
   {
     "season": 2026,
@@ -5160,10 +5304,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 20.925,
-    "opponent_matchup_rank": 18,
-    "opponent_last3_ppr_allowed_per_game": 25.5,
-    "opponent_last3_matchup_rank": 10
+    "opponent_ppr_allowed_per_game": 21.58,
+    "opponent_matchup_rank": 14,
+    "opponent_last3_ppr_allowed_per_game": 25.066666666666663,
+    "opponent_last3_matchup_rank": 8
   },
   {
     "season": 2026,
@@ -5178,10 +5322,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 22.85,
-    "opponent_matchup_rank": 12,
-    "opponent_last3_ppr_allowed_per_game": 29.2,
-    "opponent_last3_matchup_rank": 5
+    "opponent_ppr_allowed_per_game": 21.72,
+    "opponent_matchup_rank": 13,
+    "opponent_last3_ppr_allowed_per_game": 25.2,
+    "opponent_last3_matchup_rank": 7
   },
   {
     "season": 2026,
@@ -5196,10 +5340,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 24.575000000000003,
-    "opponent_matchup_rank": 10,
-    "opponent_last3_ppr_allowed_per_game": 22.650000000000002,
-    "opponent_last3_matchup_rank": 11
+    "opponent_ppr_allowed_per_game": 22.48,
+    "opponent_matchup_rank": 11,
+    "opponent_last3_ppr_allowed_per_game": 19.8,
+    "opponent_last3_matchup_rank": 18
   },
   {
     "season": 2026,
@@ -5214,10 +5358,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 17.96,
-    "opponent_matchup_rank": 10,
-    "opponent_last3_ppr_allowed_per_game": 17.08,
-    "opponent_last3_matchup_rank": 18
+    "opponent_ppr_allowed_per_game": 18.716,
+    "opponent_matchup_rank": 11,
+    "opponent_last3_ppr_allowed_per_game": 18.633333333333333,
+    "opponent_last3_matchup_rank": 10
   },
   {
     "season": 2026,
@@ -5232,10 +5376,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 5.9,
-    "opponent_matchup_rank": 32,
-    "opponent_last3_ppr_allowed_per_game": 5.6,
-    "opponent_last3_matchup_rank": 28
+    "opponent_ppr_allowed_per_game": 9.940000000000001,
+    "opponent_matchup_rank": 22,
+    "opponent_last3_ppr_allowed_per_game": 12.433333333333332,
+    "opponent_last3_matchup_rank": 16
   },
   {
     "season": 2026,
@@ -5250,10 +5394,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 26.85,
-    "opponent_matchup_rank": 28,
-    "opponent_last3_ppr_allowed_per_game": 32.85,
-    "opponent_last3_matchup_rank": 17
+    "opponent_ppr_allowed_per_game": 32.3,
+    "opponent_matchup_rank": 13,
+    "opponent_last3_ppr_allowed_per_game": 39.93333333333334,
+    "opponent_last3_matchup_rank": 4
   },
   {
     "season": 2026,
@@ -5268,10 +5412,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 33.1,
-    "opponent_matchup_rank": 16,
-    "opponent_last3_ppr_allowed_per_game": 29.299999999999997,
-    "opponent_last3_matchup_rank": 22
+    "opponent_ppr_allowed_per_game": 31.3,
+    "opponent_matchup_rank": 17,
+    "opponent_last3_ppr_allowed_per_game": 27.566666666666666,
+    "opponent_last3_matchup_rank": 24
   },
   {
     "season": 2026,
@@ -5304,10 +5448,10 @@
     "game_date": "2026-10-19",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 40.315,
+    "opponent_ppr_allowed_per_game": 39.552,
     "opponent_matchup_rank": 4,
-    "opponent_last3_ppr_allowed_per_game": 41.23,
-    "opponent_last3_matchup_rank": 9
+    "opponent_last3_ppr_allowed_per_game": 39.653333333333336,
+    "opponent_last3_matchup_rank": 6
   },
   {
     "season": 2026,
@@ -5322,10 +5466,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 26.85,
-    "opponent_matchup_rank": 28,
-    "opponent_last3_ppr_allowed_per_game": 32.85,
-    "opponent_last3_matchup_rank": 17
+    "opponent_ppr_allowed_per_game": 32.3,
+    "opponent_matchup_rank": 13,
+    "opponent_last3_ppr_allowed_per_game": 39.93333333333334,
+    "opponent_last3_matchup_rank": 4
   },
   {
     "season": 2026,
@@ -5343,7 +5487,7 @@
     "opponent_ppr_allowed_per_game": 19.6,
     "opponent_matchup_rank": 20,
     "opponent_last3_ppr_allowed_per_game": 18.75,
-    "opponent_last3_matchup_rank": 21
+    "opponent_last3_matchup_rank": 22
   },
   {
     "season": 2026,
@@ -5359,7 +5503,7 @@
     "bye": false,
     "matchup_available": true,
     "opponent_ppr_allowed_per_game": 21.285,
-    "opponent_matchup_rank": 4,
+    "opponent_matchup_rank": 5,
     "opponent_last3_ppr_allowed_per_game": 19.45,
     "opponent_last3_matchup_rank": 7
   },
@@ -5376,10 +5520,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 9.925,
-    "opponent_matchup_rank": 23,
-    "opponent_last3_ppr_allowed_per_game": 14.35,
-    "opponent_last3_matchup_rank": 13
+    "opponent_ppr_allowed_per_game": 13.180000000000001,
+    "opponent_matchup_rank": 17,
+    "opponent_last3_ppr_allowed_per_game": 18.3,
+    "opponent_last3_matchup_rank": 10
   },
   {
     "season": 2026,
@@ -5394,10 +5538,10 @@
     "game_date": "2026-10-15",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 21.775,
-    "opponent_matchup_rank": 31,
-    "opponent_last3_ppr_allowed_per_game": 29.25,
-    "opponent_last3_matchup_rank": 23
+    "opponent_ppr_allowed_per_game": 25.1,
+    "opponent_matchup_rank": 29,
+    "opponent_last3_ppr_allowed_per_game": 32.300000000000004,
+    "opponent_last3_matchup_rank": 18
   },
   {
     "season": 2026,
@@ -5412,9 +5556,9 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 38.375,
-    "opponent_matchup_rank": 6,
-    "opponent_last3_ppr_allowed_per_game": 36.1,
+    "opponent_ppr_allowed_per_game": 37.019999999999996,
+    "opponent_matchup_rank": 7,
+    "opponent_last3_ppr_allowed_per_game": 34.6,
     "opponent_last3_matchup_rank": 12
   },
   {
@@ -5430,10 +5574,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 16.85,
-    "opponent_matchup_rank": 27,
-    "opponent_last3_ppr_allowed_per_game": 18.4,
-    "opponent_last3_matchup_rank": 22
+    "opponent_ppr_allowed_per_game": 19.64,
+    "opponent_matchup_rank": 19,
+    "opponent_last3_ppr_allowed_per_game": 22.53333333333333,
+    "opponent_last3_matchup_rank": 11
   },
   {
     "season": 2026,
@@ -5448,10 +5592,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 6.725,
+    "opponent_ppr_allowed_per_game": 7.7,
     "opponent_matchup_rank": 30,
-    "opponent_last3_ppr_allowed_per_game": 2.7,
-    "opponent_last3_matchup_rank": 32
+    "opponent_last3_ppr_allowed_per_game": 5.666666666666667,
+    "opponent_last3_matchup_rank": 30
   },
   {
     "season": 2026,
@@ -5466,10 +5610,28 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 28.975,
+    "opponent_ppr_allowed_per_game": 29.26,
     "opponent_matchup_rank": 24,
-    "opponent_last3_ppr_allowed_per_game": 30.8,
-    "opponent_last3_matchup_rank": 19
+    "opponent_last3_ppr_allowed_per_game": 30.666666666666668,
+    "opponent_last3_matchup_rank": 21
+  },
+  {
+    "season": 2026,
+    "through_week": 5,
+    "upcoming_week": 6,
+    "player_id": "00-0036876",
+    "player_name": "K.Granson",
+    "position": "TE",
+    "team": "TEN",
+    "opponent": "IND",
+    "home_away": "AWAY",
+    "game_date": "2026-10-18",
+    "bye": false,
+    "matchup_available": true,
+    "opponent_ppr_allowed_per_game": 15.920000000000002,
+    "opponent_matchup_rank": 10,
+    "opponent_last3_ppr_allowed_per_game": 13.966666666666667,
+    "opponent_last3_matchup_rank": 13
   },
   {
     "season": 2026,
@@ -5502,10 +5664,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 15.2,
-    "opponent_matchup_rank": 31,
-    "opponent_last3_ppr_allowed_per_game": 17.45,
-    "opponent_last3_matchup_rank": 24
+    "opponent_ppr_allowed_per_game": 19.919999999999998,
+    "opponent_matchup_rank": 18,
+    "opponent_last3_ppr_allowed_per_game": 24.566666666666666,
+    "opponent_last3_matchup_rank": 9
   },
   {
     "season": 2026,
@@ -5520,10 +5682,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 37.275,
-    "opponent_matchup_rank": 8,
-    "opponent_last3_ppr_allowed_per_game": 35.45,
-    "opponent_last3_matchup_rank": 13
+    "opponent_ppr_allowed_per_game": 36.0,
+    "opponent_matchup_rank": 10,
+    "opponent_last3_ppr_allowed_per_game": 33.93333333333333,
+    "opponent_last3_matchup_rank": 15
   },
   {
     "season": 2026,
@@ -5541,7 +5703,7 @@
     "opponent_ppr_allowed_per_game": 21.45,
     "opponent_matchup_rank": 32,
     "opponent_last3_ppr_allowed_per_game": 22.25,
-    "opponent_last3_matchup_rank": 30
+    "opponent_last3_matchup_rank": 31
   },
   {
     "season": 2026,
@@ -5556,10 +5718,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 18.395,
-    "opponent_matchup_rank": 9,
-    "opponent_last3_ppr_allowed_per_game": 17.8,
-    "opponent_last3_matchup_rank": 12
+    "opponent_ppr_allowed_per_game": 16.712,
+    "opponent_matchup_rank": 15,
+    "opponent_last3_ppr_allowed_per_game": 15.193333333333333,
+    "opponent_last3_matchup_rank": 24
   },
   {
     "season": 2026,
@@ -5574,10 +5736,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 27.25,
-    "opponent_matchup_rank": 4,
-    "opponent_last3_ppr_allowed_per_game": 42.4,
-    "opponent_last3_matchup_rank": 1
+    "opponent_ppr_allowed_per_game": 23.86,
+    "opponent_matchup_rank": 10,
+    "opponent_last3_ppr_allowed_per_game": 31.7,
+    "opponent_last3_matchup_rank": 3
   },
   {
     "season": 2026,
@@ -5592,10 +5754,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 34.1,
-    "opponent_matchup_rank": 14,
-    "opponent_last3_ppr_allowed_per_game": 27.0,
-    "opponent_last3_matchup_rank": 26
+    "opponent_ppr_allowed_per_game": 35.9,
+    "opponent_matchup_rank": 11,
+    "opponent_last3_ppr_allowed_per_game": 32.36666666666667,
+    "opponent_last3_matchup_rank": 17
   },
   {
     "season": 2026,
@@ -5610,10 +5772,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 17.3,
-    "opponent_matchup_rank": 24,
-    "opponent_last3_ppr_allowed_per_game": 22.150000000000002,
-    "opponent_last3_matchup_rank": 14
+    "opponent_ppr_allowed_per_game": 16.9,
+    "opponent_matchup_rank": 28,
+    "opponent_last3_ppr_allowed_per_game": 19.866666666666667,
+    "opponent_last3_matchup_rank": 17
   },
   {
     "season": 2026,
@@ -5629,7 +5791,7 @@
     "bye": false,
     "matchup_available": true,
     "opponent_ppr_allowed_per_game": 16.96,
-    "opponent_matchup_rank": 25,
+    "opponent_matchup_rank": 27,
     "opponent_last3_ppr_allowed_per_game": 15.266666666666666,
     "opponent_last3_matchup_rank": 28
   },
@@ -5646,10 +5808,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 36.985,
-    "opponent_matchup_rank": 9,
-    "opponent_last3_ppr_allowed_per_game": 44.519999999999996,
-    "opponent_last3_matchup_rank": 5
+    "opponent_ppr_allowed_per_game": 36.728,
+    "opponent_matchup_rank": 8,
+    "opponent_last3_ppr_allowed_per_game": 41.58,
+    "opponent_last3_matchup_rank": 3
   },
   {
     "season": 2026,
@@ -5664,10 +5826,10 @@
     "game_date": "2026-10-15",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 21.775,
-    "opponent_matchup_rank": 31,
-    "opponent_last3_ppr_allowed_per_game": 29.25,
-    "opponent_last3_matchup_rank": 23
+    "opponent_ppr_allowed_per_game": 25.1,
+    "opponent_matchup_rank": 29,
+    "opponent_last3_ppr_allowed_per_game": 32.300000000000004,
+    "opponent_last3_matchup_rank": 18
   },
   {
     "season": 2026,
@@ -5682,10 +5844,10 @@
     "game_date": "2026-10-19",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 18.325,
-    "opponent_matchup_rank": 5,
-    "opponent_last3_ppr_allowed_per_game": 14.65,
-    "opponent_last3_matchup_rank": 11
+    "opponent_ppr_allowed_per_game": 22.240000000000002,
+    "opponent_matchup_rank": 3,
+    "opponent_last3_ppr_allowed_per_game": 22.399999999999995,
+    "opponent_last3_matchup_rank": 7
   },
   {
     "season": 2026,
@@ -5700,10 +5862,10 @@
     "game_date": "2026-10-19",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 27.45,
-    "opponent_matchup_rank": 27,
-    "opponent_last3_ppr_allowed_per_game": 31.349999999999998,
-    "opponent_last3_matchup_rank": 18
+    "opponent_ppr_allowed_per_game": 28.080000000000002,
+    "opponent_matchup_rank": 26,
+    "opponent_last3_ppr_allowed_per_game": 31.099999999999998,
+    "opponent_last3_matchup_rank": 20
   },
   {
     "season": 2026,
@@ -5718,10 +5880,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 10.575,
-    "opponent_matchup_rank": 20,
-    "opponent_last3_ppr_allowed_per_game": 9.15,
-    "opponent_last3_matchup_rank": 23
+    "opponent_ppr_allowed_per_game": 9.6,
+    "opponent_matchup_rank": 25,
+    "opponent_last3_ppr_allowed_per_game": 8.0,
+    "opponent_last3_matchup_rank": 25
   },
   {
     "season": 2026,
@@ -5736,10 +5898,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 38.4,
-    "opponent_matchup_rank": 5,
-    "opponent_last3_ppr_allowed_per_game": 46.550000000000004,
-    "opponent_last3_matchup_rank": 1
+    "opponent_ppr_allowed_per_game": 37.660000000000004,
+    "opponent_matchup_rank": 6,
+    "opponent_last3_ppr_allowed_per_game": 42.6,
+    "opponent_last3_matchup_rank": 2
   },
   {
     "season": 2026,
@@ -5754,10 +5916,10 @@
     "game_date": "2026-10-19",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 22.515,
+    "opponent_ppr_allowed_per_game": 23.2,
     "opponent_matchup_rank": 2,
-    "opponent_last3_ppr_allowed_per_game": 17.79,
-    "opponent_last3_matchup_rank": 13
+    "opponent_last3_ppr_allowed_per_game": 20.506666666666668,
+    "opponent_last3_matchup_rank": 4
   },
   {
     "season": 2026,
@@ -5772,10 +5934,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 28.975,
+    "opponent_ppr_allowed_per_game": 29.26,
     "opponent_matchup_rank": 24,
-    "opponent_last3_ppr_allowed_per_game": 30.8,
-    "opponent_last3_matchup_rank": 19
+    "opponent_last3_ppr_allowed_per_game": 30.666666666666668,
+    "opponent_last3_matchup_rank": 21
   },
   {
     "season": 2026,
@@ -5793,7 +5955,7 @@
     "opponent_ppr_allowed_per_game": 28.675,
     "opponent_matchup_rank": 25,
     "opponent_last3_ppr_allowed_per_game": 28.1,
-    "opponent_last3_matchup_rank": 24
+    "opponent_last3_matchup_rank": 23
   },
   {
     "season": 2026,
@@ -5808,10 +5970,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 37.85,
-    "opponent_matchup_rank": 7,
-    "opponent_last3_ppr_allowed_per_game": 44.45,
-    "opponent_last3_matchup_rank": 6
+    "opponent_ppr_allowed_per_game": 36.22,
+    "opponent_matchup_rank": 9,
+    "opponent_last3_ppr_allowed_per_game": 39.53333333333333,
+    "opponent_last3_matchup_rank": 7
   },
   {
     "season": 2026,
@@ -5826,10 +5988,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 29.5,
-    "opponent_matchup_rank": 21,
-    "opponent_last3_ppr_allowed_per_game": 24.65,
-    "opponent_last3_matchup_rank": 28
+    "opponent_ppr_allowed_per_game": 29.740000000000002,
+    "opponent_matchup_rank": 22,
+    "opponent_last3_ppr_allowed_per_game": 26.666666666666668,
+    "opponent_last3_matchup_rank": 27
   },
   {
     "season": 2026,
@@ -5845,9 +6007,9 @@
     "bye": false,
     "matchup_available": true,
     "opponent_ppr_allowed_per_game": 41.025,
-    "opponent_matchup_rank": 3,
+    "opponent_matchup_rank": 1,
     "opponent_last3_ppr_allowed_per_game": 39.5,
-    "opponent_last3_matchup_rank": 10
+    "opponent_last3_matchup_rank": 8
   },
   {
     "season": 2026,
@@ -5862,10 +6024,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 34.875,
-    "opponent_matchup_rank": 13,
-    "opponent_last3_ppr_allowed_per_game": 41.6,
-    "opponent_last3_matchup_rank": 8
+    "opponent_ppr_allowed_per_game": 31.359999999999996,
+    "opponent_matchup_rank": 16,
+    "opponent_last3_ppr_allowed_per_game": 33.5,
+    "opponent_last3_matchup_rank": 16
   },
   {
     "season": 2026,
@@ -5880,10 +6042,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 29.5,
-    "opponent_matchup_rank": 21,
-    "opponent_last3_ppr_allowed_per_game": 24.65,
-    "opponent_last3_matchup_rank": 28
+    "opponent_ppr_allowed_per_game": 29.740000000000002,
+    "opponent_matchup_rank": 22,
+    "opponent_last3_ppr_allowed_per_game": 26.666666666666668,
+    "opponent_last3_matchup_rank": 27
   },
   {
     "season": 2026,
@@ -5935,9 +6097,9 @@
     "bye": false,
     "matchup_available": true,
     "opponent_ppr_allowed_per_game": 25.32,
-    "opponent_matchup_rank": 9,
+    "opponent_matchup_rank": 8,
     "opponent_last3_ppr_allowed_per_game": 25.599999999999998,
-    "opponent_last3_matchup_rank": 9
+    "opponent_last3_matchup_rank": 6
   },
   {
     "season": 2026,
@@ -5952,10 +6114,10 @@
     "game_date": "2026-10-19",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 14.290000000000001,
-    "opponent_matchup_rank": 23,
-    "opponent_last3_ppr_allowed_per_game": 19.580000000000002,
-    "opponent_last3_matchup_rank": 6
+    "opponent_ppr_allowed_per_game": 13.092000000000002,
+    "opponent_matchup_rank": 27,
+    "opponent_last3_ppr_allowed_per_game": 15.82,
+    "opponent_last3_matchup_rank": 21
   },
   {
     "season": 2026,
@@ -5970,10 +6132,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 16.8,
-    "opponent_matchup_rank": 9,
-    "opponent_last3_ppr_allowed_per_game": 23.099999999999998,
-    "opponent_last3_matchup_rank": 8
+    "opponent_ppr_allowed_per_game": 14.580000000000002,
+    "opponent_matchup_rank": 13,
+    "opponent_last3_ppr_allowed_per_game": 17.3,
+    "opponent_last3_matchup_rank": 11
   },
   {
     "season": 2026,
@@ -5991,7 +6153,7 @@
     "opponent_ppr_allowed_per_game": 13.62,
     "opponent_matchup_rank": 16,
     "opponent_last3_ppr_allowed_per_game": 11.466666666666667,
-    "opponent_last3_matchup_rank": 16
+    "opponent_last3_matchup_rank": 18
   },
   {
     "season": 2026,
@@ -6006,10 +6168,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 9.425,
+    "opponent_ppr_allowed_per_game": 9.5,
     "opponent_matchup_rank": 26,
-    "opponent_last3_ppr_allowed_per_game": 7.85,
-    "opponent_last3_matchup_rank": 25
+    "opponent_last3_ppr_allowed_per_game": 8.5,
+    "opponent_last3_matchup_rank": 24
   },
   {
     "season": 2026,
@@ -6027,7 +6189,7 @@
     "opponent_ppr_allowed_per_game": 21.45,
     "opponent_matchup_rank": 32,
     "opponent_last3_ppr_allowed_per_game": 22.25,
-    "opponent_last3_matchup_rank": 30
+    "opponent_last3_matchup_rank": 31
   },
   {
     "season": 2026,
@@ -6045,7 +6207,7 @@
     "opponent_ppr_allowed_per_game": 28.675,
     "opponent_matchup_rank": 25,
     "opponent_last3_ppr_allowed_per_game": 28.1,
-    "opponent_last3_matchup_rank": 24
+    "opponent_last3_matchup_rank": 23
   },
   {
     "season": 2026,
@@ -6061,9 +6223,9 @@
     "bye": false,
     "matchup_available": true,
     "opponent_ppr_allowed_per_game": 30.275,
-    "opponent_matchup_rank": 19,
+    "opponent_matchup_rank": 21,
     "opponent_last3_ppr_allowed_per_game": 30.150000000000002,
-    "opponent_last3_matchup_rank": 20
+    "opponent_last3_matchup_rank": 22
   },
   {
     "season": 2026,
@@ -6078,10 +6240,10 @@
     "game_date": "2026-10-15",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 21.775,
-    "opponent_matchup_rank": 31,
-    "opponent_last3_ppr_allowed_per_game": 29.25,
-    "opponent_last3_matchup_rank": 23
+    "opponent_ppr_allowed_per_game": 25.1,
+    "opponent_matchup_rank": 29,
+    "opponent_last3_ppr_allowed_per_game": 32.300000000000004,
+    "opponent_last3_matchup_rank": 18
   },
   {
     "season": 2026,
@@ -6097,7 +6259,7 @@
     "bye": false,
     "matchup_available": true,
     "opponent_ppr_allowed_per_game": 14.004,
-    "opponent_matchup_rank": 25,
+    "opponent_matchup_rank": 24,
     "opponent_last3_ppr_allowed_per_game": 12.046666666666667,
     "opponent_last3_matchup_rank": 29
   },
@@ -6114,10 +6276,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 5.9,
-    "opponent_matchup_rank": 32,
-    "opponent_last3_ppr_allowed_per_game": 5.6,
-    "opponent_last3_matchup_rank": 28
+    "opponent_ppr_allowed_per_game": 9.940000000000001,
+    "opponent_matchup_rank": 22,
+    "opponent_last3_ppr_allowed_per_game": 12.433333333333332,
+    "opponent_last3_matchup_rank": 16
   },
   {
     "season": 2026,
@@ -6133,9 +6295,9 @@
     "bye": false,
     "matchup_available": true,
     "opponent_ppr_allowed_per_game": 35.46,
-    "opponent_matchup_rank": 11,
+    "opponent_matchup_rank": 12,
     "opponent_last3_ppr_allowed_per_game": 39.0,
-    "opponent_last3_matchup_rank": 11
+    "opponent_last3_matchup_rank": 10
   },
   {
     "season": 2026,
@@ -6150,10 +6312,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 16.8,
-    "opponent_matchup_rank": 9,
-    "opponent_last3_ppr_allowed_per_game": 23.099999999999998,
-    "opponent_last3_matchup_rank": 8
+    "opponent_ppr_allowed_per_game": 14.580000000000002,
+    "opponent_matchup_rank": 13,
+    "opponent_last3_ppr_allowed_per_game": 17.3,
+    "opponent_last3_matchup_rank": 11
   },
   {
     "season": 2026,
@@ -6168,10 +6330,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 20.985,
-    "opponent_matchup_rank": 5,
-    "opponent_last3_ppr_allowed_per_game": 24.64,
-    "opponent_last3_matchup_rank": 1
+    "opponent_ppr_allowed_per_game": 22.576,
+    "opponent_matchup_rank": 3,
+    "opponent_last3_ppr_allowed_per_game": 26.073333333333334,
+    "opponent_last3_matchup_rank": 2
   },
   {
     "season": 2026,
@@ -6205,9 +6367,9 @@
     "bye": false,
     "matchup_available": true,
     "opponent_ppr_allowed_per_game": 11.25,
-    "opponent_matchup_rank": 17,
+    "opponent_matchup_rank": 19,
     "opponent_last3_ppr_allowed_per_game": 6.699999999999999,
-    "opponent_last3_matchup_rank": 26
+    "opponent_last3_matchup_rank": 27
   },
   {
     "season": 2026,
@@ -6222,10 +6384,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 14.885,
-    "opponent_matchup_rank": 22,
-    "opponent_last3_ppr_allowed_per_game": 9.69,
-    "opponent_last3_matchup_rank": 31
+    "opponent_ppr_allowed_per_game": 16.924,
+    "opponent_matchup_rank": 13,
+    "opponent_last3_ppr_allowed_per_game": 14.82,
+    "opponent_last3_matchup_rank": 25
   },
   {
     "season": 2026,
@@ -6241,9 +6403,9 @@
     "bye": false,
     "matchup_available": true,
     "opponent_ppr_allowed_per_game": 30.68,
-    "opponent_matchup_rank": 18,
+    "opponent_matchup_rank": 19,
     "opponent_last3_ppr_allowed_per_game": 34.53333333333333,
-    "opponent_last3_matchup_rank": 15
+    "opponent_last3_matchup_rank": 13
   },
   {
     "season": 2026,
@@ -6259,9 +6421,9 @@
     "bye": false,
     "matchup_available": true,
     "opponent_ppr_allowed_per_game": 30.275,
-    "opponent_matchup_rank": 19,
+    "opponent_matchup_rank": 21,
     "opponent_last3_ppr_allowed_per_game": 30.150000000000002,
-    "opponent_last3_matchup_rank": 20
+    "opponent_last3_matchup_rank": 22
   },
   {
     "season": 2026,
@@ -6276,10 +6438,10 @@
     "game_date": "2026-10-19",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 40.315,
+    "opponent_ppr_allowed_per_game": 39.552,
     "opponent_matchup_rank": 4,
-    "opponent_last3_ppr_allowed_per_game": 41.23,
-    "opponent_last3_matchup_rank": 9
+    "opponent_last3_ppr_allowed_per_game": 39.653333333333336,
+    "opponent_last3_matchup_rank": 6
   },
   {
     "season": 2026,
@@ -6313,9 +6475,9 @@
     "bye": false,
     "matchup_available": true,
     "opponent_ppr_allowed_per_game": 26.275,
-    "opponent_matchup_rank": 6,
+    "opponent_matchup_rank": 5,
     "opponent_last3_ppr_allowed_per_game": 22.45,
-    "opponent_last3_matchup_rank": 12
+    "opponent_last3_matchup_rank": 13
   },
   {
     "season": 2026,
@@ -6330,10 +6492,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 7.8999999999999995,
-    "opponent_matchup_rank": 28,
-    "opponent_last3_ppr_allowed_per_game": 10.7,
-    "opponent_last3_matchup_rank": 20
+    "opponent_ppr_allowed_per_game": 9.879999999999999,
+    "opponent_matchup_rank": 23,
+    "opponent_last3_ppr_allowed_per_game": 13.066666666666668,
+    "opponent_last3_matchup_rank": 15
   },
   {
     "season": 2026,
@@ -6366,10 +6528,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 10.3,
-    "opponent_matchup_rank": 22,
-    "opponent_last3_ppr_allowed_per_game": 11.2,
-    "opponent_last3_matchup_rank": 18
+    "opponent_ppr_allowed_per_game": 10.0,
+    "opponent_matchup_rank": 21,
+    "opponent_last3_ppr_allowed_per_game": 10.4,
+    "opponent_last3_matchup_rank": 21
   },
   {
     "season": 2026,
@@ -6384,10 +6546,10 @@
     "game_date": "2026-10-15",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 28.275,
-    "opponent_matchup_rank": 26,
-    "opponent_last3_ppr_allowed_per_game": 35.4,
-    "opponent_last3_matchup_rank": 14
+    "opponent_ppr_allowed_per_game": 24.7,
+    "opponent_matchup_rank": 30,
+    "opponent_last3_ppr_allowed_per_game": 27.066666666666666,
+    "opponent_last3_matchup_rank": 25
   },
   {
     "season": 2026,
@@ -6420,10 +6582,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 33.75,
+    "opponent_ppr_allowed_per_game": 31.48,
     "opponent_matchup_rank": 1,
-    "opponent_last3_ppr_allowed_per_game": 38.55,
-    "opponent_last3_matchup_rank": 2
+    "opponent_last3_ppr_allowed_per_game": 33.166666666666664,
+    "opponent_last3_matchup_rank": 1
   },
   {
     "season": 2026,
@@ -6438,10 +6600,10 @@
     "game_date": "2026-10-15",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 10.700000000000001,
-    "opponent_matchup_rank": 19,
-    "opponent_last3_ppr_allowed_per_game": 5.95,
-    "opponent_last3_matchup_rank": 27
+    "opponent_ppr_allowed_per_game": 10.040000000000001,
+    "opponent_matchup_rank": 20,
+    "opponent_last3_ppr_allowed_per_game": 6.433333333333334,
+    "opponent_last3_matchup_rank": 28
   },
   {
     "season": 2026,
@@ -6456,10 +6618,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 10.899999999999999,
-    "opponent_matchup_rank": 18,
-    "opponent_last3_ppr_allowed_per_game": 10.7,
-    "opponent_last3_matchup_rank": 20
+    "opponent_ppr_allowed_per_game": 9.02,
+    "opponent_matchup_rank": 27,
+    "opponent_last3_ppr_allowed_per_game": 7.633333333333333,
+    "opponent_last3_matchup_rank": 26
   },
   {
     "season": 2026,
@@ -6474,10 +6636,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 24.2,
-    "opponent_matchup_rank": 11,
-    "opponent_last3_ppr_allowed_per_game": 14.200000000000001,
-    "opponent_last3_matchup_rank": 31
+    "opponent_ppr_allowed_per_game": 26.839999999999996,
+    "opponent_matchup_rank": 4,
+    "opponent_last3_ppr_allowed_per_game": 21.933333333333334,
+    "opponent_last3_matchup_rank": 16
   },
   {
     "season": 2026,
@@ -6492,10 +6654,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 19.46,
-    "opponent_matchup_rank": 7,
-    "opponent_last3_ppr_allowed_per_game": 13.0,
-    "opponent_last3_matchup_rank": 27
+    "opponent_ppr_allowed_per_game": 16.568,
+    "opponent_matchup_rank": 17,
+    "opponent_last3_ppr_allowed_per_game": 10.333333333333334,
+    "opponent_last3_matchup_rank": 30
   },
   {
     "season": 2026,
@@ -6510,10 +6672,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 6.725,
+    "opponent_ppr_allowed_per_game": 7.7,
     "opponent_matchup_rank": 30,
-    "opponent_last3_ppr_allowed_per_game": 2.7,
-    "opponent_last3_matchup_rank": 32
+    "opponent_last3_ppr_allowed_per_game": 5.666666666666667,
+    "opponent_last3_matchup_rank": 30
   },
   {
     "season": 2026,
@@ -6528,10 +6690,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 34.1,
-    "opponent_matchup_rank": 14,
-    "opponent_last3_ppr_allowed_per_game": 27.0,
-    "opponent_last3_matchup_rank": 26
+    "opponent_ppr_allowed_per_game": 35.9,
+    "opponent_matchup_rank": 11,
+    "opponent_last3_ppr_allowed_per_game": 32.36666666666667,
+    "opponent_last3_matchup_rank": 17
   },
   {
     "season": 2026,
@@ -6546,10 +6708,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 36.985,
-    "opponent_matchup_rank": 9,
-    "opponent_last3_ppr_allowed_per_game": 44.519999999999996,
-    "opponent_last3_matchup_rank": 5
+    "opponent_ppr_allowed_per_game": 36.728,
+    "opponent_matchup_rank": 8,
+    "opponent_last3_ppr_allowed_per_game": 41.58,
+    "opponent_last3_matchup_rank": 3
   },
   {
     "season": 2026,
@@ -6564,10 +6726,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 33.4,
-    "opponent_matchup_rank": 15,
-    "opponent_last3_ppr_allowed_per_game": 26.9,
-    "opponent_last3_matchup_rank": 27
+    "opponent_ppr_allowed_per_game": 31.3,
+    "opponent_matchup_rank": 17,
+    "opponent_last3_ppr_allowed_per_game": 25.566666666666666,
+    "opponent_last3_matchup_rank": 28
   },
   {
     "season": 2026,
@@ -6582,10 +6744,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 14.95,
-    "opponent_matchup_rank": 14,
-    "opponent_last3_ppr_allowed_per_game": 14.5,
-    "opponent_last3_matchup_rank": 12
+    "opponent_ppr_allowed_per_game": 14.179999999999998,
+    "opponent_matchup_rank": 15,
+    "opponent_last3_ppr_allowed_per_game": 13.366666666666667,
+    "opponent_last3_matchup_rank": 14
   },
   {
     "season": 2026,
@@ -6600,10 +6762,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 9.85,
+    "opponent_ppr_allowed_per_game": 9.78,
     "opponent_matchup_rank": 24,
-    "opponent_last3_ppr_allowed_per_game": 3.75,
-    "opponent_last3_matchup_rank": 31
+    "opponent_last3_ppr_allowed_per_game": 5.666666666666667,
+    "opponent_last3_matchup_rank": 30
   },
   {
     "season": 2026,
@@ -6618,10 +6780,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 29.5,
-    "opponent_matchup_rank": 21,
-    "opponent_last3_ppr_allowed_per_game": 24.65,
-    "opponent_last3_matchup_rank": 28
+    "opponent_ppr_allowed_per_game": 29.740000000000002,
+    "opponent_matchup_rank": 22,
+    "opponent_last3_ppr_allowed_per_game": 26.666666666666668,
+    "opponent_last3_matchup_rank": 27
   },
   {
     "season": 2026,
@@ -6636,10 +6798,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 25.375,
-    "opponent_matchup_rank": 29,
-    "opponent_last3_ppr_allowed_per_game": 22.3,
-    "opponent_last3_matchup_rank": 29
+    "opponent_ppr_allowed_per_game": 32.019999999999996,
+    "opponent_matchup_rank": 14,
+    "opponent_last3_ppr_allowed_per_game": 34.4,
+    "opponent_last3_matchup_rank": 14
   },
   {
     "season": 2026,
@@ -6672,10 +6834,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 34.875,
-    "opponent_matchup_rank": 13,
-    "opponent_last3_ppr_allowed_per_game": 41.6,
-    "opponent_last3_matchup_rank": 8
+    "opponent_ppr_allowed_per_game": 31.359999999999996,
+    "opponent_matchup_rank": 16,
+    "opponent_last3_ppr_allowed_per_game": 33.5,
+    "opponent_last3_matchup_rank": 16
   },
   {
     "season": 2026,
@@ -6693,7 +6855,7 @@
     "opponent_ppr_allowed_per_game": 19.6,
     "opponent_matchup_rank": 20,
     "opponent_last3_ppr_allowed_per_game": 18.75,
-    "opponent_last3_matchup_rank": 21
+    "opponent_last3_matchup_rank": 22
   },
   {
     "season": 2026,
@@ -6711,7 +6873,7 @@
     "opponent_ppr_allowed_per_game": 22.55,
     "opponent_matchup_rank": 2,
     "opponent_last3_ppr_allowed_per_game": 29.25,
-    "opponent_last3_matchup_rank": 1
+    "opponent_last3_matchup_rank": 2
   },
   {
     "season": 2026,
@@ -6726,10 +6888,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 14.95,
-    "opponent_matchup_rank": 14,
-    "opponent_last3_ppr_allowed_per_game": 14.5,
-    "opponent_last3_matchup_rank": 12
+    "opponent_ppr_allowed_per_game": 14.179999999999998,
+    "opponent_matchup_rank": 15,
+    "opponent_last3_ppr_allowed_per_game": 13.366666666666667,
+    "opponent_last3_matchup_rank": 14
   },
   {
     "season": 2026,
@@ -6744,10 +6906,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 44.6,
-    "opponent_matchup_rank": 1,
-    "opponent_last3_ppr_allowed_per_game": 46.25,
-    "opponent_last3_matchup_rank": 2
+    "opponent_ppr_allowed_per_game": 41.019999999999996,
+    "opponent_matchup_rank": 2,
+    "opponent_last3_ppr_allowed_per_game": 39.733333333333334,
+    "opponent_last3_matchup_rank": 5
   },
   {
     "season": 2026,
@@ -6762,10 +6924,10 @@
     "game_date": "2026-10-15",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 21.775,
-    "opponent_matchup_rank": 31,
-    "opponent_last3_ppr_allowed_per_game": 29.25,
-    "opponent_last3_matchup_rank": 23
+    "opponent_ppr_allowed_per_game": 25.1,
+    "opponent_matchup_rank": 29,
+    "opponent_last3_ppr_allowed_per_game": 32.300000000000004,
+    "opponent_last3_matchup_rank": 18
   },
   {
     "season": 2026,
@@ -6781,9 +6943,9 @@
     "bye": false,
     "matchup_available": true,
     "opponent_ppr_allowed_per_game": 15.680000000000001,
-    "opponent_matchup_rank": 12,
+    "opponent_matchup_rank": 11,
     "opponent_last3_ppr_allowed_per_game": 11.4,
-    "opponent_last3_matchup_rank": 17
+    "opponent_last3_matchup_rank": 19
   },
   {
     "season": 2026,
@@ -6801,7 +6963,7 @@
     "opponent_ppr_allowed_per_game": 22.55,
     "opponent_matchup_rank": 2,
     "opponent_last3_ppr_allowed_per_game": 29.25,
-    "opponent_last3_matchup_rank": 1
+    "opponent_last3_matchup_rank": 2
   },
   {
     "season": 2026,
@@ -6816,10 +6978,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 16.87,
-    "opponent_matchup_rank": 14,
-    "opponent_last3_ppr_allowed_per_game": 15.39,
-    "opponent_last3_matchup_rank": 20
+    "opponent_ppr_allowed_per_game": 15.080000000000002,
+    "opponent_matchup_rank": 22,
+    "opponent_last3_ppr_allowed_per_game": 12.9,
+    "opponent_last3_matchup_rank": 28
   },
   {
     "season": 2026,
@@ -6834,10 +6996,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 33.75,
+    "opponent_ppr_allowed_per_game": 31.48,
     "opponent_matchup_rank": 1,
-    "opponent_last3_ppr_allowed_per_game": 38.55,
-    "opponent_last3_matchup_rank": 2
+    "opponent_last3_ppr_allowed_per_game": 33.166666666666664,
+    "opponent_last3_matchup_rank": 1
   },
   {
     "season": 2026,
@@ -6852,10 +7014,28 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 9.925,
-    "opponent_matchup_rank": 23,
-    "opponent_last3_ppr_allowed_per_game": 14.35,
-    "opponent_last3_matchup_rank": 13
+    "opponent_ppr_allowed_per_game": 13.180000000000001,
+    "opponent_matchup_rank": 17,
+    "opponent_last3_ppr_allowed_per_game": 18.3,
+    "opponent_last3_matchup_rank": 10
+  },
+  {
+    "season": 2026,
+    "through_week": 5,
+    "upcoming_week": 6,
+    "player_id": "00-0038098",
+    "player_name": "P.Strong",
+    "position": "RB",
+    "team": "GB",
+    "opponent": "DAL",
+    "home_away": "HOME",
+    "game_date": "2026-10-18",
+    "bye": false,
+    "matchup_available": true,
+    "opponent_ppr_allowed_per_game": 25.32,
+    "opponent_matchup_rank": 8,
+    "opponent_last3_ppr_allowed_per_game": 25.599999999999998,
+    "opponent_last3_matchup_rank": 6
   },
   {
     "season": 2026,
@@ -6870,9 +7050,9 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 38.375,
-    "opponent_matchup_rank": 6,
-    "opponent_last3_ppr_allowed_per_game": 36.1,
+    "opponent_ppr_allowed_per_game": 37.019999999999996,
+    "opponent_matchup_rank": 7,
+    "opponent_last3_ppr_allowed_per_game": 34.6,
     "opponent_last3_matchup_rank": 12
   },
   {
@@ -6891,7 +7071,7 @@
     "opponent_ppr_allowed_per_game": 21.45,
     "opponent_matchup_rank": 32,
     "opponent_last3_ppr_allowed_per_game": 22.25,
-    "opponent_last3_matchup_rank": 30
+    "opponent_last3_matchup_rank": 31
   },
   {
     "season": 2026,
@@ -6906,10 +7086,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 19.1,
+    "opponent_ppr_allowed_per_game": 18.759999999999998,
     "opponent_matchup_rank": 22,
-    "opponent_last3_ppr_allowed_per_game": 17.9,
-    "opponent_last3_matchup_rank": 23
+    "opponent_last3_ppr_allowed_per_game": 17.733333333333334,
+    "opponent_last3_matchup_rank": 24
   },
   {
     "season": 2026,
@@ -6924,10 +7104,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 10.899999999999999,
-    "opponent_matchup_rank": 18,
-    "opponent_last3_ppr_allowed_per_game": 10.7,
-    "opponent_last3_matchup_rank": 20
+    "opponent_ppr_allowed_per_game": 9.02,
+    "opponent_matchup_rank": 27,
+    "opponent_last3_ppr_allowed_per_game": 7.633333333333333,
+    "opponent_last3_matchup_rank": 26
   },
   {
     "season": 2026,
@@ -6942,10 +7122,10 @@
     "game_date": "2026-10-15",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 21.225,
+    "opponent_ppr_allowed_per_game": 20.759999999999998,
     "opponent_matchup_rank": 16,
-    "opponent_last3_ppr_allowed_per_game": 26.3,
-    "opponent_last3_matchup_rank": 7
+    "opponent_last3_ppr_allowed_per_game": 23.833333333333332,
+    "opponent_last3_matchup_rank": 10
   },
   {
     "season": 2026,
@@ -6960,9 +7140,9 @@
     "game_date": "2026-10-19",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 25.6,
-    "opponent_matchup_rank": 8,
-    "opponent_last3_ppr_allowed_per_game": 30.6,
+    "opponent_ppr_allowed_per_game": 24.14,
+    "opponent_matchup_rank": 9,
+    "opponent_last3_ppr_allowed_per_game": 26.5,
     "opponent_last3_matchup_rank": 4
   },
   {
@@ -6978,10 +7158,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 19.1,
+    "opponent_ppr_allowed_per_game": 18.759999999999998,
     "opponent_matchup_rank": 22,
-    "opponent_last3_ppr_allowed_per_game": 17.9,
-    "opponent_last3_matchup_rank": 23
+    "opponent_last3_ppr_allowed_per_game": 17.733333333333334,
+    "opponent_last3_matchup_rank": 24
   },
   {
     "season": 2026,
@@ -6996,10 +7176,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 33.4,
-    "opponent_matchup_rank": 15,
-    "opponent_last3_ppr_allowed_per_game": 26.9,
-    "opponent_last3_matchup_rank": 27
+    "opponent_ppr_allowed_per_game": 31.3,
+    "opponent_matchup_rank": 17,
+    "opponent_last3_ppr_allowed_per_game": 25.566666666666666,
+    "opponent_last3_matchup_rank": 28
   },
   {
     "season": 2026,
@@ -7014,10 +7194,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 16.675,
-    "opponent_matchup_rank": 28,
-    "opponent_last3_ppr_allowed_per_game": 16.45,
-    "opponent_last3_matchup_rank": 27
+    "opponent_ppr_allowed_per_game": 17.6,
+    "opponent_matchup_rank": 26,
+    "opponent_last3_ppr_allowed_per_game": 18.066666666666666,
+    "opponent_last3_matchup_rank": 23
   },
   {
     "season": 2026,
@@ -7032,10 +7212,10 @@
     "game_date": "2026-10-15",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 28.275,
-    "opponent_matchup_rank": 26,
-    "opponent_last3_ppr_allowed_per_game": 35.4,
-    "opponent_last3_matchup_rank": 14
+    "opponent_ppr_allowed_per_game": 24.7,
+    "opponent_matchup_rank": 30,
+    "opponent_last3_ppr_allowed_per_game": 27.066666666666666,
+    "opponent_last3_matchup_rank": 25
   },
   {
     "season": 2026,
@@ -7050,10 +7230,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 37.275,
-    "opponent_matchup_rank": 8,
-    "opponent_last3_ppr_allowed_per_game": 35.45,
-    "opponent_last3_matchup_rank": 13
+    "opponent_ppr_allowed_per_game": 36.0,
+    "opponent_matchup_rank": 10,
+    "opponent_last3_ppr_allowed_per_game": 33.93333333333333,
+    "opponent_last3_matchup_rank": 15
   },
   {
     "season": 2026,
@@ -7068,10 +7248,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 21.075,
-    "opponent_matchup_rank": 17,
-    "opponent_last3_ppr_allowed_per_game": 25.7,
-    "opponent_last3_matchup_rank": 8
+    "opponent_ppr_allowed_per_game": 22.3,
+    "opponent_matchup_rank": 12,
+    "opponent_last3_ppr_allowed_per_game": 26.2,
+    "opponent_last3_matchup_rank": 5
   },
   {
     "season": 2026,
@@ -7086,10 +7266,28 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 27.25,
-    "opponent_matchup_rank": 4,
-    "opponent_last3_ppr_allowed_per_game": 42.4,
-    "opponent_last3_matchup_rank": 1
+    "opponent_ppr_allowed_per_game": 23.86,
+    "opponent_matchup_rank": 10,
+    "opponent_last3_ppr_allowed_per_game": 31.7,
+    "opponent_last3_matchup_rank": 3
+  },
+  {
+    "season": 2026,
+    "through_week": 5,
+    "upcoming_week": 6,
+    "player_id": "00-0041070",
+    "player_name": "R.Virgil",
+    "position": "WR",
+    "team": "ARI",
+    "opponent": "LA",
+    "home_away": "AWAY",
+    "game_date": "2026-10-18",
+    "bye": false,
+    "matchup_available": true,
+    "opponent_ppr_allowed_per_game": 30.275,
+    "opponent_matchup_rank": 21,
+    "opponent_last3_ppr_allowed_per_game": 30.150000000000002,
+    "opponent_last3_matchup_rank": 22
   },
   {
     "season": 2026,
@@ -7104,10 +7302,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 27.25,
-    "opponent_matchup_rank": 4,
-    "opponent_last3_ppr_allowed_per_game": 42.4,
-    "opponent_last3_matchup_rank": 1
+    "opponent_ppr_allowed_per_game": 23.86,
+    "opponent_matchup_rank": 10,
+    "opponent_last3_ppr_allowed_per_game": 31.7,
+    "opponent_last3_matchup_rank": 3
   },
   {
     "season": 2026,
@@ -7123,7 +7321,7 @@
     "bye": false,
     "matchup_available": true,
     "opponent_ppr_allowed_per_game": 16.96,
-    "opponent_matchup_rank": 25,
+    "opponent_matchup_rank": 27,
     "opponent_last3_ppr_allowed_per_game": 15.266666666666666,
     "opponent_last3_matchup_rank": 28
   },
@@ -7141,9 +7339,9 @@
     "bye": false,
     "matchup_available": true,
     "opponent_ppr_allowed_per_game": 15.680000000000001,
-    "opponent_matchup_rank": 12,
+    "opponent_matchup_rank": 11,
     "opponent_last3_ppr_allowed_per_game": 11.4,
-    "opponent_last3_matchup_rank": 17
+    "opponent_last3_matchup_rank": 19
   },
   {
     "season": 2026,
@@ -7159,9 +7357,9 @@
     "bye": false,
     "matchup_available": true,
     "opponent_ppr_allowed_per_game": 30.68,
-    "opponent_matchup_rank": 18,
+    "opponent_matchup_rank": 19,
     "opponent_last3_ppr_allowed_per_game": 34.53333333333333,
-    "opponent_last3_matchup_rank": 15
+    "opponent_last3_matchup_rank": 13
   },
   {
     "season": 2026,
@@ -7176,10 +7374,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 38.4,
-    "opponent_matchup_rank": 5,
-    "opponent_last3_ppr_allowed_per_game": 46.550000000000004,
-    "opponent_last3_matchup_rank": 1
+    "opponent_ppr_allowed_per_game": 37.660000000000004,
+    "opponent_matchup_rank": 6,
+    "opponent_last3_ppr_allowed_per_game": 42.6,
+    "opponent_last3_matchup_rank": 2
   },
   {
     "season": 2026,
@@ -7194,10 +7392,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 28.975,
+    "opponent_ppr_allowed_per_game": 29.26,
     "opponent_matchup_rank": 24,
-    "opponent_last3_ppr_allowed_per_game": 30.8,
-    "opponent_last3_matchup_rank": 19
+    "opponent_last3_ppr_allowed_per_game": 30.666666666666668,
+    "opponent_last3_matchup_rank": 21
   },
   {
     "season": 2026,
@@ -7212,10 +7410,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 15.2,
-    "opponent_matchup_rank": 31,
-    "opponent_last3_ppr_allowed_per_game": 17.45,
-    "opponent_last3_matchup_rank": 24
+    "opponent_ppr_allowed_per_game": 19.919999999999998,
+    "opponent_matchup_rank": 18,
+    "opponent_last3_ppr_allowed_per_game": 24.566666666666666,
+    "opponent_last3_matchup_rank": 9
   },
   {
     "season": 2026,
@@ -7230,10 +7428,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 16.85,
-    "opponent_matchup_rank": 27,
-    "opponent_last3_ppr_allowed_per_game": 18.4,
-    "opponent_last3_matchup_rank": 22
+    "opponent_ppr_allowed_per_game": 19.64,
+    "opponent_matchup_rank": 19,
+    "opponent_last3_ppr_allowed_per_game": 22.53333333333333,
+    "opponent_last3_matchup_rank": 11
   },
   {
     "season": 2026,
@@ -7248,10 +7446,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 32.75,
-    "opponent_matchup_rank": 17,
-    "opponent_last3_ppr_allowed_per_game": 30.0,
-    "opponent_last3_matchup_rank": 21
+    "opponent_ppr_allowed_per_game": 30.3,
+    "opponent_matchup_rank": 20,
+    "opponent_last3_ppr_allowed_per_game": 26.833333333333332,
+    "opponent_last3_matchup_rank": 26
   },
   {
     "season": 2026,
@@ -7284,10 +7482,10 @@
     "game_date": "2026-10-15",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 17.085,
-    "opponent_matchup_rank": 13,
-    "opponent_last3_ppr_allowed_per_game": 20.259999999999998,
-    "opponent_last3_matchup_rank": 5
+    "opponent_ppr_allowed_per_game": 15.716,
+    "opponent_matchup_rank": 19,
+    "opponent_last3_ppr_allowed_per_game": 16.919999999999998,
+    "opponent_last3_matchup_rank": 16
   },
   {
     "season": 2026,
@@ -7320,10 +7518,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 15.875,
-    "opponent_matchup_rank": 11,
-    "opponent_last3_ppr_allowed_per_game": 11.05,
-    "opponent_last3_matchup_rank": 19
+    "opponent_ppr_allowed_per_game": 14.580000000000002,
+    "opponent_matchup_rank": 13,
+    "opponent_last3_ppr_allowed_per_game": 10.5,
+    "opponent_last3_matchup_rank": 20
   },
   {
     "season": 2026,
@@ -7374,10 +7572,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 24.575000000000003,
-    "opponent_matchup_rank": 10,
-    "opponent_last3_ppr_allowed_per_game": 22.650000000000002,
-    "opponent_last3_matchup_rank": 11
+    "opponent_ppr_allowed_per_game": 22.48,
+    "opponent_matchup_rank": 11,
+    "opponent_last3_ppr_allowed_per_game": 19.8,
+    "opponent_last3_matchup_rank": 18
   },
   {
     "season": 2026,
@@ -7392,10 +7590,28 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 20.6,
-    "opponent_matchup_rank": 19,
-    "opponent_last3_ppr_allowed_per_game": 19.45,
-    "opponent_last3_matchup_rank": 20
+    "opponent_ppr_allowed_per_game": 19.2,
+    "opponent_matchup_rank": 21,
+    "opponent_last3_ppr_allowed_per_game": 17.5,
+    "opponent_last3_matchup_rank": 26
+  },
+  {
+    "season": 2026,
+    "through_week": 5,
+    "upcoming_week": 6,
+    "player_id": "00-0041579",
+    "player_name": "S.Traore",
+    "position": "TE",
+    "team": "MIA",
+    "opponent": null,
+    "home_away": null,
+    "game_date": null,
+    "bye": true,
+    "matchup_available": false,
+    "opponent_ppr_allowed_per_game": null,
+    "opponent_matchup_rank": null,
+    "opponent_last3_ppr_allowed_per_game": null,
+    "opponent_last3_matchup_rank": null
   },
   {
     "season": 2026,
@@ -7410,10 +7626,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 16.485,
-    "opponent_matchup_rank": 16,
-    "opponent_last3_ppr_allowed_per_game": 17.26,
-    "opponent_last3_matchup_rank": 16
+    "opponent_ppr_allowed_per_game": 15.940000000000001,
+    "opponent_matchup_rank": 18,
+    "opponent_last3_ppr_allowed_per_game": 16.093333333333334,
+    "opponent_last3_matchup_rank": 20
   },
   {
     "season": 2026,
@@ -7429,9 +7645,9 @@
     "bye": false,
     "matchup_available": true,
     "opponent_ppr_allowed_per_game": 30.275,
-    "opponent_matchup_rank": 19,
+    "opponent_matchup_rank": 21,
     "opponent_last3_ppr_allowed_per_game": 30.150000000000002,
-    "opponent_last3_matchup_rank": 20
+    "opponent_last3_matchup_rank": 22
   },
   {
     "season": 2026,
@@ -7465,9 +7681,9 @@
     "bye": false,
     "matchup_available": true,
     "opponent_ppr_allowed_per_game": 35.46,
-    "opponent_matchup_rank": 11,
+    "opponent_matchup_rank": 12,
     "opponent_last3_ppr_allowed_per_game": 39.0,
-    "opponent_last3_matchup_rank": 11
+    "opponent_last3_matchup_rank": 10
   },
   {
     "season": 2026,
@@ -7482,10 +7698,10 @@
     "game_date": "2026-10-19",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 27.45,
-    "opponent_matchup_rank": 27,
-    "opponent_last3_ppr_allowed_per_game": 31.349999999999998,
-    "opponent_last3_matchup_rank": 18
+    "opponent_ppr_allowed_per_game": 28.080000000000002,
+    "opponent_matchup_rank": 26,
+    "opponent_last3_ppr_allowed_per_game": 31.099999999999998,
+    "opponent_last3_matchup_rank": 20
   },
   {
     "season": 2026,
@@ -7500,10 +7716,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 34.875,
-    "opponent_matchup_rank": 13,
-    "opponent_last3_ppr_allowed_per_game": 41.6,
-    "opponent_last3_matchup_rank": 8
+    "opponent_ppr_allowed_per_game": 31.359999999999996,
+    "opponent_matchup_rank": 16,
+    "opponent_last3_ppr_allowed_per_game": 33.5,
+    "opponent_last3_matchup_rank": 16
   },
   {
     "season": 2026,
@@ -7518,10 +7734,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 20.985,
-    "opponent_matchup_rank": 5,
-    "opponent_last3_ppr_allowed_per_game": 24.64,
-    "opponent_last3_matchup_rank": 1
+    "opponent_ppr_allowed_per_game": 22.576,
+    "opponent_matchup_rank": 3,
+    "opponent_last3_ppr_allowed_per_game": 26.073333333333334,
+    "opponent_last3_matchup_rank": 2
   },
   {
     "season": 2026,
@@ -7599,6 +7815,24 @@
     "season": 2026,
     "through_week": 5,
     "upcoming_week": 6,
+    "player_id": "00-0041314",
+    "player_name": "T.Arkin",
+    "position": "TE",
+    "team": "NE",
+    "opponent": "NYJ",
+    "home_away": "HOME",
+    "game_date": "2026-10-18",
+    "bye": false,
+    "matchup_available": true,
+    "opponent_ppr_allowed_per_game": 8.059999999999999,
+    "opponent_matchup_rank": 28,
+    "opponent_last3_ppr_allowed_per_game": 9.433333333333334,
+    "opponent_last3_matchup_rank": 23
+  },
+  {
+    "season": 2026,
+    "through_week": 5,
+    "upcoming_week": 6,
     "player_id": "00-0034613",
     "player_name": "T.Hudson",
     "position": "TE",
@@ -7635,6 +7869,24 @@
     "season": 2026,
     "through_week": 5,
     "upcoming_week": 6,
+    "player_id": "00-0037277",
+    "player_name": "T.Quitoriano",
+    "position": "TE",
+    "team": "ARI",
+    "opponent": "LA",
+    "home_away": "AWAY",
+    "game_date": "2026-10-18",
+    "bye": false,
+    "matchup_available": true,
+    "opponent_ppr_allowed_per_game": 6.625,
+    "opponent_matchup_rank": 32,
+    "opponent_last3_ppr_allowed_per_game": 5.55,
+    "opponent_last3_matchup_rank": 32
+  },
+  {
+    "season": 2026,
+    "through_week": 5,
+    "upcoming_week": 6,
     "player_id": "00-0041048",
     "player_name": "T.Hurst",
     "position": "WR",
@@ -7644,10 +7896,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 29.0,
-    "opponent_matchup_rank": 23,
-    "opponent_last3_ppr_allowed_per_game": 42.5,
-    "opponent_last3_matchup_rank": 7
+    "opponent_ppr_allowed_per_game": 27.72,
+    "opponent_matchup_rank": 27,
+    "opponent_last3_ppr_allowed_per_game": 35.86666666666667,
+    "opponent_last3_matchup_rank": 11
   },
   {
     "season": 2026,
@@ -7680,9 +7932,9 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 18.625,
-    "opponent_matchup_rank": 3,
-    "opponent_last3_ppr_allowed_per_game": 23.95,
+    "opponent_ppr_allowed_per_game": 19.28,
+    "opponent_matchup_rank": 5,
+    "opponent_last3_ppr_allowed_per_game": 23.266666666666666,
     "opponent_last3_matchup_rank": 6
   },
   {
@@ -7698,10 +7950,10 @@
     "game_date": "2026-10-19",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 27.45,
-    "opponent_matchup_rank": 27,
-    "opponent_last3_ppr_allowed_per_game": 31.349999999999998,
-    "opponent_last3_matchup_rank": 18
+    "opponent_ppr_allowed_per_game": 28.080000000000002,
+    "opponent_matchup_rank": 26,
+    "opponent_last3_ppr_allowed_per_game": 31.099999999999998,
+    "opponent_last3_matchup_rank": 20
   },
   {
     "season": 2026,
@@ -7716,10 +7968,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 36.95,
-    "opponent_matchup_rank": 10,
-    "opponent_last3_ppr_allowed_per_game": 44.550000000000004,
-    "opponent_last3_matchup_rank": 4
+    "opponent_ppr_allowed_per_game": 38.239999999999995,
+    "opponent_matchup_rank": 5,
+    "opponent_last3_ppr_allowed_per_game": 44.166666666666664,
+    "opponent_last3_matchup_rank": 1
   },
   {
     "season": 2026,
@@ -7734,10 +7986,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 29.0,
-    "opponent_matchup_rank": 23,
-    "opponent_last3_ppr_allowed_per_game": 42.5,
-    "opponent_last3_matchup_rank": 7
+    "opponent_ppr_allowed_per_game": 27.72,
+    "opponent_matchup_rank": 27,
+    "opponent_last3_ppr_allowed_per_game": 35.86666666666667,
+    "opponent_last3_matchup_rank": 11
   },
   {
     "season": 2026,
@@ -7752,10 +8004,46 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 17.9,
+    "opponent_ppr_allowed_per_game": 16.72,
     "opponent_matchup_rank": 7,
-    "opponent_last3_ppr_allowed_per_game": 24.7,
-    "opponent_last3_matchup_rank": 4
+    "opponent_last3_ppr_allowed_per_game": 20.466666666666665,
+    "opponent_last3_matchup_rank": 8
+  },
+  {
+    "season": 2026,
+    "through_week": 5,
+    "upcoming_week": 6,
+    "player_id": "00-0040311",
+    "player_name": "T.Wease",
+    "position": "WR",
+    "team": "LAC",
+    "opponent": "KC",
+    "home_away": "AWAY",
+    "game_date": "2026-10-18",
+    "bye": false,
+    "matchup_available": true,
+    "opponent_ppr_allowed_per_game": 21.45,
+    "opponent_matchup_rank": 32,
+    "opponent_last3_ppr_allowed_per_game": 22.25,
+    "opponent_last3_matchup_rank": 31
+  },
+  {
+    "season": 2026,
+    "through_week": 5,
+    "upcoming_week": 6,
+    "player_id": "00-0033375",
+    "player_name": "T.Patrick",
+    "position": "WR",
+    "team": "NYJ",
+    "opponent": "NE",
+    "home_away": "AWAY",
+    "game_date": "2026-10-18",
+    "bye": false,
+    "matchup_available": true,
+    "opponent_ppr_allowed_per_game": 31.359999999999996,
+    "opponent_matchup_rank": 16,
+    "opponent_last3_ppr_allowed_per_game": 33.5,
+    "opponent_last3_matchup_rank": 16
   },
   {
     "season": 2026,
@@ -7788,10 +8076,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 13.42,
-    "opponent_matchup_rank": 28,
-    "opponent_last3_ppr_allowed_per_game": 14.09,
-    "opponent_last3_matchup_rank": 24
+    "opponent_ppr_allowed_per_game": 13.175999999999998,
+    "opponent_matchup_rank": 26,
+    "opponent_last3_ppr_allowed_per_game": 13.459999999999999,
+    "opponent_last3_matchup_rank": 27
   },
   {
     "season": 2026,
@@ -7806,10 +8094,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 7.8999999999999995,
-    "opponent_matchup_rank": 28,
-    "opponent_last3_ppr_allowed_per_game": 10.7,
-    "opponent_last3_matchup_rank": 20
+    "opponent_ppr_allowed_per_game": 9.879999999999999,
+    "opponent_matchup_rank": 23,
+    "opponent_last3_ppr_allowed_per_game": 13.066666666666668,
+    "opponent_last3_matchup_rank": 15
   },
   {
     "season": 2026,
@@ -7824,10 +8112,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 24.2,
-    "opponent_matchup_rank": 11,
-    "opponent_last3_ppr_allowed_per_game": 14.200000000000001,
-    "opponent_last3_matchup_rank": 31
+    "opponent_ppr_allowed_per_game": 26.839999999999996,
+    "opponent_matchup_rank": 4,
+    "opponent_last3_ppr_allowed_per_game": 21.933333333333334,
+    "opponent_last3_matchup_rank": 16
   },
   {
     "season": 2026,
@@ -7842,10 +8130,10 @@
     "game_date": "2026-10-15",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 28.275,
-    "opponent_matchup_rank": 26,
-    "opponent_last3_ppr_allowed_per_game": 35.4,
-    "opponent_last3_matchup_rank": 14
+    "opponent_ppr_allowed_per_game": 24.7,
+    "opponent_matchup_rank": 30,
+    "opponent_last3_ppr_allowed_per_game": 27.066666666666666,
+    "opponent_last3_matchup_rank": 25
   },
   {
     "season": 2026,
@@ -7860,10 +8148,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 21.25,
+    "opponent_ppr_allowed_per_game": 20.919999999999998,
     "opponent_matchup_rank": 15,
-    "opponent_last3_ppr_allowed_per_game": 16.75,
-    "opponent_last3_matchup_rank": 26
+    "opponent_last3_ppr_allowed_per_game": 17.7,
+    "opponent_last3_matchup_rank": 25
   },
   {
     "season": 2026,
@@ -7879,7 +8167,7 @@
     "bye": false,
     "matchup_available": true,
     "opponent_ppr_allowed_per_game": 16.96,
-    "opponent_matchup_rank": 25,
+    "opponent_matchup_rank": 27,
     "opponent_last3_ppr_allowed_per_game": 15.266666666666666,
     "opponent_last3_matchup_rank": 28
   },
@@ -7896,10 +8184,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 9.85,
+    "opponent_ppr_allowed_per_game": 9.78,
     "opponent_matchup_rank": 24,
-    "opponent_last3_ppr_allowed_per_game": 3.75,
-    "opponent_last3_matchup_rank": 31
+    "opponent_last3_ppr_allowed_per_game": 5.666666666666667,
+    "opponent_last3_matchup_rank": 30
   },
   {
     "season": 2026,
@@ -7917,7 +8205,7 @@
     "opponent_ppr_allowed_per_game": 21.45,
     "opponent_matchup_rank": 32,
     "opponent_last3_ppr_allowed_per_game": 22.25,
-    "opponent_last3_matchup_rank": 30
+    "opponent_last3_matchup_rank": 31
   },
   {
     "season": 2026,
@@ -7933,9 +8221,9 @@
     "bye": false,
     "matchup_available": true,
     "opponent_ppr_allowed_per_game": 41.025,
-    "opponent_matchup_rank": 3,
+    "opponent_matchup_rank": 1,
     "opponent_last3_ppr_allowed_per_game": 39.5,
-    "opponent_last3_matchup_rank": 10
+    "opponent_last3_matchup_rank": 8
   },
   {
     "season": 2026,
@@ -7950,10 +8238,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 27.25,
-    "opponent_matchup_rank": 4,
-    "opponent_last3_ppr_allowed_per_game": 42.4,
-    "opponent_last3_matchup_rank": 1
+    "opponent_ppr_allowed_per_game": 23.86,
+    "opponent_matchup_rank": 10,
+    "opponent_last3_ppr_allowed_per_game": 31.7,
+    "opponent_last3_matchup_rank": 3
   },
   {
     "season": 2026,
@@ -7968,10 +8256,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 19.46,
-    "opponent_matchup_rank": 7,
-    "opponent_last3_ppr_allowed_per_game": 13.0,
-    "opponent_last3_matchup_rank": 27
+    "opponent_ppr_allowed_per_game": 16.568,
+    "opponent_matchup_rank": 17,
+    "opponent_last3_ppr_allowed_per_game": 10.333333333333334,
+    "opponent_last3_matchup_rank": 30
   },
   {
     "season": 2026,
@@ -7987,9 +8275,9 @@
     "bye": false,
     "matchup_available": true,
     "opponent_ppr_allowed_per_game": 6.625,
-    "opponent_matchup_rank": 31,
+    "opponent_matchup_rank": 32,
     "opponent_last3_ppr_allowed_per_game": 5.55,
-    "opponent_last3_matchup_rank": 29
+    "opponent_last3_matchup_rank": 32
   },
   {
     "season": 2026,
@@ -8004,10 +8292,10 @@
     "game_date": "2026-10-19",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 27.45,
-    "opponent_matchup_rank": 27,
-    "opponent_last3_ppr_allowed_per_game": 31.349999999999998,
-    "opponent_last3_matchup_rank": 18
+    "opponent_ppr_allowed_per_game": 28.080000000000002,
+    "opponent_matchup_rank": 26,
+    "opponent_last3_ppr_allowed_per_game": 31.099999999999998,
+    "opponent_last3_matchup_rank": 20
   },
   {
     "season": 2026,
@@ -8022,10 +8310,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 14.95,
-    "opponent_matchup_rank": 14,
-    "opponent_last3_ppr_allowed_per_game": 14.5,
-    "opponent_last3_matchup_rank": 12
+    "opponent_ppr_allowed_per_game": 14.179999999999998,
+    "opponent_matchup_rank": 15,
+    "opponent_last3_ppr_allowed_per_game": 13.366666666666667,
+    "opponent_last3_matchup_rank": 14
   },
   {
     "season": 2026,
@@ -8040,10 +8328,28 @@
     "game_date": "2026-10-15",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 21.775,
-    "opponent_matchup_rank": 31,
-    "opponent_last3_ppr_allowed_per_game": 29.25,
-    "opponent_last3_matchup_rank": 23
+    "opponent_ppr_allowed_per_game": 25.1,
+    "opponent_matchup_rank": 29,
+    "opponent_last3_ppr_allowed_per_game": 32.300000000000004,
+    "opponent_last3_matchup_rank": 18
+  },
+  {
+    "season": 2026,
+    "through_week": 5,
+    "upcoming_week": 6,
+    "player_id": "00-0036212",
+    "player_name": "T.Tagovailoa",
+    "position": "QB",
+    "team": "ATL",
+    "opponent": "CHI",
+    "home_away": "HOME",
+    "game_date": "2026-10-18",
+    "bye": false,
+    "matchup_available": true,
+    "opponent_ppr_allowed_per_game": 16.924,
+    "opponent_matchup_rank": 13,
+    "opponent_last3_ppr_allowed_per_game": 14.82,
+    "opponent_last3_matchup_rank": 25
   },
   {
     "season": 2026,
@@ -8061,7 +8367,7 @@
     "opponent_ppr_allowed_per_game": 13.62,
     "opponent_matchup_rank": 16,
     "opponent_last3_ppr_allowed_per_game": 11.466666666666667,
-    "opponent_last3_matchup_rank": 16
+    "opponent_last3_matchup_rank": 18
   },
   {
     "season": 2026,
@@ -8076,9 +8382,9 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 38.375,
-    "opponent_matchup_rank": 6,
-    "opponent_last3_ppr_allowed_per_game": 36.1,
+    "opponent_ppr_allowed_per_game": 37.019999999999996,
+    "opponent_matchup_rank": 7,
+    "opponent_last3_ppr_allowed_per_game": 34.6,
     "opponent_last3_matchup_rank": 12
   },
   {
@@ -8094,10 +8400,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 21.075,
-    "opponent_matchup_rank": 17,
-    "opponent_last3_ppr_allowed_per_game": 25.7,
-    "opponent_last3_matchup_rank": 8
+    "opponent_ppr_allowed_per_game": 22.3,
+    "opponent_matchup_rank": 12,
+    "opponent_last3_ppr_allowed_per_game": 26.2,
+    "opponent_last3_matchup_rank": 5
   },
   {
     "season": 2026,
@@ -8112,10 +8418,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 24.2,
-    "opponent_matchup_rank": 11,
-    "opponent_last3_ppr_allowed_per_game": 14.200000000000001,
-    "opponent_last3_matchup_rank": 31
+    "opponent_ppr_allowed_per_game": 26.839999999999996,
+    "opponent_matchup_rank": 4,
+    "opponent_last3_ppr_allowed_per_game": 21.933333333333334,
+    "opponent_last3_matchup_rank": 16
   },
   {
     "season": 2026,
@@ -8130,10 +8436,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 37.85,
-    "opponent_matchup_rank": 7,
-    "opponent_last3_ppr_allowed_per_game": 44.45,
-    "opponent_last3_matchup_rank": 6
+    "opponent_ppr_allowed_per_game": 36.22,
+    "opponent_matchup_rank": 9,
+    "opponent_last3_ppr_allowed_per_game": 39.53333333333333,
+    "opponent_last3_matchup_rank": 7
   },
   {
     "season": 2026,
@@ -8149,9 +8455,9 @@
     "bye": false,
     "matchup_available": true,
     "opponent_ppr_allowed_per_game": 15.5,
-    "opponent_matchup_rank": 30,
+    "opponent_matchup_rank": 31,
     "opponent_last3_ppr_allowed_per_game": 14.6,
-    "opponent_last3_matchup_rank": 30
+    "opponent_last3_matchup_rank": 31
   },
   {
     "season": 2026,
@@ -8166,10 +8472,10 @@
     "game_date": "2026-10-15",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 21.225,
+    "opponent_ppr_allowed_per_game": 20.759999999999998,
     "opponent_matchup_rank": 16,
-    "opponent_last3_ppr_allowed_per_game": 26.3,
-    "opponent_last3_matchup_rank": 7
+    "opponent_last3_ppr_allowed_per_game": 23.833333333333332,
+    "opponent_last3_matchup_rank": 10
   },
   {
     "season": 2026,
@@ -8184,10 +8490,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 28.95,
+    "opponent_ppr_allowed_per_game": 28.419999999999998,
     "opponent_matchup_rank": 2,
-    "opponent_last3_ppr_allowed_per_game": 35.05,
-    "opponent_last3_matchup_rank": 3
+    "opponent_last3_ppr_allowed_per_game": 32.13333333333333,
+    "opponent_last3_matchup_rank": 2
   },
   {
     "season": 2026,
@@ -8202,9 +8508,9 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 18.625,
-    "opponent_matchup_rank": 3,
-    "opponent_last3_ppr_allowed_per_game": 23.95,
+    "opponent_ppr_allowed_per_game": 19.28,
+    "opponent_matchup_rank": 5,
+    "opponent_last3_ppr_allowed_per_game": 23.266666666666666,
     "opponent_last3_matchup_rank": 6
   },
   {
@@ -8220,10 +8526,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 18.395,
-    "opponent_matchup_rank": 9,
-    "opponent_last3_ppr_allowed_per_game": 17.8,
-    "opponent_last3_matchup_rank": 12
+    "opponent_ppr_allowed_per_game": 16.712,
+    "opponent_matchup_rank": 15,
+    "opponent_last3_ppr_allowed_per_game": 15.193333333333333,
+    "opponent_last3_matchup_rank": 24
   },
   {
     "season": 2026,
@@ -8238,10 +8544,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 15.315,
-    "opponent_matchup_rank": 20,
-    "opponent_last3_ppr_allowed_per_game": 9.94,
-    "opponent_last3_matchup_rank": 30
+    "opponent_ppr_allowed_per_game": 18.704,
+    "opponent_matchup_rank": 12,
+    "opponent_last3_ppr_allowed_per_game": 17.38,
+    "opponent_last3_matchup_rank": 14
   },
   {
     "season": 2026,
@@ -8256,10 +8562,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 10.3,
-    "opponent_matchup_rank": 22,
-    "opponent_last3_ppr_allowed_per_game": 11.2,
-    "opponent_last3_matchup_rank": 18
+    "opponent_ppr_allowed_per_game": 10.0,
+    "opponent_matchup_rank": 21,
+    "opponent_last3_ppr_allowed_per_game": 10.4,
+    "opponent_last3_matchup_rank": 21
   },
   {
     "season": 2026,
@@ -8274,10 +8580,28 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 33.4,
-    "opponent_matchup_rank": 15,
-    "opponent_last3_ppr_allowed_per_game": 26.9,
-    "opponent_last3_matchup_rank": 27
+    "opponent_ppr_allowed_per_game": 31.3,
+    "opponent_matchup_rank": 17,
+    "opponent_last3_ppr_allowed_per_game": 25.566666666666666,
+    "opponent_last3_matchup_rank": 28
+  },
+  {
+    "season": 2026,
+    "through_week": 5,
+    "upcoming_week": 6,
+    "player_id": "00-0028118",
+    "player_name": "T.Taylor",
+    "position": "QB",
+    "team": "GB",
+    "opponent": "DAL",
+    "home_away": "HOME",
+    "game_date": "2026-10-18",
+    "bye": false,
+    "matchup_available": true,
+    "opponent_ppr_allowed_per_game": 21.492,
+    "opponent_matchup_rank": 4,
+    "opponent_last3_ppr_allowed_per_game": 19.126666666666665,
+    "opponent_last3_matchup_rank": 8
   },
   {
     "season": 2026,
@@ -8292,10 +8616,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 33.75,
+    "opponent_ppr_allowed_per_game": 31.48,
     "opponent_matchup_rank": 1,
-    "opponent_last3_ppr_allowed_per_game": 38.55,
-    "opponent_last3_matchup_rank": 2
+    "opponent_last3_ppr_allowed_per_game": 33.166666666666664,
+    "opponent_last3_matchup_rank": 1
   },
   {
     "season": 2026,
@@ -8310,10 +8634,28 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 17.66,
-    "opponent_matchup_rank": 11,
-    "opponent_last3_ppr_allowed_per_game": 17.21,
-    "opponent_last3_matchup_rank": 17
+    "opponent_ppr_allowed_per_game": 18.936,
+    "opponent_matchup_rank": 9,
+    "opponent_last3_ppr_allowed_per_game": 19.486666666666668,
+    "opponent_last3_matchup_rank": 6
+  },
+  {
+    "season": 2026,
+    "through_week": 5,
+    "upcoming_week": 6,
+    "player_id": "00-0037745",
+    "player_name": "V.Jones",
+    "position": "RB",
+    "team": "SEA",
+    "opponent": "DEN",
+    "home_away": "AWAY",
+    "game_date": "2026-10-15",
+    "bye": false,
+    "matchup_available": true,
+    "opponent_ppr_allowed_per_game": 25.34,
+    "opponent_matchup_rank": 7,
+    "opponent_last3_ppr_allowed_per_game": 22.0,
+    "opponent_last3_matchup_rank": 15
   },
   {
     "season": 2026,
@@ -8328,10 +8670,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 34.95,
-    "opponent_matchup_rank": 12,
-    "opponent_last3_ppr_allowed_per_game": 27.45,
-    "opponent_last3_matchup_rank": 25
+    "opponent_ppr_allowed_per_game": 31.9,
+    "opponent_matchup_rank": 15,
+    "opponent_last3_ppr_allowed_per_game": 24.866666666666664,
+    "opponent_last3_matchup_rank": 29
   },
   {
     "season": 2026,
@@ -8382,10 +8724,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 17.525,
-    "opponent_matchup_rank": 23,
-    "opponent_last3_ppr_allowed_per_game": 17.1,
-    "opponent_last3_matchup_rank": 25
+    "opponent_ppr_allowed_per_game": 16.32,
+    "opponent_matchup_rank": 29,
+    "opponent_last3_ppr_allowed_per_game": 15.233333333333334,
+    "opponent_last3_matchup_rank": 29
   },
   {
     "season": 2026,
@@ -8400,10 +8742,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 36.985,
-    "opponent_matchup_rank": 9,
-    "opponent_last3_ppr_allowed_per_game": 44.519999999999996,
-    "opponent_last3_matchup_rank": 5
+    "opponent_ppr_allowed_per_game": 36.728,
+    "opponent_matchup_rank": 8,
+    "opponent_last3_ppr_allowed_per_game": 41.58,
+    "opponent_last3_matchup_rank": 3
   },
   {
     "season": 2026,
@@ -8418,10 +8760,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 36.95,
-    "opponent_matchup_rank": 10,
-    "opponent_last3_ppr_allowed_per_game": 44.550000000000004,
-    "opponent_last3_matchup_rank": 4
+    "opponent_ppr_allowed_per_game": 38.239999999999995,
+    "opponent_matchup_rank": 5,
+    "opponent_last3_ppr_allowed_per_game": 44.166666666666664,
+    "opponent_last3_matchup_rank": 1
   },
   {
     "season": 2026,
@@ -8436,9 +8778,9 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 38.375,
-    "opponent_matchup_rank": 6,
-    "opponent_last3_ppr_allowed_per_game": 36.1,
+    "opponent_ppr_allowed_per_game": 37.019999999999996,
+    "opponent_matchup_rank": 7,
+    "opponent_last3_ppr_allowed_per_game": 34.6,
     "opponent_last3_matchup_rank": 12
   },
   {
@@ -8454,10 +8796,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 33.4,
-    "opponent_matchup_rank": 15,
-    "opponent_last3_ppr_allowed_per_game": 26.9,
-    "opponent_last3_matchup_rank": 27
+    "opponent_ppr_allowed_per_game": 31.3,
+    "opponent_matchup_rank": 17,
+    "opponent_last3_ppr_allowed_per_game": 25.566666666666666,
+    "opponent_last3_matchup_rank": 28
   },
   {
     "season": 2026,
@@ -8473,9 +8815,9 @@
     "bye": false,
     "matchup_available": true,
     "opponent_ppr_allowed_per_game": 16.575,
-    "opponent_matchup_rank": 10,
+    "opponent_matchup_rank": 9,
     "opponent_last3_ppr_allowed_per_game": 24.15,
-    "opponent_last3_matchup_rank": 5
+    "opponent_last3_matchup_rank": 4
   },
   {
     "season": 2026,
@@ -8490,10 +8832,28 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 25.375,
-    "opponent_matchup_rank": 29,
-    "opponent_last3_ppr_allowed_per_game": 22.3,
-    "opponent_last3_matchup_rank": 29
+    "opponent_ppr_allowed_per_game": 32.019999999999996,
+    "opponent_matchup_rank": 14,
+    "opponent_last3_ppr_allowed_per_game": 34.4,
+    "opponent_last3_matchup_rank": 14
+  },
+  {
+    "season": 2026,
+    "through_week": 5,
+    "upcoming_week": 6,
+    "player_id": "00-0038440",
+    "player_name": "Z.Scott",
+    "position": "RB",
+    "team": "CHI",
+    "opponent": "ATL",
+    "home_away": "AWAY",
+    "game_date": "2026-10-18",
+    "bye": false,
+    "matchup_available": true,
+    "opponent_ppr_allowed_per_game": 19.64,
+    "opponent_matchup_rank": 19,
+    "opponent_last3_ppr_allowed_per_game": 22.53333333333333,
+    "opponent_last3_matchup_rank": 11
   },
   {
     "season": 2026,
@@ -8508,10 +8868,10 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 38.4,
-    "opponent_matchup_rank": 5,
-    "opponent_last3_ppr_allowed_per_game": 46.550000000000004,
-    "opponent_last3_matchup_rank": 1
+    "opponent_ppr_allowed_per_game": 37.660000000000004,
+    "opponent_matchup_rank": 6,
+    "opponent_last3_ppr_allowed_per_game": 42.6,
+    "opponent_last3_matchup_rank": 2
   },
   {
     "season": 2026,
@@ -8526,9 +8886,9 @@
     "game_date": "2026-10-18",
     "bye": false,
     "matchup_available": true,
-    "opponent_ppr_allowed_per_game": 37.275,
-    "opponent_matchup_rank": 8,
-    "opponent_last3_ppr_allowed_per_game": 35.45,
-    "opponent_last3_matchup_rank": 13
+    "opponent_ppr_allowed_per_game": 36.0,
+    "opponent_matchup_rank": 10,
+    "opponent_last3_ppr_allowed_per_game": 33.93333333333333,
+    "opponent_last3_matchup_rank": 15
   }
 ]
