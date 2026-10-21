@@ -2,7 +2,7 @@
   "status": "validated",
   "season": 2026,
   "latest_week": 6,
-  "generated_at_utc": "2026-10-20T11:58:03.777362+00:00",
+  "generated_at_utc": "2026-10-21T11:59:07.419668+00:00",
   "player_week_records": 2091,
   "unique_players": 512,
   "teams_found": 32,
@@ -59,23 +59,23 @@
     "advanced_passing": {
       "status": "loaded",
       "eligible_records": 211,
-      "matched_records": 184,
-      "coverage": 0.8720379146919431,
-      "total_matches": 184
+      "matched_records": 209,
+      "coverage": 0.990521327014218,
+      "total_matches": 209
     },
     "advanced_rushing": {
       "status": "loaded",
       "eligible_records": 725,
-      "matched_records": 622,
-      "coverage": 0.8579310344827586,
-      "total_matches": 622
+      "matched_records": 709,
+      "coverage": 0.9779310344827586,
+      "total_matches": 709
     },
     "advanced_receiving": {
       "status": "loaded",
       "eligible_records": 1487,
-      "matched_records": 1276,
-      "coverage": 0.8581035642232683,
-      "total_matches": 1276
+      "matched_records": 1464,
+      "coverage": 0.98453261600538,
+      "total_matches": 1464
     }
   },
   "license": "CC BY 4.0",
