@@ -2,9 +2,9 @@
   "status": "validated",
   "season": 2026,
   "latest_week": 10,
-  "generated_at_utc": "2026-11-15T17:54:12.937842+00:00",
-  "player_week_records": 3062,
-  "unique_players": 560,
+  "generated_at_utc": "2026-11-16T21:09:29.615619+00:00",
+  "player_week_records": 3338,
+  "unique_players": 574,
   "teams_found": 32,
   "teams": [
     "ARI",
@@ -41,10 +41,10 @@
     "WAS"
   ],
   "position_counts": {
-    "WR": 222,
-    "RB": 146,
-    "TE": 126,
-    "QB": 66
+    "WR": 229,
+    "RB": 148,
+    "TE": 127,
+    "QB": 70
   },
   "sources": {
     "player_stats": {
@@ -53,29 +53,29 @@
     },
     "snap_counts": {
       "status": "loaded",
-      "matched_records": 3047,
-      "coverage": 0.9951
+      "matched_records": 3321,
+      "coverage": 0.9949
     },
     "advanced_passing": {
       "status": "loaded",
-      "eligible_records": 312,
-      "matched_records": 310,
-      "coverage": 0.9935897435897436,
-      "total_matches": 310
+      "eligible_records": 342,
+      "matched_records": 312,
+      "coverage": 0.9122807017543859,
+      "total_matches": 312
     },
     "advanced_rushing": {
       "status": "loaded",
-      "eligible_records": 1078,
-      "matched_records": 1056,
-      "coverage": 0.9795918367346939,
-      "total_matches": 1056
+      "eligible_records": 1178,
+      "matched_records": 1064,
+      "coverage": 0.9032258064516129,
+      "total_matches": 1064
     },
     "advanced_receiving": {
       "status": "loaded",
-      "eligible_records": 2159,
-      "matched_records": 2135,
-      "coverage": 0.9888837424733673,
-      "total_matches": 2135
+      "eligible_records": 2357,
+      "matched_records": 2148,
+      "coverage": 0.9113279592702588,
+      "total_matches": 2148
     }
   },
   "license": "CC BY 4.0",
